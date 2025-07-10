@@ -1,4 +1,20 @@
 {
+  "name": "@stassi/emergence",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Elementary cellular automata.",
+  "keywords": [
+    "eca",
+    "elementary cellular automata",
+    "generative systems"
+  ],
+  "homepage": "https://github.com/Stassi/emergence#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stassi/emergence.git"
+  },
+  "license": "ISC",
+  "author": "Andreas Stassivik <andreas@stassi.net>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,5 +40,19 @@
     "eslint": "latest",
     "eslint-config-next": "^15.0.0",
     "typescript": "latest"
-  }
+  },
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": "^20.19.3 || ^22.17.0",
+    "npm": "^10.9.2"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ]
 }
