@@ -44,7 +44,7 @@
   "packageManager": "pnpm@10.13.1",
   "engines": {
     "node": "^20.19.3 || ^22.17.0",
-    "npm": "^10.9.2"
+    "npm": "^11.4.2"
   },
   "os": [
     "darwin",
