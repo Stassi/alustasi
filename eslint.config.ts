@@ -13,7 +13,15 @@ const eslintConfig: Linter.Config[] = [
     rules: {
       'prettier/prettier': [
         'error',
-        { semi: false, singleQuote: true, trailingComma: 'all' },
+        {
+          endOfLine: 'lf',
+          printWidth: 80,
+          semi: false,
+          singleQuote: true,
+          tabWidth: 2,
+          trailingComma: 'all',
+          useTabs: false,
+        },
       ],
     },
   },
