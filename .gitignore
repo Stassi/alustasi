@@ -157,3 +157,6 @@ $RECYCLE.BIN/
 
 ### JetBrains IDE
 .idea
+
+### Turborepo
+.turbo
