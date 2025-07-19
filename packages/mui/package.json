@@ -1,14 +1,16 @@
 {
-  "name": "emergence",
+  "name": "@repo/mui",
   "private": true,
   "version": "0.0.0",
+  "exports": {
+    "./*": "./src/*.ts",
+    "./components/*": "./src/components/*.tsx"
+  },
   "scripts": {
-    "build": "next build",
     "check-types": "tsc --noEmit",
-    "dev": "next dev --port 9000",
-    "format": "next lint --file eslint.config.ts --file next.config.ts --fix --max-warnings 0",
-    "lint": "next lint --file eslint.config.ts --file next.config.ts --max-warnings 0",
-    "start": "next start"
+    "format": "eslint . --fix --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -17,7 +19,6 @@
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
     "@mui/material-nextjs": "^7.2.0",
-    "@repo/mui": "workspace:*",
     "next": "^15.3.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
