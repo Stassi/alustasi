@@ -5,7 +5,7 @@
   "type": "module",
   "exports": {
     "./base": "./base.ts",
-    "./next-js": "./next.ts",
+    "./next": "./next.ts",
     "./react": "./react.ts"
   },
   "devDependencies": {
