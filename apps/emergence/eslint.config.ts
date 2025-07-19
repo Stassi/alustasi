@@ -1,9 +1,9 @@
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
-import { type Linter } from 'eslint'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
 
-const eslintConfig: Linter.Config[] = [
+const eslintConfig: ConfigArray = tseslint.config([
   ...fixupConfigRules(
     new FlatCompat().config({
       extends: ['next', 'next/core-web-vitals', 'next/typescript'],
@@ -26,6 +26,6 @@ const eslintConfig: Linter.Config[] = [
     },
   },
   eslintPluginPrettierRecommended,
-]
+])
 
 export default eslintConfig
