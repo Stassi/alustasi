@@ -11,6 +11,10 @@
     "generate:component": "turbo gen react-component",
     "lint": "eslint . --max-warnings 0"
   },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
@@ -19,9 +23,5 @@
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.31.0",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
   }
 }
