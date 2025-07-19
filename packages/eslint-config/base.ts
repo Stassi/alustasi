@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import turbo from "eslint-plugin-turbo";
 import tseslint, { type ConfigArray } from "typescript-eslint";
 // @ts-ignore
@@ -27,4 +28,21 @@ export const baseConfig: ConfigArray = tseslint.config([
   {
     ignores: ["dist/**"],
   },
+  {
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          endOfLine: 'lf',
+          printWidth: 80,
+          semi: false,
+          singleQuote: true,
+          tabWidth: 2,
+          trailingComma: 'all',
+          useTabs: false,
+        },
+      ],
+    },
+  },
+  eslintPluginPrettierRecommended,
 ]);
