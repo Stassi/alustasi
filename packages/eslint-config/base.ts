@@ -1,10 +1,10 @@
-import js from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier";
+import js from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-import turbo from "eslint-plugin-turbo";
-import tseslint, { type ConfigArray } from "typescript-eslint";
-// @ts-ignore
-import onlyWarnUntyped from "eslint-plugin-only-warn";
+import turbo from 'eslint-plugin-turbo'
+import tseslint, { type ConfigArray } from 'typescript-eslint'
+// @ts-expect-error -- untyped module
+import onlyWarnUntyped from 'eslint-plugin-only-warn'
 
 const onlyWarn = <typeof turbo>onlyWarnUntyped
 
@@ -17,7 +17,7 @@ export const baseConfig: ConfigArray = tseslint.config([
       turbo,
     },
     rules: {
-      "turbo/no-undeclared-env-vars": "warn",
+      'turbo/no-undeclared-env-vars': 'warn',
     },
   },
   {
@@ -26,7 +26,7 @@ export const baseConfig: ConfigArray = tseslint.config([
     },
   },
   {
-    ignores: ["dist/**"],
+    ignores: ['dist/**'],
   },
   {
     rules: {
@@ -45,4 +45,4 @@ export const baseConfig: ConfigArray = tseslint.config([
     },
   },
   eslintPluginPrettierRecommended,
-]);
+])
