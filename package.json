@@ -24,9 +24,7 @@
     "turbo:daemon:reload": "turbo daemon clean"
   },
   "devDependencies": {
-    "prettier": "3.6.2",
-    "turbo": "^2.5.5",
-    "typescript": "^5.8.3"
+    "turbo": "^2.5.5"
   },
   "packageManager": "pnpm@10.13.1",
   "engines": {
