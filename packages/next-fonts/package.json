@@ -1,25 +1,23 @@
 {
-  "name": "web",
+  "name": "@repo/next-fonts",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "exports": {
+    "./*": "./src/*.tsx"
+  },
   "scripts": {
-    "build": "next build",
     "check-types": "tsc --noEmit",
-    "dev": "next dev --port 3000",
-    "format": "next lint --file eslint.config.ts --file next.config.ts --fix --max-warnings 0",
-    "lint": "next lint --file eslint.config.ts --file next.config.ts --max-warnings 0",
-    "start": "next start"
+    "format": "eslint . --fix --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
     "next": "^15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@repo/next-fonts": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^24.0.14",
     "@types/react": "^19.1.8",
