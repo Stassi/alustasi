@@ -9,7 +9,7 @@ import { json } from './json.js'
 
 const onlyWarn = <typeof turbo>onlyWarnUntyped
 
-export const baseConfig: ConfigArray = tseslint.config([
+export const base: ConfigArray = tseslint.config([
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
