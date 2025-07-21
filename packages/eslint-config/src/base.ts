@@ -1,18 +1,22 @@
-import js from '@eslint/js'
+import { configs as jsConfigs } from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import turbo from 'eslint-plugin-turbo'
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import {
+  config,
+  configs as tsConfigs,
+  type ConfigArray,
+} from 'typescript-eslint'
 // @ts-expect-error -- untyped module
 import onlyWarnUntyped from 'eslint-plugin-only-warn'
 import { json } from './json.js'
 
 const onlyWarn = <typeof turbo>onlyWarnUntyped
 
-export const base: ConfigArray = tseslint.config([
-  js.configs.recommended,
+export const base: ConfigArray = config([
+  jsConfigs.recommended,
   eslintConfigPrettier,
-  ...tseslint.configs.recommended,
+  ...tsConfigs.recommended,
   ...json,
   {
     plugins: {
