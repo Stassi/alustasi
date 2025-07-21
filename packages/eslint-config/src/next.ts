@@ -2,7 +2,7 @@ import tseslint, { type ConfigArray } from 'typescript-eslint'
 import pluginNext from '@next/eslint-plugin-next'
 import { reactConfig } from './react.js'
 
-export const nextJsConfig: ConfigArray = tseslint.config([
+export const next: ConfigArray = tseslint.config([
   // @ts-expect-error -- rules are valid
   ...reactConfig(false),
   {
