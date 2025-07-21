@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src"],
+  "include": ["eslint.config.ts", "src"],
   "exclude": ["node_modules", "dist"]
 }
