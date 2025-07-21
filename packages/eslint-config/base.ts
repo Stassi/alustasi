@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import eslintPluginJsonc from 'eslint-plugin-jsonc'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import turbo from 'eslint-plugin-turbo'
@@ -12,6 +13,9 @@ export const baseConfig: ConfigArray = tseslint.config([
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
+  ...eslintPluginJsonc.configs['flat/base'],
+  ...eslintPluginJsonc.configs['flat/recommended-with-json'],
+  ...eslintPluginJsonc.configs['flat/prettier'],
   {
     plugins: {
       turbo,
