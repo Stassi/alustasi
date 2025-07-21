@@ -5,7 +5,7 @@ import turbo from 'eslint-plugin-turbo'
 import tseslint, { type ConfigArray } from 'typescript-eslint'
 // @ts-expect-error -- untyped module
 import onlyWarnUntyped from 'eslint-plugin-only-warn'
-import { json } from './src/json.js'
+import { json } from './json.js'
 
 const onlyWarn = <typeof turbo>onlyWarnUntyped
 
