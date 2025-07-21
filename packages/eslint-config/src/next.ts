@@ -1,10 +1,10 @@
 import tseslint, { type ConfigArray } from 'typescript-eslint'
 import pluginNext from '@next/eslint-plugin-next'
-import { reactConfig } from './react.js'
+import { reactWithoutBrowserGlobals } from './react.js'
 
 export const next: ConfigArray = tseslint.config([
   // @ts-expect-error -- rules are valid
-  ...reactConfig(false),
+  ...reactWithoutBrowserGlobals,
   {
     plugins: {
       '@next/next': pluginNext,

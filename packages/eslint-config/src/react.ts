@@ -4,7 +4,7 @@ import pluginReact from 'eslint-plugin-react'
 import globals from 'globals'
 import { base } from './base.js'
 
-export function reactConfig(browserGlobals: boolean): ConfigArray {
+function config(browserGlobals: boolean): ConfigArray {
   return tseslint.config([
     ...base,
     pluginReact.configs.flat.recommended!,
@@ -29,3 +29,6 @@ export function reactConfig(browserGlobals: boolean): ConfigArray {
     },
   ])
 }
+
+export const react: ConfigArray = config(true)
+export const reactWithoutBrowserGlobals: ConfigArray = config(false)
