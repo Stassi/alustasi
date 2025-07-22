@@ -1,5 +1,5 @@
-import eslintConfigPrettier from 'eslint-config-prettier'
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import prettierConfig from 'eslint-config-prettier'
+import prettierPluginRecommended from 'eslint-plugin-prettier/recommended'
 import { config, type ConfigArray } from 'typescript-eslint'
 
 export const prettier: ConfigArray = config([
@@ -19,6 +19,6 @@ export const prettier: ConfigArray = config([
       ],
     },
   },
-  eslintConfigPrettier,
-  eslintPluginPrettierRecommended,
+  prettierConfig,
+  prettierPluginRecommended,
 ])
