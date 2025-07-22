@@ -1,5 +1,5 @@
 import { config, type ConfigArray } from 'typescript-eslint'
-import pluginNext from '@next/eslint-plugin-next'
+import nextPlugin, { configs } from '@next/eslint-plugin-next'
 import { reactWithoutBrowserGlobals } from './react/react.js'
 
 export const next: ConfigArray = config([
@@ -7,12 +7,12 @@ export const next: ConfigArray = config([
   ...reactWithoutBrowserGlobals,
   {
     plugins: {
-      '@next/next': pluginNext,
+      '@next/next': nextPlugin,
     },
     // @ts-expect-error -- `rules` are presumed valid
     rules: {
-      ...pluginNext.configs.recommended.rules,
-      ...pluginNext.configs['core-web-vitals'].rules,
+      ...configs.recommended.rules,
+      ...configs['core-web-vitals'].rules,
     },
   },
 ])
