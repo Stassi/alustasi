@@ -1,11 +1,11 @@
-import tseslint, { type ConfigArray } from 'typescript-eslint'
+import { config as tseslintConfig, type ConfigArray } from 'typescript-eslint'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginReact from 'eslint-plugin-react'
 import globals from 'globals'
 import { base } from './base/base.js'
 
 function config(browserGlobals: boolean): ConfigArray {
-  return tseslint.config([
+  return tseslintConfig([
     ...base,
     pluginReact.configs.flat.recommended!,
     {
