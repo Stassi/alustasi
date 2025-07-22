@@ -1,8 +1,8 @@
 import { config as tseslintConfig, type ConfigArray } from 'typescript-eslint'
-import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginReact from 'eslint-plugin-react'
 import globals from 'globals'
 import { base } from '../base/base.js'
+import { hooks } from './hooks.js'
 
 function config(browserGlobals: boolean): ConfigArray {
   return tseslintConfig([
@@ -17,16 +17,7 @@ function config(browserGlobals: boolean): ConfigArray {
         },
       },
     },
-    {
-      plugins: {
-        'react-hooks': pluginReactHooks,
-      },
-      settings: { react: { version: 'detect' } },
-      rules: {
-        ...pluginReactHooks.configs.recommended.rules,
-        'react/react-in-jsx-scope': 'off',
-      },
-    },
+    ...hooks,
   ])
 }
 
