@@ -6,7 +6,7 @@
   "exports": {
     "./base": "./src/base/base.ts",
     "./next": "./src/next.ts",
-    "./react": "./src/react.ts"
+    "./react": "./src/react/react.ts"
   },
   "scripts": {
     "check-types": "tsc --noEmit",
