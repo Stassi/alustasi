@@ -1,5 +1,4 @@
 import { configs as jsConfigs } from '@eslint/js'
-import turbo from 'eslint-plugin-turbo'
 import {
   config,
   configs as tsConfigs,
@@ -9,21 +8,15 @@ import {
 import onlyWarnUntyped from 'eslint-plugin-only-warn'
 import { json } from './json.js'
 import { prettier } from './prettier.js'
+import { turbo, type ESLintPlugin } from './turbo.js'
 
-const onlyWarn = <typeof turbo>onlyWarnUntyped
+const onlyWarn = <ESLintPlugin>onlyWarnUntyped
 
 export const base: ConfigArray = config([
   jsConfigs.recommended,
   ...tsConfigs.recommended,
   ...json,
-  {
-    plugins: {
-      turbo,
-    },
-    rules: {
-      'turbo/no-undeclared-env-vars': 'warn',
-    },
-  },
+  ...turbo,
   {
     plugins: {
       onlyWarn,
