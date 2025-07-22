@@ -1,1 +1,1 @@
-export { baseConfig as default } from './base.js'
+export { base as default } from './src/base/base.js'

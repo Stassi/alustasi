@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./base": "./base.ts",
-    "./next": "./next.ts",
-    "./react": "./react.ts"
+    "./base": "./src/base/base.ts",
+    "./next": "./src/next.ts",
+    "./react": "./src/react/react.ts"
   },
   "scripts": {
     "check-types": "tsc --noEmit",
@@ -19,6 +19,7 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsonc": "^2.20.1",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.5",
