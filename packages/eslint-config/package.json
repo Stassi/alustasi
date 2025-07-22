@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./base": "./src/base.ts",
+    "./base": "./src/base/base.ts",
     "./next": "./src/next.ts",
     "./react": "./src/react.ts"
   },
