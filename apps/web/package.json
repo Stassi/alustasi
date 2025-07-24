@@ -7,8 +7,8 @@
     "build": "next build",
     "check-types": "tsc --noEmit",
     "dev": "next dev --port 3000",
-    "format": "next lint --file eslint.config.ts --file next.config.ts --fix --max-warnings 0",
-    "lint": "next lint --file eslint.config.ts --file next.config.ts --max-warnings 0",
+    "format": "next lint --file eslint.config.ts --file next.config.ts --file tsconfig.json --fix --max-warnings 0",
+    "lint": "next lint --file eslint.config.ts --file next.config.ts --file tsconfig.json --max-warnings 0",
     "start": "next start"
   },
   "dependencies": {
