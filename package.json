@@ -17,11 +17,11 @@
   "author": "Andreas Stassivik <andreas@stassi.net>",
   "scripts": {
     "build": "turbo run build",
-    "check-types": "turbo run check-types",
     "dev": "turbo run dev",
-    "format": "turbo run format",
-    "lint": "turbo run lint",
-    "quality:all": "turbo run check-types lint",
+    "quality:all:check": "turbo run check-types lint",
+    "quality:lint:check": "turbo run lint",
+    "quality:lint:format": "turbo run format",
+    "quality:types:check": "turbo run check-types",
     "turbo:daemon:reload": "turbo daemon clean"
   },
   "devDependencies": {
