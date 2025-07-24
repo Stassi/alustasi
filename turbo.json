@@ -18,19 +18,19 @@
       "cache": false,
       "persistent": true
     },
-    "format": {
+    "quality:lint:check": {
       "dependsOn": [
-        "^format"
+        "^quality:lint:check"
       ]
     },
-    "lint": {
+    "quality:lint:format": {
       "dependsOn": [
-        "^lint"
+        "^quality:lint:format"
       ]
     },
-    "check-types": {
+    "quality:types:check": {
       "dependsOn": [
-        "^check-types"
+        "^quality:types:check"
       ]
     }
   },
