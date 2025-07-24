@@ -21,6 +21,7 @@
     "dev": "turbo run dev",
     "format": "turbo run format",
     "lint": "turbo run lint",
+    "quality:all": "turbo run check-types lint",
     "turbo:daemon:reload": "turbo daemon clean"
   },
   "devDependencies": {
