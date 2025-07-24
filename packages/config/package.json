@@ -1,12 +1,15 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@repo/config",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./base": "./src/base/base.ts",
-    "./next": "./src/next.ts",
-    "./react": "./src/react/react.ts"
+    "./eslint/base": "./src/eslint/base/base.ts",
+    "./eslint/next": "./src/eslint/next.ts",
+    "./eslint/react": "./src/eslint/react/react.ts",
+    "./typescript/base.json": "./src/typescript/base.json",
+    "./typescript/next.json": "./src/typescript/next.json",
+    "./typescript/react.json": "./src/typescript/react.json"
   },
   "scripts": {
     "check-types": "tsc --noEmit",
@@ -16,7 +19,6 @@
   "devDependencies": {
     "@eslint/js": "^9.31.0",
     "@next/eslint-plugin-next": "^15.3.0",
-    "@repo/typescript-config": "workspace:*",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsonc": "^2.20.1",
