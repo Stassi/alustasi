@@ -18,7 +18,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: ^15.4.2
+        specifier: ^15.4.3
         version: 15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
@@ -34,7 +34,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/next-fonts
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
@@ -73,7 +73,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/mui
       next:
-        specifier: ^15.4.2
+        specifier: ^15.4.3
         version: 15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
@@ -86,7 +86,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/config
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
@@ -107,7 +107,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: ^15.4.2
+        specifier: ^15.4.3
         version: 15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
@@ -123,7 +123,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/next-fonts
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
@@ -144,7 +144,7 @@ importers:
         specifier: ^9.31.0
         version: 9.31.0
       '@next/eslint-plugin-next':
-        specifier: ^15.3.0
+        specifier: ^15.4.3
         version: 15.4.3
       eslint:
         specifier: ^9.31.0
@@ -168,19 +168,19 @@ importers:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.31.0(jiti@2.5.0))
       eslint-plugin-turbo:
-        specifier: ^2.5.0
+        specifier: ^2.5.5
         version: 2.5.5(eslint@9.31.0(jiti@2.5.0))(turbo@2.5.5)
       globals:
         specifier: ^16.3.0
         version: 16.3.0
       jiti:
-        specifier: ^2.4.2
+        specifier: ^2.5.0
         version: 2.5.0
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
       typescript-eslint:
-        specifier: ^8.36.0
+        specifier: ^8.38.0
         version: 8.38.0(eslint@9.31.0(jiti@2.5.0))(typescript@5.8.3)
 
   packages/mui:
@@ -204,7 +204,7 @@ importers:
         specifier: ^7.2.0
         version: 7.2.0(@emotion/cache@11.14.0)(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(next@15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       next:
-        specifier: ^15.4.2
+        specifier: ^15.4.3
         version: 15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
@@ -217,7 +217,7 @@ importers:
         specifier: workspace:*
         version: link:../config
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
@@ -235,7 +235,7 @@ importers:
   packages/next-fonts:
     dependencies:
       next:
-        specifier: ^15.4.2
+        specifier: ^15.4.3
         version: 15.4.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.1.0
@@ -248,7 +248,7 @@ importers:
         specifier: workspace:*
         version: link:../config
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
@@ -276,7 +276,7 @@ importers:
         specifier: workspace:*
         version: link:../config
       '@types/node':
-        specifier: ^24.0.14
+        specifier: ^24.1.0
         version: 24.1.0
       '@types/react':
         specifier: ^19.1.8
