@@ -18,7 +18,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "quality:all:check": "turbo run quality:types:check quality:lint:check",
+    "quality:all:check": "turbo run quality:lint:check quality:types:check",
     "quality:lint:check": "turbo run quality:lint:check",
     "quality:lint:format": "turbo run quality:lint:format",
     "quality:types:check": "turbo run quality:types:check",
