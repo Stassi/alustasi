@@ -7,10 +7,10 @@
     "./components/*": "./src/components/*.tsx"
   },
   "scripts": {
-    "check-types": "tsc --noEmit",
-    "format": "eslint . --fix --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "lint": "eslint . --max-warnings 0"
+    "quality:lint:check": "eslint . --max-warnings 0",
+    "quality:lint:format": "eslint . --fix --max-warnings 0",
+    "quality:types:check": "tsc --noEmit",
+    "react:component:generate": "turbo gen react-component"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",

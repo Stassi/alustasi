@@ -12,9 +12,9 @@
     "./typescript/react.json": "./src/typescript/react.json"
   },
   "scripts": {
-    "check-types": "tsc --noEmit",
-    "format": "eslint . --fix --max-warnings 0",
-    "lint": "eslint . --max-warnings 0"
+    "quality:lint:check": "eslint . --max-warnings 0",
+    "quality:lint:format": "eslint . --fix --max-warnings 0",
+    "quality:types:check": "tsc --noEmit"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
