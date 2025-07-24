@@ -6,8 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3001",
-    "quality:lint:check": "next lint --file eslint.config.ts --file next.config.ts --file tsconfig.json --max-warnings 0",
-    "quality:lint:format": "next lint --file eslint.config.ts --file next.config.ts --file tsconfig.json --fix --max-warnings 0",
+    "quality:lint:check": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --max-warnings 0",
+    "quality:lint:format": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --fix --max-warnings 0",
     "quality:types:check": "tsc --noEmit",
     "start": "next start"
   },
