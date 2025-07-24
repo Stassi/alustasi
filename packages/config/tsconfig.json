@@ -1,5 +1,6 @@
 {
-  "extends": "@repo/typescript-config/base.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./src/typescript/base.json",
   "include": ["."],
   "exclude": ["node_modules"]
 }
