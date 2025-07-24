@@ -6,10 +6,10 @@
     "./*": "./src/*.tsx"
   },
   "scripts": {
-    "generate:component": "turbo gen react-component",
     "quality:lint:check": "eslint . --max-warnings 0",
     "quality:lint:format": "eslint . --fix --max-warnings 0",
-    "quality:types:check": "tsc --noEmit"
+    "quality:types:check": "tsc --noEmit",
+    "react:component:generate": "turbo gen react-component"
   },
   "dependencies": {
     "next": "^15.4.2",
