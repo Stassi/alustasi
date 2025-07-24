@@ -27,9 +27,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../packages/config
       '@repo/next-fonts':
         specifier: workspace:*
         version: link:../../packages/next-fonts
@@ -85,9 +85,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../packages/config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -122,9 +122,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../packages/config
       '@repo/next-fonts':
         specifier: workspace:*
         version: link:../../packages/next-fonts
@@ -147,7 +147,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  packages/eslint-config:
+  packages/config:
     devDependencies:
       '@eslint/js':
         specifier: ^9.31.0
@@ -225,9 +225,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
@@ -259,9 +259,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
@@ -292,9 +292,9 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/config':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config

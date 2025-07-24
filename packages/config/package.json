@@ -1,12 +1,12 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@repo/config",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./base": "./src/base/base.ts",
-    "./next": "./src/next.ts",
-    "./react": "./src/react/react.ts"
+    "./eslint/base": "./src/eslint/base/base.ts",
+    "./eslint/next": "./src/eslint/next.ts",
+    "./eslint/react": "./src/eslint/react/react.ts"
   },
   "scripts": {
     "check-types": "tsc --noEmit",
