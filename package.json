@@ -2,6 +2,7 @@
   "name": "@stassi/emergence",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "description": "Elementary cellular automata.",
   "keywords": [
     "eca",
