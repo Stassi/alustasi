@@ -216,6 +216,9 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../config
+      '@repo/next-fonts':
+        specifier: workspace:*
+        version: link:../next-fonts
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0

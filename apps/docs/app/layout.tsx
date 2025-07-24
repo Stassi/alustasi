@@ -1,6 +1,6 @@
 import './globals.css'
-import geistMono from '@repo/next-fonts/geistMono'
-import geistSans from '@repo/next-fonts/geistSans'
+import { geistMono } from '@repo/next-fonts/geistMono'
+import { geistSans } from '@repo/next-fonts/geistSans'
 import { type Metadata } from 'next'
 import { type ReactElement, type ReactNode } from 'react'
 
