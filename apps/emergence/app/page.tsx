@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { type ReactElement } from 'react'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
@@ -7,7 +7,7 @@ import NextLink from 'next/link'
 import Copyright from '@repo/mui/components/Copyright'
 import ProTip from '@repo/mui/components/ProTip'
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <Container maxWidth="lg">
       <Box
