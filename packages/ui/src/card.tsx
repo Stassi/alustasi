@@ -1,16 +1,16 @@
-import { type JSX } from 'react'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Card({
-  className,
-  title,
   children,
+  className,
   href,
+  title,
 }: {
+  children: ReactNode
   className?: string
-  title: string
-  children: React.ReactNode
   href: string
-}): JSX.Element {
+  title: string
+}): ReactElement {
   return (
     <a
       className={className}
