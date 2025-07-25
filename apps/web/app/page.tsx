@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react'
 import Image from 'next/image'
-import { Button } from '@repo/ui/button'
+import { Button } from '@repo/ui/Button'
 import { ThemeImage } from '@repo/ui/ThemeImage'
 import styles from './page.module.css'
 
