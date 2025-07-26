@@ -1,6 +1,6 @@
 'use client'
 import { createTheme, type Theme } from '@mui/material/styles'
-import { roboto } from '@repo/next-fonts/roboto'
+import { roboto } from '@repo/fonts/roboto'
 
 export const theme: Theme = createTheme({
   colorSchemes: { light: true, dark: true },
