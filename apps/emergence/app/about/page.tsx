@@ -1,16 +1,16 @@
 import { type ReactElement } from 'react'
-import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import NextLink from 'next/link'
 import { CenteredContent } from '@repo/mui/components/CenteredContent'
 import { Copyright } from '@repo/mui/components/Copyright'
+import { PageContainer } from '@repo/mui/components/PageContainer'
 import { ProTip } from '@repo/mui/components/ProTip'
 import { Title } from '@repo/mui/components/Title'
 
 export default function About(): ReactElement {
   return (
-    <Container maxWidth="lg">
+    <PageContainer>
       <CenteredContent>
         <Title>Material UI - Next.js example in TypeScript</Title>
         <Box sx={{ maxWidth: 'sm' }}>
@@ -21,6 +21,6 @@ export default function About(): ReactElement {
         <ProTip />
         <Copyright />
       </CenteredContent>
-    </Container>
+    </PageContainer>
   )
 }
