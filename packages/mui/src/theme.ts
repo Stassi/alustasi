@@ -2,7 +2,7 @@
 import { createTheme, type Theme } from '@mui/material/styles'
 import { roboto } from '@repo/next-fonts/roboto'
 
-const theme: Theme = createTheme({
+export const theme: Theme = createTheme({
   colorSchemes: { light: true, dark: true },
   cssVariables: {
     colorSchemeSelector: 'class',
@@ -27,5 +27,3 @@ const theme: Theme = createTheme({
     },
   },
 })
-
-export default theme

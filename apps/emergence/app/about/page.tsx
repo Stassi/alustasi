@@ -1,13 +1,13 @@
-import * as React from 'react'
+import { type ReactElement } from 'react'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import NextLink from 'next/link'
-import ProTip from '@repo/mui/components/ProTip'
-import Copyright from '@repo/mui/components/Copyright'
+import { Copyright } from '@repo/mui/components/Copyright'
+import { ProTip } from '@repo/mui/components/ProTip'
 
-export default function About() {
+export default function About(): ReactElement {
   return (
     <Container maxWidth="lg">
       <Box

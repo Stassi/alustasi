@@ -1,24 +1,10 @@
-import Image, { type ImageProps } from 'next/image'
-import { Button } from '@repo/ui/button'
+import { type ReactElement } from 'react'
+import Image from 'next/image'
+import { Button } from '@repo/ui/Button'
+import { ThemeImage } from '@repo/ui/ThemeImage'
 import styles from './page.module.css'
 
-type Props = Omit<ImageProps, 'src'> & {
-  srcLight: string
-  srcDark: string
-}
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props
-
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  )
-}
-
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <div className={styles.page}>
       <main className={styles.main}>

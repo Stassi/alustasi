@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@repo/config/typescript/react.json",
+  "extends": "@repo/config/typescript/next.json",
   "compilerOptions": {
     "outDir": "dist"
   },
   "include": ["eslint.config.ts", "src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["dist", "node_modules"]
 }
