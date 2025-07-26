@@ -4,21 +4,14 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import NextLink from 'next/link'
+import { CenteredContent } from '@repo/mui/components/CenteredContent'
 import { Copyright } from '@repo/mui/components/Copyright'
 import { ProTip } from '@repo/mui/components/ProTip'
 
 export default function About(): ReactElement {
   return (
     <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <CenteredContent>
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           Material UI - Next.js example in TypeScript
         </Typography>
@@ -29,7 +22,7 @@ export default function About(): ReactElement {
         </Box>
         <ProTip />
         <Copyright />
-      </Box>
+      </CenteredContent>
     </Container>
   )
 }
