@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactElement, ReactNode } from 'react'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Button({
   appName,
