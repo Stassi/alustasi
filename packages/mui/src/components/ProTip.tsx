@@ -3,7 +3,7 @@ import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import { LightBulbIcon } from './LightBulbIcon'
 
-export default function ProTip(): ReactElement {
+export function ProTip(): ReactElement {
   return (
     <Typography sx={{ mt: 6, mb: 3, color: 'text.secondary' }}>
       <LightBulbIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
