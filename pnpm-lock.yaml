@@ -30,9 +30,9 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@repo/next-fonts':
+      '@repo/fonts':
         specifier: workspace:*
-        version: link:../../packages/next-fonts
+        version: link:../../packages/fonts
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
@@ -119,9 +119,9 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@repo/next-fonts':
+      '@repo/fonts':
         specifier: workspace:*
-        version: link:../../packages/next-fonts
+        version: link:../../packages/fonts
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
@@ -183,6 +183,37 @@ importers:
         specifier: ^8.38.0
         version: 8.38.0(eslint@9.31.0(jiti@2.5.1))(typescript@5.8.3)
 
+  packages/fonts:
+    dependencies:
+      next:
+        specifier: ^15.4.3
+        version: 15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../config
+      '@types/node':
+        specifier: ^24.1.0
+        version: 24.1.0
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
+      eslint:
+        specifier: ^9.31.0
+        version: 9.31.0(jiti@2.5.1)
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
   packages/mui:
     dependencies:
       '@emotion/cache':
@@ -216,40 +247,9 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../config
-      '@repo/next-fonts':
+      '@repo/fonts':
         specifier: workspace:*
-        version: link:../next-fonts
-      '@types/node':
-        specifier: ^24.1.0
-        version: 24.1.0
-      '@types/react':
-        specifier: ^19.1.8
-        version: 19.1.8
-      '@types/react-dom':
-        specifier: ^19.1.6
-        version: 19.1.6(@types/react@19.1.8)
-      eslint:
-        specifier: ^9.31.0
-        version: 9.31.0(jiti@2.5.1)
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
-
-  packages/next-fonts:
-    dependencies:
-      next:
-        specifier: ^15.4.3
-        version: 15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
-    devDependencies:
-      '@repo/config':
-        specifier: workspace:*
-        version: link:../config
+        version: link:../fonts
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
