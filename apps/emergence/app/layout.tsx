@@ -3,7 +3,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
-import theme from '@repo/mui/theme'
+import { theme } from '@repo/mui/theme'
 import { ModeSwitch } from '@repo/mui/components/ModeSwitch'
 
 export default function RootLayout({
