@@ -1,7 +1,6 @@
 import { type ReactElement } from 'react'
 import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import NextLink from 'next/link'
+import { ButtonLink } from '@repo/mui/components/ButtonLink'
 import { CenteredContent } from '@repo/mui/components/CenteredContent'
 import { Copyright } from '@repo/mui/components/Copyright'
 import { PageContainer } from '@repo/mui/components/PageContainer'
@@ -14,9 +13,7 @@ export default function About(): ReactElement {
       <CenteredContent>
         <Title>Material UI - Next.js example in TypeScript</Title>
         <Box sx={{ maxWidth: 'sm' }}>
-          <Button variant="contained" component={NextLink} href="/">
-            Go to the home page
-          </Button>
+          <ButtonLink href="/">Go to the home page</ButtonLink>
         </Box>
         <ProTip />
         <Copyright />
