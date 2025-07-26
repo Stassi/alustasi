@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import theme from '@repo/mui/theme'
-import ModeSwitch from '@repo/mui/components/ModeSwitch'
+import { ModeSwitch } from '@repo/mui/components/ModeSwitch'
 
 export default function RootLayout({
   children,

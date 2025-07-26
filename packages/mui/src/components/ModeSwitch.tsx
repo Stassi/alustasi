@@ -7,7 +7,7 @@ import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 import { useColorScheme } from '@mui/material/styles'
 
-export default function ModeSwitch() {
+export function ModeSwitch() {
   const { mode, setMode } = useColorScheme()
   if (!mode) {
     return null
