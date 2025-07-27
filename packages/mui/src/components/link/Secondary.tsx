@@ -1,5 +1,5 @@
 import { type ReactElement, type ReactNode } from 'react'
-import Link from '@mui/material/Link'
+import MuiLink from '@mui/material/Link'
 import NextLink from 'next/link'
 
 export function Secondary({
@@ -10,8 +10,8 @@ export function Secondary({
   href: string
 }): ReactElement {
   return (
-    <Link color="secondary" component={NextLink} href={href}>
+    <MuiLink color="secondary" component={NextLink} href={href}>
       {children}
-    </Link>
+    </MuiLink>
   )
 }
