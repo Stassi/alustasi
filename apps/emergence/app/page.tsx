@@ -4,7 +4,7 @@ import { Copyright } from '@repo/mui/components/Copyright'
 import { PageContainer } from '@repo/mui/components/PageContainer'
 import { ProTip } from '@repo/mui/components/ProTip'
 import { Secondary as Link } from '@repo/mui/components/link/Secondary'
-import { Title } from '@repo/mui/components/Title'
+import { Title } from '@repo/mui/components/typography/Title'
 
 export default function Home(): ReactElement {
   return (
