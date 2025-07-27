@@ -24,9 +24,13 @@ export function ThemeSwitch(): ReactElement | undefined {
             }
             value={mode}
           >
-            <MenuItem value="system">System</MenuItem>
-            <MenuItem value="light">Light</MenuItem>
-            <MenuItem value="dark">Dark</MenuItem>
+            {['System', 'Light', 'Dark'].map(
+              (theme: string): ReactElement => (
+                <MenuItem key={theme} value={theme.toLowerCase()}>
+                  {theme}
+                </MenuItem>
+              ),
+            )}
           </Select>
         </FormControl>
       </AlignedRight>
