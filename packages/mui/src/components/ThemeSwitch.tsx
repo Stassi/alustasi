@@ -5,14 +5,14 @@ import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { type SelectChangeEvent } from '@mui/material/Select'
 import { useColorScheme } from '@mui/material/styles'
-import { RightAligned } from './box/RightAligned'
+import { AlignedRight } from './box/AlignedRight'
 
 export function ThemeSwitch(): ReactElement | undefined {
   const { mode, setMode } = useColorScheme()
 
   return (
     mode && (
-      <RightAligned>
+      <AlignedRight>
         <FormControl>
           <InputLabel id="mode-select-label">Theme</InputLabel>
           <Select
@@ -29,7 +29,7 @@ export function ThemeSwitch(): ReactElement | undefined {
             <MenuItem value="dark">Dark</MenuItem>
           </Select>
         </FormControl>
-      </RightAligned>
+      </AlignedRight>
     )
   )
 }

@@ -1,7 +1,7 @@
 import { type ReactElement, type ReactNode } from 'react'
 import Box from '@mui/material/Box'
 
-export function RightAligned({
+export function AlignedRight({
   children,
 }: {
   children: ReactNode
