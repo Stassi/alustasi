@@ -7,7 +7,7 @@ import Select, { type SelectChangeEvent } from '@mui/material/Select'
 import { useColorScheme } from '@mui/material/styles'
 import { RightAligned } from './box/RightAligned'
 
-export function ModeSwitch(): ReactElement | undefined {
+export function ThemeSwitch(): ReactElement | undefined {
   const { mode, setMode } = useColorScheme()
 
   return (
