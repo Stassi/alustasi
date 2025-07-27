@@ -1,5 +1,5 @@
 import { type ReactElement } from 'react'
-import { ButtonLink } from '@repo/mui/components/ButtonLink'
+import { Button as Link } from '@repo/mui/components/link/Button'
 import { Centered } from '@repo/mui/components/box/Centered'
 import { Compact } from '@repo/mui/components/box/Compact'
 import { Copyright } from '@repo/mui/components/Copyright'
@@ -13,7 +13,7 @@ export default function About(): ReactElement {
       <Centered>
         <Title>Material UI - Next.js example in TypeScript</Title>
         <Compact>
-          <ButtonLink href="/">Go to the home page</ButtonLink>
+          <Link href="/">Go to the home page</Link>
         </Compact>
         <ProTip />
         <Copyright />

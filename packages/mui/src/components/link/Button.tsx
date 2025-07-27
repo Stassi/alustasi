@@ -1,8 +1,8 @@
 import { type ReactElement, type ReactNode } from 'react'
-import Button from '@mui/material/Button'
+import MuiButton from '@mui/material/Button'
 import NextLink from 'next/link'
 
-export function ButtonLink({
+export function Button({
   children,
   href,
 }: {
@@ -10,8 +10,8 @@ export function ButtonLink({
   href: string
 }): ReactElement {
   return (
-    <Button component={NextLink} href={href} variant="contained">
+    <MuiButton component={NextLink} href={href} variant="contained">
       {children}
-    </Button>
+    </MuiButton>
   )
 }
