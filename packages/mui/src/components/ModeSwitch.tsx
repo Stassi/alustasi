@@ -1,25 +1,18 @@
 'use client'
 import { type ReactElement } from 'react'
-import Box from '@mui/material/Box'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { type SelectChangeEvent } from '@mui/material/Select'
 import { useColorScheme } from '@mui/material/styles'
+import { RightAligned } from './box/RightAligned'
 
 export function ModeSwitch(): ReactElement | undefined {
   const { mode, setMode } = useColorScheme()
 
   return (
     mode && (
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          mt: 1,
-          p: 1,
-        }}
-      >
+      <RightAligned>
         <FormControl>
           <InputLabel id="mode-select-label">Theme</InputLabel>
           <Select
@@ -36,7 +29,7 @@ export function ModeSwitch(): ReactElement | undefined {
             <MenuItem value="dark">Dark</MenuItem>
           </Select>
         </FormControl>
-      </Box>
+      </RightAligned>
     )
   )
 }
