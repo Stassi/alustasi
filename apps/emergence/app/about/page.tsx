@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react'
-import { Button as Link } from '@repo/mui/components/link/Button'
-import { Compact } from '@repo/mui/components/box/Compact'
+import { Button as Link } from '@repo/mui/components/Link/Button'
+import { Compact } from '@repo/mui/components/Box/Compact'
 import { Page } from '@repo/mui/components/Page/Page'
 
 export default function About(): ReactElement {
