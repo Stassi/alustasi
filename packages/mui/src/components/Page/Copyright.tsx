@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react'
 import MuiLink from '@mui/material/Link'
-import { Footer } from './typography/Footer'
+import { Footer } from '../typography/Footer'
 
 export function Copyright(): ReactElement {
   return (

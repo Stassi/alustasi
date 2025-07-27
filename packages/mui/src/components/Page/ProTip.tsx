@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import { LightBulb } from '../icons/LightBulb'
+import { LightBulb } from '../../icons/LightBulb'
 
 export function ProTip(): ReactElement {
   return (
