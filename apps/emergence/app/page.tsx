@@ -3,7 +3,7 @@ import { Centered } from '@repo/mui/components/box/Centered'
 import { Copyright } from '@repo/mui/components/Copyright'
 import { PageContainer } from '@repo/mui/components/PageContainer'
 import { ProTip } from '@repo/mui/components/ProTip'
-import { SecondaryLink } from '@repo/mui/components/SecondaryLink'
+import { Secondary as Link } from '@repo/mui/components/link/Secondary'
 import { Title } from '@repo/mui/components/Title'
 
 export default function Home(): ReactElement {
@@ -11,7 +11,7 @@ export default function Home(): ReactElement {
     <PageContainer>
       <Centered>
         <Title>Material UI - Next.js App Router example in TypeScript</Title>
-        <SecondaryLink href="/about">Go to the about page</SecondaryLink>
+        <Link href="/about">Go to the about page</Link>
         <ProTip />
         <Copyright />
       </Centered>

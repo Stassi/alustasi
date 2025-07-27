@@ -2,7 +2,7 @@ import { type ReactElement, type ReactNode } from 'react'
 import Link from '@mui/material/Link'
 import NextLink from 'next/link'
 
-export function SecondaryLink({
+export function Secondary({
   children,
   href,
 }: {
