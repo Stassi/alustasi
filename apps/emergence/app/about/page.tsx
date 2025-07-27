@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react'
 import Box from '@mui/material/Box'
 import { ButtonLink } from '@repo/mui/components/ButtonLink'
-import { CenteredContent } from '@repo/mui/components/CenteredContent'
+import { CenteredContent } from '@repo/mui/components/box/CenteredContent'
 import { Copyright } from '@repo/mui/components/Copyright'
 import { PageContainer } from '@repo/mui/components/PageContainer'
 import { ProTip } from '@repo/mui/components/ProTip'
