@@ -1,7 +1,7 @@
 import { type ReactElement, type ReactNode } from 'react'
 import Container from '@mui/material/Container'
 
-export function PageContainer({
+export function RootContainer({
   children,
 }: {
   children: ReactNode

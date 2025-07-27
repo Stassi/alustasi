@@ -3,13 +3,13 @@ import { AlignedCenter } from '@repo/mui/components/box/AlignedCenter'
 import { Button as Link } from '@repo/mui/components/link/Button'
 import { Compact } from '@repo/mui/components/box/Compact'
 import { Copyright } from '@repo/mui/components/Copyright'
-import { PageContainer } from '@repo/mui/components/PageContainer'
 import { ProTip } from '@repo/mui/components/ProTip'
+import { RootContainer } from '@repo/mui/components/RootContainer'
 import { Title } from '@repo/mui/components/typography/Title'
 
 export default function About(): ReactElement {
   return (
-    <PageContainer>
+    <RootContainer>
       <AlignedCenter>
         <Title>Material UI - Next.js example in TypeScript</Title>
         <Compact>
@@ -18,6 +18,6 @@ export default function About(): ReactElement {
         <ProTip />
         <Copyright />
       </AlignedCenter>
-    </PageContainer>
+    </RootContainer>
   )
 }
