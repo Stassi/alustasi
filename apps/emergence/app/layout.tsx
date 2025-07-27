@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import { theme } from '@repo/mui/theme'
-import { ThemeSwitch } from '@repo/mui/components/ThemeSwitch'
+import { ModeSwitch } from '@repo/mui/components/ModeSwitch'
 
 export default function RootLayout({
   children,
@@ -18,7 +18,7 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <ThemeSwitch />
+            <ModeSwitch />
             {children}
           </ThemeProvider>
         </AppRouterCacheProvider>
