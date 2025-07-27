@@ -1,21 +1,15 @@
 import { type ReactElement } from 'react'
-import Typography from '@mui/material/Typography'
 import MuiLink from '@mui/material/Link'
+import { Footer } from './typography/Footer'
 
 export function Copyright(): ReactElement {
   return (
-    <Typography
-      variant="body2"
-      align="center"
-      sx={{
-        color: 'text.secondary',
-      }}
-    >
+    <Footer>
       {'Copyright © '}
       <MuiLink color="inherit" href="https://mui.com/">
         Your Website
       </MuiLink>{' '}
       {new Date().getFullYear()}.
-    </Typography>
+    </Footer>
   )
 }
