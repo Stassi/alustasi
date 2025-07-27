@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react'
-import { Button as Link } from '@repo/mui/components/link/Button'
 import { AlignedCenter } from '@repo/mui/components/box/AlignedCenter'
+import { Button as Link } from '@repo/mui/components/link/Button'
 import { Compact } from '@repo/mui/components/box/Compact'
 import { Copyright } from '@repo/mui/components/Copyright'
 import { PageContainer } from '@repo/mui/components/PageContainer'
