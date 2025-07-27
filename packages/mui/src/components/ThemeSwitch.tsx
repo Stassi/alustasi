@@ -25,9 +25,9 @@ export function ThemeSwitch(): ReactElement | undefined {
             value={mode}
           >
             {['System', 'Light', 'Dark'].map(
-              (theme: string): ReactElement => (
-                <MenuItem key={theme} value={theme.toLowerCase()}>
-                  {theme}
+              (modeName: string): ReactElement => (
+                <MenuItem key={modeName} value={modeName.toLowerCase()}>
+                  {modeName}
                 </MenuItem>
               ),
             )}
