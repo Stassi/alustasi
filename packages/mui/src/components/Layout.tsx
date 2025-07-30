@@ -2,23 +2,35 @@
 import { type ReactElement, type ReactNode } from 'react'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import {
+  createTheme,
+  ThemeProvider,
   type CssVarsThemeOptions,
   type Theme,
   type ThemeProviderProps,
 } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
-import { ThemeProvider } from '@mui/material/styles'
-import { theme } from '../theme'
 
 export function Layout({
   children,
-  colorSchemeSelector = 'class',
   defaultMode = 'system',
+  theme,
+  theme: {
+    cssVariables: { colorSchemeSelector },
+  },
 }: {
   children: ReactNode
-  colorSchemeSelector?: CssVarsThemeOptions['colorSchemeSelector']
   defaultMode?: ThemeProviderProps<Theme>['defaultMode']
+  theme: Parameters<typeof createTheme>[0] & {
+    cssVariables: Pick<
+      CssVarsThemeOptions,
+      | 'colorSchemeSelector'
+      | 'cssVarPrefix'
+      | 'disableCssColorScheme'
+      | 'rootSelector'
+      | 'shouldSkipGeneratingVar'
+    >
+  }
 }): ReactElement {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -28,10 +40,7 @@ export function Layout({
           defaultMode={defaultMode}
         />
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider
-            defaultMode={defaultMode}
-            theme={theme({ colorSchemeSelector })}
-          >
+          <ThemeProvider defaultMode={defaultMode} theme={createTheme(theme)}>
             <CssBaseline />
             {children}
           </ThemeProvider>

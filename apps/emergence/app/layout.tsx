@@ -1,6 +1,7 @@
 import { type ReactElement, type ReactNode } from 'react'
 import { Layout } from '@repo/mui/components/Layout'
 import { ModeSwitch } from '@repo/mui/components/ModeSwitch'
+import { roboto } from '@repo/fonts/roboto'
 
 export default function RootLayout({
   children,
@@ -8,7 +9,33 @@ export default function RootLayout({
   children: ReactNode
 }): ReactElement {
   return (
-    <Layout>
+    <Layout
+      theme={{
+        colorSchemes: { light: true, dark: true },
+        components: {
+          MuiAlert: {
+            styleOverrides: {
+              root: {
+                variants: [
+                  {
+                    props: { severity: 'info' },
+                    style: {
+                      backgroundColor: '#60a5fa',
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        },
+        cssVariables: {
+          colorSchemeSelector: 'class',
+        },
+        typography: {
+          fontFamily: roboto.style.fontFamily,
+        },
+      }}
+    >
       <ModeSwitch />
       {children}
     </Layout>
