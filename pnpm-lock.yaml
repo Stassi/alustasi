@@ -85,6 +85,9 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@repo/fonts':
+        specifier: workspace:*
+        version: link:../../packages/fonts
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
