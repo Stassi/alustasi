@@ -5,6 +5,7 @@ import {
   type ConfigArray,
 } from 'typescript-eslint'
 import { ignores } from './ignores.js'
+import { importConfig } from './import.js'
 import { json } from './json.js'
 import { onlyWarn } from './onlyWarn.js'
 import { prettier } from './prettier.js'
@@ -16,6 +17,7 @@ export const base: ConfigArray = config([
   ...json,
   ...turbo,
   ...onlyWarn,
+  ...importConfig,
   ...ignores,
   ...prettier,
 ])
