@@ -1,19 +1,16 @@
 import { configs as jsConfigs } from '@eslint/js'
-import {
-  config,
-  configs as tsConfigs,
-  type ConfigArray,
-} from 'typescript-eslint'
+import { config, type ConfigArray } from 'typescript-eslint'
 import { ignores } from './ignores.js'
 import { importConfig } from './import.js'
 import { json } from './json.js'
 import { onlyWarn } from './onlyWarn.js'
 import { prettier } from './prettier.js'
 import { turbo } from './turbo.js'
+import { typeScript } from './typeScript.js'
 
 export const base: ConfigArray = config([
   jsConfigs.recommended,
-  ...tsConfigs.recommended,
+  ...typeScript,
   ...json,
   ...turbo,
   ...onlyWarn,
