@@ -28,7 +28,7 @@
   "devDependencies": {
     "turbo": "^2.5.5"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": "^20.19.4 || ^22.17.1",
     "npm": "^11.4.2"
