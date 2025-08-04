@@ -6,7 +6,7 @@ import { type ESLintPlugin } from './turbo.js'
 export const onlyWarn: ConfigArray = config([
   {
     plugins: {
-      onlyWarn: <ESLintPlugin>onlyWarnPlugin,
+      onlyWarn: onlyWarnPlugin as ESLintPlugin,
     },
   },
 ])
