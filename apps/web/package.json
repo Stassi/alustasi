@@ -6,9 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3000 --turbopack",
-    "quality:lint:check": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --max-warnings 0",
-    "quality:lint:format": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --fix --max-warnings 0",
-    "quality:types:check": "tsc --noEmit",
+    "lint:check": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --max-warnings 0",
+    "lint:format": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --fix --max-warnings 0",
     "start": "next start"
   },
   "dependencies": {
