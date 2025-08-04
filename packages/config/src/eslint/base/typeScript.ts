@@ -5,11 +5,14 @@ import {
 } from 'typescript-eslint'
 
 export const typeScript: ConfigArray = config([
-  ...tsConfigs.recommended,
   {
-    files: ['**/*.json'],
-    rules: {
-      '@typescript-eslint/no-unused-expressions': 'off',
+    extends: [tsConfigs.strictTypeChecked, tsConfigs.stylisticTypeChecked],
+    ignores: ['**/*.json'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: '.',
+      },
     },
   },
 ])

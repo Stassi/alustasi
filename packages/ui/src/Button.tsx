@@ -14,7 +14,9 @@ export function Button({
   return (
     <button
       className={className}
-      onClick={(): void => alert(`Hello from your ${appName} app!`)}
+      onClick={(): void => {
+        alert(`Hello from your ${appName} app!`)
+      }}
     >
       {children}
     </button>
