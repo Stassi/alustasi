@@ -19,9 +19,9 @@ export function ModeSwitch(): ReactElement | undefined {
             id="mode-select"
             label="Theme"
             labelId="mode-select-label"
-            onChange={({ target: { value } }: SelectChangeEvent): void =>
+            onChange={({ target: { value } }: SelectChangeEvent): void => {
               setMode(value as typeof mode)
-            }
+            }}
             value={mode}
           >
             {['System', 'Light', 'Dark'].map(
