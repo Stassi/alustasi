@@ -19,10 +19,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "quality:all:check": "turbo run quality:lint:check quality:types:check",
-    "quality:lint:check": "turbo run quality:lint:check",
-    "quality:lint:format": "turbo run quality:lint:format",
-    "quality:types:check": "turbo run quality:types:check",
+    "lint:check": "turbo run lint:check",
+    "lint:format": "turbo run lint:format",
     "turbo:daemon:reload": "turbo daemon clean"
   },
   "devDependencies": {

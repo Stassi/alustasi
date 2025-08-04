@@ -12,9 +12,8 @@
     "./typescript/react.json": "./src/typescript/react.json"
   },
   "scripts": {
-    "quality:lint:check": "eslint . --max-warnings 0",
-    "quality:lint:format": "eslint . --fix --max-warnings 0",
-    "quality:types:check": "tsc --noEmit"
+    "lint:check": "eslint . --max-warnings 0",
+    "lint:format": "eslint . --fix --max-warnings 0"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

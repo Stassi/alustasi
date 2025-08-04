@@ -9,9 +9,8 @@
     "./roboto": "./src/roboto.ts"
   },
   "scripts": {
-    "quality:lint:check": "eslint . --max-warnings 0",
-    "quality:lint:format": "eslint . --fix --max-warnings 0",
-    "quality:types:check": "tsc --noEmit",
+    "lint:check": "eslint . --max-warnings 0",
+    "lint:format": "eslint . --fix --max-warnings 0",
     "react:component:generate": "turbo gen react-component"
   },
   "dependencies": {
