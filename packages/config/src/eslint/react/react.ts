@@ -8,7 +8,7 @@ const defaultRecommended = {
     languageOptions: {},
   },
   {
-    flat: { recommended = defaultRecommended },
+    flat: { 'jsx-runtime': jsxRuntime = {}, recommended = defaultRecommended },
   } = configs,
   { languageOptions }: ReactFlatConfig | typeof defaultRecommended = recommended
 
@@ -16,6 +16,7 @@ function config(browserGlobals: boolean): ConfigArray {
   return tseslintConfig([
     ...base,
     recommended,
+    jsxRuntime,
     {
       languageOptions: {
         ...languageOptions,

@@ -8,9 +8,6 @@ export const hooks: ConfigArray = config([
       'react-hooks': hooksPlugin,
     },
     settings: { react: { version: 'detect' } },
-    rules: {
-      ...configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-    },
+    rules: configs.recommended.rules,
   },
 ])
