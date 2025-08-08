@@ -1,6 +1,6 @@
-import { type ReactElement, type ReactNode } from 'react'
 import MuiLink from '@mui/material/Link'
 import NextLink from 'next/link'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Secondary({
   children,

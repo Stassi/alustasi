@@ -1,7 +1,7 @@
+import parser from '@typescript-eslint/parser'
+import { importX } from 'eslint-plugin-import-x'
 import { config } from 'typescript-eslint'
 import { type ConfigArray } from 'typescript-eslint'
-import { importX } from 'eslint-plugin-import-x'
-import parser from '@typescript-eslint/parser'
 
 export const importConfig: ConfigArray = config([
   importX.flatConfigs.recommended,

@@ -1,5 +1,5 @@
-import { config, type ConfigArray } from 'typescript-eslint'
 import nextPlugin, { configs } from '@next/eslint-plugin-next'
+import { config, type ConfigArray } from 'typescript-eslint'
 import { reactWithoutBrowserGlobals } from './react/react.js'
 
 export const next: ConfigArray = config([

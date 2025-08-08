@@ -1,5 +1,5 @@
-import { Roboto } from 'next/font/google'
 import { type NextFont } from 'next/dist/compiled/@next/font'
+import { Roboto } from 'next/font/google'
 
 export const roboto: NextFont = Roboto({
   display: 'swap',

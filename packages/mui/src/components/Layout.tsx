@@ -1,15 +1,15 @@
 'use client'
-import { type ReactElement, type ReactNode } from 'react'
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import CssBaseline from '@mui/material/CssBaseline'
+import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import {
-  createTheme,
   ThemeProvider,
+  createTheme,
   type CssVarsThemeOptions,
   type Theme,
   type ThemeProviderProps,
 } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Layout({
   children,

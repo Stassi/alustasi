@@ -1,6 +1,6 @@
-import { type ReactElement } from 'react'
-import { Page } from '@repo/mui/components/Page/Page'
 import { Secondary as Link } from '@repo/mui/components/Link/Secondary'
+import { Page } from '@repo/mui/components/Page/Page'
+import { type ReactElement } from 'react'
 
 export default function Home(): ReactElement {
   return (

@@ -1,5 +1,5 @@
-import { type ReactElement, type ReactNode } from 'react'
 import Typography from '@mui/material/Typography'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Title({ children }: { children: ReactNode }): ReactElement {
   return (

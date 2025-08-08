@@ -1,5 +1,5 @@
-import { type ReactElement } from 'react'
 import Image, { type ImageProps } from 'next/image'
+import { type ReactElement } from 'react'
 
 export function ThemeImage({
   srcDark,

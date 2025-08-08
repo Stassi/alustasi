@@ -1,7 +1,7 @@
-import { type ReactElement, type ReactNode } from 'react'
+import { roboto } from '@repo/fonts/roboto'
 import { Layout } from '@repo/mui/components/Layout'
 import { ModeSwitch } from '@repo/mui/components/ModeSwitch'
-import { roboto } from '@repo/fonts/roboto'
+import { type ReactElement, type ReactNode } from 'react'
 
 export default function RootLayout({
   children,
