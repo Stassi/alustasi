@@ -12,6 +12,13 @@ export const importConfig: ConfigArray = config([
     },
     rules: {
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/order': [
+        'error',
+        {
+          alphabetize: { order: 'asc' },
+          named: { enabled: true, types: 'types-last' },
+        },
+      ],
     },
   },
 ])
