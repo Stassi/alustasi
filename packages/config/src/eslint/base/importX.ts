@@ -16,6 +16,7 @@ export const importX: ConfigArray = config([
     },
     rules: {
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
       'import-x/order': [
         'error',
         {
