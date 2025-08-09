@@ -3,6 +3,8 @@ import prettierPluginRecommended from 'eslint-plugin-prettier/recommended'
 import { config, type ConfigArray } from 'typescript-eslint'
 
 export const prettier: ConfigArray = config([
+  prettierConfig,
+  prettierPluginRecommended,
   {
     rules: {
       'prettier/prettier': [
@@ -19,6 +21,4 @@ export const prettier: ConfigArray = config([
       ],
     },
   },
-  prettierConfig,
-  prettierPluginRecommended,
 ])
