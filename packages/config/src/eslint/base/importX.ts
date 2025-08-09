@@ -3,9 +3,13 @@ import { importX as importXPlugin } from 'eslint-plugin-import-x'
 import { config } from 'typescript-eslint'
 import { type ConfigArray } from 'typescript-eslint'
 
+const {
+  flatConfigs: { recommended, typescript },
+} = importXPlugin
+
 export const importX: ConfigArray = config([
-  importXPlugin.flatConfigs.recommended,
-  importXPlugin.flatConfigs.typescript,
+  recommended,
+  typescript,
   {
     languageOptions: {
       parser,
