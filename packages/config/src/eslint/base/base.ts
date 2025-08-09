@@ -1,5 +1,5 @@
 import { config, type ConfigArray } from 'typescript-eslint'
-import { ignores } from './ignores.js'
+import { globalIgnores } from './globalIgnores.js'
 import { javaScript } from './javaScript.js'
 import { json } from './json.js'
 import { noUnsanitized } from './noUnsanitized.js'
@@ -15,6 +15,6 @@ export const base: ConfigArray = config([
   ...json,
   ...turbo,
   ...onlyWarn,
-  ...ignores,
+  ...globalIgnores,
   ...prettier,
 ])
