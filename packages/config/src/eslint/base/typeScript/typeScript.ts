@@ -13,6 +13,9 @@ export const typeScript: ConfigArray = config([
         tsconfigRootDir: '.',
       },
     },
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    },
   },
   ...importX,
 ])
