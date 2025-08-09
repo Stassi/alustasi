@@ -1,7 +1,6 @@
 import parser from '@typescript-eslint/parser'
 import { importX as importXPlugin } from 'eslint-plugin-import-x'
-import { config } from 'typescript-eslint'
-import { type ConfigArray } from 'typescript-eslint'
+import { config, type ConfigArray } from 'typescript-eslint'
 
 const {
   flatConfigs: { recommended, typescript },
@@ -16,6 +15,7 @@ export const importX: ConfigArray = config([
     },
     rules: {
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
       'import-x/order': [
         'error',
         {
