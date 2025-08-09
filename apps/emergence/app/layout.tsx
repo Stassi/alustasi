@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <Layout
       theme={{
-        colorSchemes: { light: true, dark: true },
+        colorSchemes: { dark: true, light: true },
         components: {
           MuiAlert: {
             styleOverrides: {

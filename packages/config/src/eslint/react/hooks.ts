@@ -7,7 +7,7 @@ export const hooks: ConfigArray = config([
     plugins: {
       'react-hooks': hooksPlugin,
     },
-    settings: { react: { version: 'detect' } },
     rules: configs.recommended.rules,
+    settings: { react: { version: 'detect' } },
   },
 ])
