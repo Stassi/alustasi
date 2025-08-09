@@ -3,6 +3,7 @@ import {
   configs as tsConfigs,
   type ConfigArray,
 } from 'typescript-eslint'
+import { importX } from './importX.js'
 
 export const typeScript: ConfigArray = config([
   {
@@ -15,4 +16,5 @@ export const typeScript: ConfigArray = config([
       },
     },
   },
+  ...importX,
 ])
