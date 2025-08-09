@@ -1,11 +1,11 @@
 import parser from '@typescript-eslint/parser'
-import { importX } from 'eslint-plugin-import-x'
+import { importX as importXPlugin } from 'eslint-plugin-import-x'
 import { config } from 'typescript-eslint'
 import { type ConfigArray } from 'typescript-eslint'
 
-export const importConfig: ConfigArray = config([
-  importX.flatConfigs.recommended,
-  importX.flatConfigs.typescript,
+export const importX: ConfigArray = config([
+  importXPlugin.flatConfigs.recommended,
+  importXPlugin.flatConfigs.typescript,
   {
     languageOptions: {
       parser,
