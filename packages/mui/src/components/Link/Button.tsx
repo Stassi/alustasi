@@ -1,6 +1,6 @@
-import { type ReactElement, type ReactNode } from 'react'
 import MuiButton from '@mui/material/Button'
 import NextLink from 'next/link'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function Button({
   children,

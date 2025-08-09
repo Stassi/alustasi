@@ -1,5 +1,5 @@
-import { type ReactElement, type ReactNode } from 'react'
 import Box from '@mui/material/Box'
+import { type ReactElement, type ReactNode } from 'react'
 
 export function AlignedCenter({
   children,

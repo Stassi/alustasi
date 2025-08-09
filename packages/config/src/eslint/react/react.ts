@@ -1,6 +1,6 @@
-import { config as tseslintConfig, type ConfigArray } from 'typescript-eslint'
 import { configs, type ReactFlatConfig } from 'eslint-plugin-react'
 import { browser, serviceworker } from 'globals'
+import { config as tseslintConfig, type ConfigArray } from 'typescript-eslint'
 import { base } from '../base/base.js'
 import { hooks } from './hooks.js'
 

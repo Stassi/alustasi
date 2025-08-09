@@ -1,9 +1,9 @@
 import { type ReactElement, type ReactNode } from 'react'
 import { AlignedCenter } from '../Box/AlignedCenter'
+import { Title } from '../Typography/Title'
 import { Copyright } from './Copyright'
 import { ProTip } from './ProTip'
 import { RootContainer } from './RootContainer'
-import { Title } from '../Typography/Title'
 
 export function Page({
   children,
