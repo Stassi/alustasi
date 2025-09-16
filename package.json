@@ -21,7 +21,8 @@
     "dev": "turbo run dev",
     "lint:check": "turbo run lint:check",
     "lint:format": "turbo run lint:format",
-    "turbo:daemon:reload": "turbo daemon clean"
+    "turbo:daemon:reload": "turbo daemon clean",
+    "types:generate": "turbo run types:generate"
   },
   "devDependencies": {
     "turbo": "^2.5.5"
