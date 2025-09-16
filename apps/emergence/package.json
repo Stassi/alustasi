@@ -8,7 +8,8 @@
     "dev": "next dev --port 9000 --turbopack",
     "lint:check": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --max-warnings 0",
     "lint:format": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --fix --max-warnings 0",
-    "start": "next start"
+    "start": "next start",
+    "types:generate": "next typegen"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -18,7 +19,7 @@
     "@mui/material": "^7.3.1",
     "@mui/material-nextjs": "^7.3.0",
     "@repo/mui": "workspace:*",
-    "next": "^15.4.6",
+    "next": "^15.5.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
