@@ -14,7 +14,6 @@ export const typeScript = defineConfig([
     },
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-      '@typescript-eslint/no-deprecated': 'off',
     },
   },
   ...importX,
