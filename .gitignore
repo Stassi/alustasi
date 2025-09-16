@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 ### Node template
 # Logs
 logs
@@ -160,3 +162,26 @@ $RECYCLE.BIN/
 
 ### Turborepo
 .turbo
+
+
+### Workspaces
+
+#### Dependencies
+.pnp
+.pnp.js
+
+#### Production
+build
+
+#### Misc
+.DS_Store
+*.pem
+
+#### env files
+.env*
+
+#### Vercel
+.vercel
+
+#### TypeScript
+next-env.d.ts

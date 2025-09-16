@@ -27,6 +27,11 @@
       "dependsOn": [
         "^lint:format"
       ]
+    },
+    "types:generate": {
+      "dependsOn": [
+        "^types:generate"
+      ]
     }
   },
   "ui": "tui"
