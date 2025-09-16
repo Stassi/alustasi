@@ -1,14 +1,15 @@
 import parser from '@typescript-eslint/parser'
+import { defineConfig } from 'eslint/config'
 import { importX as importXPlugin } from 'eslint-plugin-import-x'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { type Config } from '../base.js'
 
 const {
   flatConfigs: { recommended, typescript },
 } = importXPlugin
 
-export const importX: ConfigArray = config([
-  recommended,
-  typescript,
+export const importX = defineConfig([
+  recommended as Config,
+  typescript as Config,
   {
     languageOptions: {
       parser,
@@ -25,4 +26,4 @@ export const importX: ConfigArray = config([
       ],
     },
   },
-])
+]) satisfies Config[]

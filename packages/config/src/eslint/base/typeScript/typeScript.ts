@@ -1,9 +1,11 @@
-import { config, configs, type ConfigArray } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
+import { configs } from 'typescript-eslint'
+import { type Config } from '../base.js'
 import { importX } from './importX.js'
 
 const { strictTypeChecked, stylisticTypeChecked } = configs
 
-export const typeScript: ConfigArray = config([
+export const typeScript = defineConfig([
   {
     extends: [strictTypeChecked, stylisticTypeChecked],
     ignores: ['**/*.json'],
@@ -15,4 +17,4 @@ export const typeScript: ConfigArray = config([
     },
   },
   ...importX,
-])
+]) satisfies Config[]
