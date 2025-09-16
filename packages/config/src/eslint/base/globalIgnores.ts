@@ -1,6 +1,8 @@
-import { globalIgnores as globalIgnoresHelper } from 'eslint/config'
+import { resolve } from 'node:path'
+import { cwd } from 'node:process'
+import { includeIgnoreFile } from '@eslint/compat'
 import { config, type ConfigArray } from 'typescript-eslint'
 
 export const globalIgnores: ConfigArray = config([
-  globalIgnoresHelper(['.next/**', '.turbo/**', 'dist/**', 'node_modules/**']),
+  includeIgnoreFile(resolve(cwd(), '../../.gitignore')),
 ])
