@@ -6,8 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3001 --turbopack",
-    "lint:check": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --max-warnings 0",
-    "lint:format": "next lint --dir . --ext .js,.jsx,.ts,.tsx,.json --fix --max-warnings 0",
+    "lint:check": "eslint . --max-warnings 0",
+    "lint:format": "eslint . --fix --max-warnings 0",
     "start": "next start",
     "types:generate": "next typegen"
   },
