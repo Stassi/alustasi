@@ -1,18 +1,20 @@
 import nextPlugin, { configs } from '@next/eslint-plugin-next'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { type ESLint, type Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
+import { type Config } from './base/base.js'
 import { reactWithoutBrowserGlobals } from './react/react.js'
 
-export const next: ConfigArray = config([
-  // @ts-expect-error -- `rules` are presumed valid
+type Rules = Partial<Linter.RulesRecord>
+
+export const next = defineConfig([
   ...reactWithoutBrowserGlobals,
   {
     plugins: {
-      '@next/next': nextPlugin,
+      '@next/next': nextPlugin as ESLint.Plugin,
     },
-    // @ts-expect-error -- `rules` are presumed valid
     rules: {
-      ...configs.recommended.rules,
-      ...configs['core-web-vitals'].rules,
+      ...(configs.recommended.rules as Rules),
+      ...(configs['core-web-vitals'].rules as Rules),
     },
   },
-])
+]) satisfies Config[]

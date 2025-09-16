@@ -1,9 +1,10 @@
+import { defineConfig } from 'eslint/config'
 import turboPlugin from 'eslint-plugin-turbo'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { type Config } from './base.js'
 
 export type ESLintPlugin = typeof turboPlugin
 
-export const turbo: ConfigArray = config([
+export const turbo = defineConfig([
   {
     plugins: {
       turbo: turboPlugin,
@@ -12,4 +13,4 @@ export const turbo: ConfigArray = config([
       'turbo/no-undeclared-env-vars': 'warn',
     },
   },
-])
+]) satisfies Config[]

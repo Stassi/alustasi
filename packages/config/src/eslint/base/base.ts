@@ -1,4 +1,5 @@
-import { config, type ConfigArray } from 'typescript-eslint'
+import { type Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
 import { globalIgnores } from './globalIgnores.js'
 import { javaScript } from './javaScript.js'
 import { json } from './json.js'
@@ -8,7 +9,9 @@ import { prettier } from './prettier.js'
 import { turbo } from './turbo.js'
 import { typeScript } from './typeScript/typeScript.js'
 
-export const base: ConfigArray = config([
+export type Config = Linter.Config
+
+export const base = defineConfig([
   ...javaScript,
   ...typeScript,
   ...noUnsanitized,
@@ -17,4 +20,4 @@ export const base: ConfigArray = config([
   ...onlyWarn,
   ...globalIgnores,
   ...prettier,
-])
+]) satisfies Config[]
