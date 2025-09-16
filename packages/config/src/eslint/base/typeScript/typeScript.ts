@@ -8,10 +8,7 @@ export const typeScript: ConfigArray = config([
     extends: [strictTypeChecked, stylisticTypeChecked],
     ignores: ['**/*.json'],
     languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: '.',
-      },
+      parserOptions: { projectService: true },
     },
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
