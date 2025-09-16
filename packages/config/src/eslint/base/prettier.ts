@@ -1,8 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import prettierConfig from 'eslint-config-prettier'
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { type Config } from './base.js'
 
-export const prettier: ConfigArray = config([
+export const prettier = defineConfig([
   prettierConfig,
   prettierPluginRecommended,
   {
@@ -21,4 +22,4 @@ export const prettier: ConfigArray = config([
       ],
     },
   },
-])
+]) satisfies Config[]

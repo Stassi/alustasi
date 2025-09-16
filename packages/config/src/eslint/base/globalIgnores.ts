@@ -1,8 +1,9 @@
 import { resolve } from 'node:path'
 import { cwd } from 'node:process'
 import { includeIgnoreFile } from '@eslint/compat'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
+import { type Config } from './base.js'
 
-export const globalIgnores: ConfigArray = config([
+export const globalIgnores = defineConfig([
   includeIgnoreFile(resolve(cwd(), '../../.gitignore')),
-])
+]) satisfies Config[]

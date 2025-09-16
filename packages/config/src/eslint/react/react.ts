@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import { configs, type ReactFlatConfig } from 'eslint-plugin-react'
 import { browser, serviceworker } from 'globals'
-import { config as tseslintConfig, type ConfigArray } from 'typescript-eslint'
-import { base } from '../base/base.js'
+import { base, type Config } from '../base/base.js'
 import { hooks } from './hooks.js'
 
 const defaultRecommended = {
@@ -12,8 +12,8 @@ const defaultRecommended = {
   } = configs,
   { languageOptions }: ReactFlatConfig | typeof defaultRecommended = recommended
 
-function config(browserGlobals: boolean): ConfigArray {
-  return tseslintConfig([
+function config(browserGlobals: boolean): Config[] {
+  return defineConfig([
     ...base,
     recommended,
     jsxRuntime,
@@ -27,8 +27,8 @@ function config(browserGlobals: boolean): ConfigArray {
       },
     },
     ...hooks,
-  ])
+  ]) satisfies Config[]
 }
 
-export const react: ConfigArray = config(true)
-export const reactWithoutBrowserGlobals: ConfigArray = config(false)
+export const react: Config[] = config(true)
+export const reactWithoutBrowserGlobals: Config[] = config(false)

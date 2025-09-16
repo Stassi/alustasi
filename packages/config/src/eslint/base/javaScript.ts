@@ -1,7 +1,8 @@
 import { configs as jsConfigs } from '@eslint/js'
-import { config, type ConfigArray } from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
+import { type Config } from './base.js'
 
-export const javaScript: ConfigArray = config([
+export const javaScript = defineConfig([
   jsConfigs.recommended,
   {
     ignores: ['**/*.json'],
@@ -9,4 +10,4 @@ export const javaScript: ConfigArray = config([
       'sort-keys': ['error', 'asc'],
     },
   },
-])
+]) satisfies Config[]
