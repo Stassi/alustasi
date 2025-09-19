@@ -1,18 +1,18 @@
 {
-  "name": "@stassi/emergence",
+  "name": "@stassi/alustasi",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Elementary cellular automata.",
+  "description": "Integrated front-end platform.",
   "keywords": [
-    "eca",
-    "elementary cellular automata",
-    "generative systems"
+    "front-end",
+    "monorepo",
+    "platform"
   ],
-  "homepage": "https://github.com/Stassi/emergence#readme",
+  "homepage": "https://github.com/Stassi/alustasi#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stassi/emergence.git"
+    "url": "git+https://github.com/Stassi/alustasi.git"
   },
   "license": "ISC",
   "author": "Andreas Stassivik <andreas@stassi.net>",
