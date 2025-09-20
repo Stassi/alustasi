@@ -10,6 +10,7 @@ import { turbo } from './turbo.js'
 import { typeScript } from './typeScript/typeScript.js'
 
 export type Config = Linter.Config
+export type Rules = Linter.RulesRecord
 export type Plugin = ESLint.Plugin
 
 export const base = defineConfig([
