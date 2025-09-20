@@ -17,13 +17,6 @@ export const importX = defineConfig([
     rules: {
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
-      'import-x/order': [
-        'error',
-        {
-          alphabetize: { order: 'asc' },
-          named: { enabled: true, types: 'types-last' },
-        },
-      ],
     },
   },
 ]) satisfies Config[]
