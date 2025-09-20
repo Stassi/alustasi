@@ -1,18 +1,24 @@
 {
-  "name": "docs",
+  "name": "demo-mui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "next build",
-    "dev": "next dev --port 3001 --turbopack",
+    "dev": "next dev --port 9000 --turbopack",
     "lint:check": "eslint . --max-warnings 0",
     "lint:format": "eslint . --fix --max-warnings 0",
     "start": "next start",
     "types:generate": "next typegen"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
+    "@mui/material-nextjs": "^7.3.2",
+    "@repo/mui": "workspace:*",
     "next": "^15.5.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"

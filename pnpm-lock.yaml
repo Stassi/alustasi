@@ -12,7 +12,44 @@ importers:
         specifier: ^2.5.6
         version: 2.5.6
 
-  apps/alustasi:
+  apps/demo-basic:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      next:
+        specifier: ^15.5.3
+        version: 15.5.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react:
+        specifier: ^19.1.1
+        version: 19.1.1
+      react-dom:
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
+    devDependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@repo/fonts':
+        specifier: workspace:*
+        version: link:../../packages/fonts
+      '@types/node':
+        specifier: ^24.5.2
+        version: 24.5.2
+      '@types/react':
+        specifier: ^19.1.13
+        version: 19.1.13
+      '@types/react-dom':
+        specifier: ^19.1.9
+        version: 19.1.9(@types/react@19.1.13)
+      eslint:
+        specifier: ^9.36.0
+        version: 9.36.0(jiti@2.5.1)
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  apps/demo-mui:
     dependencies:
       '@emotion/cache':
         specifier: ^11.14.0
@@ -35,80 +72,6 @@ importers:
       '@repo/mui':
         specifier: workspace:*
         version: link:../../packages/mui
-      next:
-        specifier: ^15.5.3
-        version: 15.5.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      react:
-        specifier: ^19.1.1
-        version: 19.1.1
-      react-dom:
-        specifier: ^19.1.1
-        version: 19.1.1(react@19.1.1)
-    devDependencies:
-      '@repo/config':
-        specifier: workspace:*
-        version: link:../../packages/config
-      '@repo/fonts':
-        specifier: workspace:*
-        version: link:../../packages/fonts
-      '@types/node':
-        specifier: ^24.5.2
-        version: 24.5.2
-      '@types/react':
-        specifier: ^19.1.13
-        version: 19.1.13
-      '@types/react-dom':
-        specifier: ^19.1.9
-        version: 19.1.9(@types/react@19.1.13)
-      eslint:
-        specifier: ^9.36.0
-        version: 9.36.0(jiti@2.5.1)
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
-
-  apps/docs:
-    dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      next:
-        specifier: ^15.5.3
-        version: 15.5.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      react:
-        specifier: ^19.1.1
-        version: 19.1.1
-      react-dom:
-        specifier: ^19.1.1
-        version: 19.1.1(react@19.1.1)
-    devDependencies:
-      '@repo/config':
-        specifier: workspace:*
-        version: link:../../packages/config
-      '@repo/fonts':
-        specifier: workspace:*
-        version: link:../../packages/fonts
-      '@types/node':
-        specifier: ^24.5.2
-        version: 24.5.2
-      '@types/react':
-        specifier: ^19.1.13
-        version: 19.1.13
-      '@types/react-dom':
-        specifier: ^19.1.9
-        version: 19.1.9(@types/react@19.1.13)
-      eslint:
-        specifier: ^9.36.0
-        version: 9.36.0(jiti@2.5.1)
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
-
-  apps/web:
-    dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       next:
         specifier: ^15.5.3
         version: 15.5.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
