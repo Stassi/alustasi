@@ -5,6 +5,7 @@ import { javaScript } from './javaScript.js'
 import { json } from './json.js'
 import { noUnsanitized } from './noUnsanitized.js'
 import { onlyWarn } from './onlyWarn.js'
+import { perfectionist } from './perfectionist.js'
 import { prettier } from './prettier.js'
 import { turbo } from './turbo.js'
 import { typeScript } from './typeScript/typeScript.js'
@@ -19,6 +20,7 @@ export const base = defineConfig([
   ...noUnsanitized,
   ...json,
   ...turbo,
+  ...perfectionist,
   ...onlyWarn,
   ...globalIgnores,
   ...prettier,
