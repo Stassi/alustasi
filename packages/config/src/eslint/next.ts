@@ -1,7 +1,7 @@
 import nextPlugin, { configs } from '@next/eslint-plugin-next'
-import { type ESLint, type Linter } from 'eslint'
+import { type Linter } from 'eslint'
 import { defineConfig } from 'eslint/config'
-import { type Config } from './base/base.js'
+import { type Config, type Plugin } from './base/base.js'
 import { reactWithoutBrowserGlobals } from './react/react.js'
 
 type Rules = Partial<Linter.RulesRecord>
@@ -10,7 +10,7 @@ export const next = defineConfig([
   ...reactWithoutBrowserGlobals,
   {
     plugins: {
-      '@next/next': nextPlugin as ESLint.Plugin,
+      '@next/next': nextPlugin as Plugin,
     },
     rules: {
       ...(configs.recommended.rules as Rules),
