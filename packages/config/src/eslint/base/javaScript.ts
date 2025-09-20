@@ -4,10 +4,4 @@ import { type Config } from './base.js'
 
 export const javaScript = defineConfig([
   jsConfigs.recommended,
-  {
-    ignores: ['**/*.json'],
-    rules: {
-      'sort-keys': ['error', 'asc'],
-    },
-  },
 ]) satisfies Config[]
