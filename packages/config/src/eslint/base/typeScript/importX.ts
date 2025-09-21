@@ -1,6 +1,7 @@
 import parser from '@typescript-eslint/parser'
-import { defineConfig } from 'eslint/config'
 import { importX as importXPlugin } from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+
 import { type Config } from '../base.js'
 
 const {
@@ -17,13 +18,7 @@ export const importX = defineConfig([
     rules: {
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
-      'import-x/order': [
-        'error',
-        {
-          alphabetize: { order: 'asc' },
-          named: { enabled: true, types: 'types-last' },
-        },
-      ],
+      'import-x/order': 'off',
     },
   },
 ]) satisfies Config[]

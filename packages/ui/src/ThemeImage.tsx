@@ -5,14 +5,14 @@ export function ThemeImage({
   srcDark,
   srcLight,
   ...rest
-}: Omit<ImageProps, 'src'> & {
+}: {
   srcDark: string
   srcLight: string
-}): ReactElement {
+} & Omit<ImageProps, 'src'>): ReactElement {
   return (
     <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
+      <Image {...rest} className="imgLight" src={srcLight} />
+      <Image {...rest} className="imgDark" src={srcDark} />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import { defineConfig } from 'eslint/config'
 import { configs } from 'typescript-eslint'
+
 import { type Config } from '../base.js'
 import { importX } from './importX.js'
 
@@ -13,7 +14,9 @@ export const typeScript = defineConfig([
       parserOptions: { projectService: true },
     },
     rules: {
+      '@typescript-eslint/adjacent-overload-signatures': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/sort-type-constituents': 'off',
     },
   },
   ...importX,

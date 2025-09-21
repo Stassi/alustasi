@@ -1,7 +1,9 @@
+/* eslint-disable perfectionist/sort-variable-declarations */
+import { type ReactFlatConfig, configs } from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
-import { configs, type ReactFlatConfig } from 'eslint-plugin-react'
 import { browser, serviceworker } from 'globals'
-import { base, type Config } from '../base/base.js'
+
+import { type Config, base } from '../base/base.js'
 import { hooks } from './hooks.js'
 
 const defaultRecommended = {

@@ -1,5 +1,6 @@
-import { defineConfig } from 'eslint/config'
 import { configs } from 'eslint-plugin-jsonc'
+import { defineConfig } from 'eslint/config'
+
 import { type Config } from './base.js'
 
 export const json = defineConfig([

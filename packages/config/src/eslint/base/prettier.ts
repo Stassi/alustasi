@@ -1,6 +1,7 @@
-import { defineConfig } from 'eslint/config'
 import prettierConfig from 'eslint-config-prettier'
 import prettierPluginRecommended from 'eslint-plugin-prettier/recommended'
+import { defineConfig } from 'eslint/config'
+
 import { type Config } from './base.js'
 
 export const prettier = defineConfig([
