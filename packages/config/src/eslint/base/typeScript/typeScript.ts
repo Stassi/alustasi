@@ -13,6 +13,7 @@ export const typeScript = defineConfig([
       parserOptions: { projectService: true },
     },
     rules: {
+      '@typescript-eslint/adjacent-overload-signatures': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     },
   },
