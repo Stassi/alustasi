@@ -1,3 +1,5 @@
+/* eslint-disable perfectionist/sort-variable-declarations */
+import { type ReactFlatConfig, configs } from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
 import { configs, type ReactFlatConfig } from 'eslint-plugin-react'
 import { browser, serviceworker } from 'globals'
