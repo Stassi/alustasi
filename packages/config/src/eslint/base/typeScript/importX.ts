@@ -1,6 +1,7 @@
 import parser from '@typescript-eslint/parser'
-import { defineConfig } from 'eslint/config'
 import { importX as importXPlugin } from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+
 import { type Config } from '../base.js'
 
 const {

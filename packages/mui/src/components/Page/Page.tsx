@@ -1,4 +1,5 @@
 import { type ReactElement, type ReactNode } from 'react'
+
 import { AlignedCenter } from '../Box/AlignedCenter'
 import { Title } from '../Typography/Title'
 import { Copyright } from './Copyright'

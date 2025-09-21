@@ -1,6 +1,7 @@
-import { defineConfig } from 'eslint/config'
 // eslint-disable-next-line import-x/default
 import hooksPlugin, { configs } from 'eslint-plugin-react-hooks'
+import { defineConfig } from 'eslint/config'
+
 import { type Config } from '../base/base.js'
 
 export const hooks = defineConfig([

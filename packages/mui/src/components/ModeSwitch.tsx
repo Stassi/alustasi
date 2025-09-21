@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem'
 import Select, { type SelectChangeEvent } from '@mui/material/Select'
 import { useColorScheme } from '@mui/material/styles'
 import { type ReactElement } from 'react'
+
 import { AlignedRight } from './Box/AlignedRight'
 
 export function ModeSwitch(): ReactElement | undefined {

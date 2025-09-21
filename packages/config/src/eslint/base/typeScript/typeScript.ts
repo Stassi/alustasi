@@ -1,5 +1,6 @@
 import { defineConfig } from 'eslint/config'
 import { configs } from 'typescript-eslint'
+
 import { type Config } from '../base.js'
 import { importX } from './importX.js'
 
