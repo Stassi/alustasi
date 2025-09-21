@@ -16,6 +16,13 @@ export const typeScript = defineConfig([
     rules: {
       '@typescript-eslint/adjacent-overload-signatures': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          fixStyle: 'inline-type-imports',
+          prefer: 'type-imports',
+        },
+      ],
       '@typescript-eslint/sort-type-constituents': 'off',
     },
   },
