@@ -5,4 +5,14 @@ import { type Config } from './base.js'
 
 export const perfectionist = defineConfig([
   configs['recommended-alphabetical'],
+  {
+    rules: {
+      'perfectionist/sort-named-imports': [
+        'error',
+        {
+          groups: ['type-import', 'value-import'],
+        },
+      ],
+    },
+  },
 ]) satisfies Config[]
