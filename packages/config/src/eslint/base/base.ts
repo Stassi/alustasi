@@ -3,6 +3,7 @@ import { defineConfig } from 'eslint/config'
 
 import { globalIgnores } from './globalIgnores.js'
 import { javaScript } from './javaScript.js'
+import { jest } from './jest.js'
 import { json } from './json.js'
 import { noUnsanitized } from './noUnsanitized.js'
 import { onlyWarn } from './onlyWarn.js'
@@ -19,6 +20,7 @@ export const base = defineConfig([
   ...javaScript,
   ...typeScript,
   ...noUnsanitized,
+  ...jest,
   ...json,
   ...turbo,
   ...perfectionist,
