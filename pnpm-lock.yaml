@@ -119,6 +119,9 @@ importers:
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../../packages/config-eslint-typescript
+      '@repo/config-playwright':
+        specifier: workspace:*
+        version: link:../../packages/config-playwright
       '@types/node':
         specifier: ^24.7.0
         version: 24.7.0
