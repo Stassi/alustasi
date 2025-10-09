@@ -1,15 +1,13 @@
-// eslint-disable-next-line import-x/default
-import hooksPlugin, { configs } from 'eslint-plugin-react-hooks'
+import hooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
 
 import { type Config } from '../base/base.js'
 
-export const hooks = defineConfig([
-  {
-    plugins: {
-      'react-hooks': hooksPlugin,
-    },
-    rules: configs.recommended.rules,
-    settings: { react: { version: 'detect' } },
+const {
+  // @ts-expect-error -- improperly typed upstream
+  configs: {
+    flat: { recommended },
   },
-]) satisfies Config[]
+} = hooksPlugin
+
+export const hooks = defineConfig([recommended]) satisfies Config[]
