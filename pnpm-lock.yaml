@@ -27,9 +27,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/config':
+      '@repo/config-eslint-typescript':
         specifier: workspace:*
-        version: link:../../packages/config
+        version: link:../../packages/config-eslint-typescript
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
@@ -79,9 +79,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/config':
+      '@repo/config-eslint-typescript':
         specifier: workspace:*
-        version: link:../../packages/config
+        version: link:../../packages/config-eslint-typescript
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
@@ -101,7 +101,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/config:
+  packages/config-eslint-typescript:
     devDependencies:
       '@eslint/compat':
         specifier: ^1.4.0
@@ -182,9 +182,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/config':
+      '@repo/config-eslint-typescript':
         specifier: workspace:*
-        version: link:../config
+        version: link:../config-eslint-typescript
       '@types/node':
         specifier: ^24.7.0
         version: 24.7.0
@@ -231,9 +231,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/config':
+      '@repo/config-eslint-typescript':
         specifier: workspace:*
-        version: link:../config
+        version: link:../config-eslint-typescript
       '@repo/fonts':
         specifier: workspace:*
         version: link:../fonts
@@ -265,9 +265,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/config':
+      '@repo/config-eslint-typescript':
         specifier: workspace:*
-        version: link:../config
+        version: link:../config-eslint-typescript
       '@types/node':
         specifier: ^24.7.0
         version: 24.7.0
