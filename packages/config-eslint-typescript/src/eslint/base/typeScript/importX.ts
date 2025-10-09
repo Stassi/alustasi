@@ -8,7 +8,7 @@ const {
   flatConfigs: { recommended, typescript },
 } = importXPlugin
 
-export const importX = defineConfig([
+const config = defineConfig([
   recommended as Config,
   typescript as Config,
   {
@@ -22,3 +22,5 @@ export const importX = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const importX: Config[] = config

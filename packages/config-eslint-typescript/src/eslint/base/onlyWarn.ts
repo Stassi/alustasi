@@ -4,10 +4,12 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config, type Plugin } from './base.js'
 
-export const onlyWarn = defineConfig([
+const config = defineConfig([
   {
     plugins: {
       onlyWarn: onlyWarnPlugin as Plugin,
     },
   },
 ]) satisfies Config[]
+
+export const onlyWarn: Config[] = config

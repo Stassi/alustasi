@@ -8,10 +8,12 @@ const {
   'flat/style': style,
 }: Record<`flat/${'all' | 'recommended' | 'style'}`, Config> = configs
 
-export const jest = defineConfig([
+const config = defineConfig([
   {
     files: ['**/*.test.ts?(x)'],
     ...recommended,
     ...style,
   },
 ]) satisfies Config[]
+
+export const jest: Config[] = config

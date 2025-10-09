@@ -3,7 +3,7 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config } from './base.js'
 
-export const javaScript = defineConfig([
+const config = defineConfig([
   configs.recommended,
   {
     rules: {
@@ -11,3 +11,5 @@ export const javaScript = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const javaScript: Config[] = config

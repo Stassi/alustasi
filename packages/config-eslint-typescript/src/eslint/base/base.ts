@@ -16,7 +16,7 @@ export type Config = Linter.Config
 export type Plugin = ESLint.Plugin
 export type Rules = Linter.RulesRecord
 
-export const base = defineConfig([
+const config = defineConfig([
   ...javaScript,
   ...typeScript,
   ...noUnsanitized,
@@ -28,3 +28,5 @@ export const base = defineConfig([
   ...globalIgnores,
   ...prettier,
 ]) satisfies Config[]
+
+export const base: Config[] = config
