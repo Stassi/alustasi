@@ -206,6 +206,9 @@ importers:
 
   packages/config-playwright:
     devDependencies:
+      '@playwright/test':
+        specifier: ^1.56.0
+        version: 1.56.0
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript

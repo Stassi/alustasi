@@ -8,6 +8,7 @@
     "lint:format": "eslint . --fix --max-warnings 0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.0",
     "@repo/config-eslint-typescript": "workspace:*",
     "@types/node": "^24.7.0",
     "eslint": "^9.37.0",
