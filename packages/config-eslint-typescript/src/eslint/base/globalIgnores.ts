@@ -5,6 +5,8 @@ import { cwd } from 'node:process'
 
 import { type Config } from './base.js'
 
-export const globalIgnores = defineConfig([
+const config = defineConfig([
   includeIgnoreFile(resolve(cwd(), '../../.gitignore')),
 ]) satisfies Config[]
+
+export const globalIgnores: Config[] = config

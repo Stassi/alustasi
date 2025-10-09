@@ -6,7 +6,7 @@ import { importX } from './importX.js'
 
 const { strictTypeChecked, stylisticTypeChecked } = configs
 
-export const typeScript = defineConfig([
+const config = defineConfig([
   {
     extends: [strictTypeChecked, stylisticTypeChecked],
     ignores: ['**/*.json'],
@@ -28,3 +28,5 @@ export const typeScript = defineConfig([
   },
   ...importX,
 ]) satisfies Config[]
+
+export const typeScript: Config[] = config

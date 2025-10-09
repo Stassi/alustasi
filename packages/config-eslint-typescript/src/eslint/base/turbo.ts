@@ -3,7 +3,7 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config } from './base.js'
 
-export const turbo = defineConfig([
+const config = defineConfig([
   {
     plugins: {
       turbo: turboPlugin,
@@ -13,3 +13,5 @@ export const turbo = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const turbo: Config[] = config
