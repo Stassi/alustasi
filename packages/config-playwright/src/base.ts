@@ -4,6 +4,7 @@ import {
   devices,
 } from '@playwright/test'
 
+import { continuousIntegrationOptions } from './continuousIntegrationOptions.js'
 import { deviceDescriptors } from './deviceDescriptors.js'
 
 export type DeviceName = keyof {
@@ -40,13 +41,6 @@ export function base({
       reuseExistingServer: !continuousIntegration,
       url: baseURL,
     },
-    ...((continuousIntegration
-      ? {
-          forbidOnly: true,
-          reporter: 'github',
-          retries: 2,
-          workers: 1,
-        }
-      : {}) satisfies PlaywrightTestConfig),
+    ...continuousIntegrationOptions(continuousIntegration),
   }) satisfies PlaywrightTestConfig
 }
