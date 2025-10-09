@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@repo/config/typescript/next.json",
+  "extends": "@repo/config-eslint-typescript/typescript/next.json",
   "compilerOptions": {
     "outDir": "dist"
   },
