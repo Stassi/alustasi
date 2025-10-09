@@ -3,7 +3,7 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config } from './base.js'
 
-export const perfectionist = defineConfig([
+const config = defineConfig([
   configs['recommended-alphabetical'],
   {
     rules: {
@@ -16,3 +16,5 @@ export const perfectionist = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const perfectionist: Config[] = config

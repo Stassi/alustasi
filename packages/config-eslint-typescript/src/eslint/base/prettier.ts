@@ -4,7 +4,7 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config } from './base.js'
 
-export const prettier = defineConfig([
+const config = defineConfig([
   prettierConfig,
   prettierPluginRecommended,
   {
@@ -24,3 +24,5 @@ export const prettier = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const prettier: Config[] = config

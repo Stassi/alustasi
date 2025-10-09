@@ -10,4 +10,6 @@ const {
   },
 } = hooksPlugin
 
-export const hooks = defineConfig([recommended]) satisfies Config[]
+const config = defineConfig([recommended]) satisfies Config[]
+
+export const hooks: Config[] = config

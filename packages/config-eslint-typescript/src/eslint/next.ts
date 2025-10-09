@@ -4,7 +4,7 @@ import { defineConfig } from 'eslint/config'
 import { type Config, type Plugin, type Rules } from './base/base.js'
 import { reactWithoutBrowserGlobals } from './react/react.js'
 
-export const next = defineConfig([
+const config = defineConfig([
   ...reactWithoutBrowserGlobals,
   {
     plugins: {
@@ -16,3 +16,5 @@ export const next = defineConfig([
     },
   },
 ]) satisfies Config[]
+
+export const next: Config[] = config
