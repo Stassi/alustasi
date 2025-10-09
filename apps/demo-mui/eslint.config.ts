@@ -1,1 +1,1 @@
-export { next as default } from '@repo/config/eslint/next'
+export { next as default } from '@repo/config-eslint-typescript/eslint/next'
