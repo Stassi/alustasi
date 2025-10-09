@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",
-    "@repo/config": "workspace:*",
+    "@repo/config-eslint-typescript": "workspace:*",
     "@types/node": "^24.7.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
