@@ -21,7 +21,7 @@
     "dev": "turbo run dev",
     "lint:check": "turbo run lint:check",
     "lint:format": "turbo run lint:format",
-    "test:e2e": "turbo run test:e2e",
+    "test:e2e": "turbo run test:e2e --concurrency=1",
     "turbo:daemon:reload": "turbo daemon clean",
     "types:generate": "turbo run types:generate"
   },

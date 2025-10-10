@@ -3,12 +3,13 @@ import { defineConfig } from 'eslint/config'
 
 import { globalIgnores } from './globalIgnores.js'
 import { javaScript } from './javaScript.js'
-import { jest } from './jest.js'
 import { json } from './json.js'
 import { noUnsanitized } from './noUnsanitized.js'
 import { onlyWarn } from './onlyWarn.js'
 import { perfectionist } from './perfectionist.js'
 import { prettier } from './prettier.js'
+import { jest } from './testing/jest.js'
+import { playwright } from './testing/playwright.js'
 import { turbo } from './turbo.js'
 import { typeScript } from './typeScript/typeScript.js'
 
@@ -21,6 +22,7 @@ const config = defineConfig([
   ...typeScript,
   ...noUnsanitized,
   ...jest,
+  ...playwright,
   ...json,
   ...turbo,
   ...perfectionist,

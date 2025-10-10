@@ -1,7 +1,7 @@
 import { configs } from 'eslint-plugin-jest'
 import { defineConfig } from 'eslint/config'
 
-import { type Config } from './base.js'
+import { type Config } from '../base.js'
 
 const {
   'flat/recommended': recommended,
