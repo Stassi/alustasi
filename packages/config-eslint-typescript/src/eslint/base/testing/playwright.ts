@@ -1,7 +1,7 @@
 import playwrightPlugin from 'eslint-plugin-playwright'
 import { defineConfig } from 'eslint/config'
 
-import { type Config } from './base.js'
+import { type Config } from '../base.js'
 
 const {
     configs: { 'flat/recommended': recommended },
