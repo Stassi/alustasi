@@ -11,15 +11,7 @@ const {
     {
       ...recommended,
       files: ['**/*.spec.ts?(x)'],
-      rules: {
-        ...rules,
-        'playwright/max-expects': [
-          'error',
-          {
-            max: 1,
-          },
-        ],
-      },
+      rules,
     },
   ]) satisfies Config[]
 
