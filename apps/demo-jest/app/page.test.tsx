@@ -11,6 +11,8 @@ describe('Server Component (RSC)', (): void => {
   })
 
   it('should have text "App Router" in its heading', (): void => {
-    expect(screen.getByRole('heading')).toHaveTextContent('App Router')
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      'App Router',
+    )
   })
 })
