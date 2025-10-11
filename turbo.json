@@ -28,16 +28,24 @@
         "^lint:format"
       ]
     },
-    "types:generate": {
-      "dependsOn": [
-        "^types:generate"
-      ]
-    },
     "test:e2e": {
       "dependsOn": [
         "^test:e2e"
       ],
-      "env": ["CI", "PORT"]
+      "env": [
+        "CI",
+        "PORT"
+      ]
+    },
+    "test:unit": {
+      "dependsOn": [
+        "^test:unit"
+      ]
+    },
+    "types:generate": {
+      "dependsOn": [
+        "^types:generate"
+      ]
     }
   },
   "ui": "tui"
