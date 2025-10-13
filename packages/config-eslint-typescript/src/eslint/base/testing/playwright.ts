@@ -2,6 +2,7 @@ import playwrightPlugin from 'eslint-plugin-playwright'
 import { defineConfig } from 'eslint/config'
 
 import { type Config } from '../base.js'
+import { spec } from './filesPattern.js'
 
 const {
     configs: { 'flat/recommended': recommended },
@@ -10,7 +11,7 @@ const {
   config = defineConfig([
     {
       ...recommended,
-      files: ['**/*.spec.ts?(x)'],
+      files: [spec],
       rules,
     },
   ]) satisfies Config[]
