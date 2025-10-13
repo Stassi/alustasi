@@ -5,22 +5,21 @@ import { defineConfig } from 'eslint/config'
 import { type Config } from '../base.js'
 
 const {
-  flatConfigs: { recommended, typescript },
-} = importXPlugin
-
-const config = defineConfig([
-  recommended as Config,
-  typescript as Config,
-  {
-    languageOptions: {
-      parser,
+    flatConfigs: { recommended, typescript },
+  } = importXPlugin,
+  config = defineConfig([
+    recommended as Config,
+    typescript as Config,
+    {
+      languageOptions: {
+        parser,
+      },
+      rules: {
+        'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+        'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
+        'import-x/order': 'off',
+      },
     },
-    rules: {
-      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
-      'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
-      'import-x/order': 'off',
-    },
-  },
-]) satisfies Config[]
+  ]) satisfies Config[]
 
 export const importX: Config[] = config

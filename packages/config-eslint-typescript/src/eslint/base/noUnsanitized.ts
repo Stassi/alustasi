@@ -5,8 +5,7 @@ import { defineConfig } from 'eslint/config'
 import { type Config } from './base.js'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const { recommended } = configs
-
-const config = defineConfig([recommended]) satisfies Config[]
+const { recommended } = configs,
+  config = defineConfig([recommended]) satisfies Config[]
 
 export const noUnsanitized: Config[] = config
