@@ -1,15 +1,16 @@
-import { configs } from 'eslint-plugin-jest'
+import { configs } from 'eslint-plugin-jest-dom'
 import { defineConfig } from 'eslint/config'
 
 import { type Config } from '../base.js'
 
-const { 'flat/recommended': recommended, 'flat/style': style } = configs,
+const { 'flat/recommended': recommended } = configs,
+  { rules }: Config = recommended,
   config = defineConfig([
     {
       ...recommended,
-      ...style,
       files: ['**/*.test.ts?(x)'],
+      rules,
     },
   ]) satisfies Config[]
 
-export const jest: Config[] = config
+export const jestDOM: Config[] = config
