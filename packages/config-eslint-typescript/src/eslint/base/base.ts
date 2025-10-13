@@ -8,6 +8,7 @@ import { noUnsanitized } from './noUnsanitized.js'
 import { onlyWarn } from './onlyWarn.js'
 import { perfectionist } from './perfectionist.js'
 import { prettier } from './prettier.js'
+import { jestDOM } from './testing/jest-dom.js'
 import { jest } from './testing/jest.js'
 import { playwright } from './testing/playwright.js'
 import { turbo } from './turbo.js'
@@ -22,6 +23,7 @@ const config = defineConfig([
   ...typeScript,
   ...noUnsanitized,
   ...jest,
+  ...jestDOM,
   ...playwright,
   ...json,
   ...turbo,
