@@ -3,11 +3,6 @@
   "compilerOptions": {
     "incremental": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "target": "es5",
     "types": ["@testing-library/jest-dom"]
   },
