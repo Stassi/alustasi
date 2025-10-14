@@ -12,6 +12,9 @@ const {
     ...base,
     ...recommendedWithJSON,
     ...prettier,
+    {
+      files: ['**/*.json'],
+    },
   ]) satisfies Config[]
 
 export const json: Config[] = config
