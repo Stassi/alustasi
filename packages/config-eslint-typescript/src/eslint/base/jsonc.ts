@@ -15,4 +15,4 @@ const {
     },
   ]) satisfies Config[]
 
-export const json: Config[] = config
+export const jsonc: Config[] = config
