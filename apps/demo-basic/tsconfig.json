@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "exclude": ["node_modules"],
   "extends": "@repo/config-eslint-typescript/typescript/next.json",
   "include": [
     "**/*.ts",
@@ -7,6 +8,5 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "next.config.ts"
-  ],
-  "exclude": ["node_modules"]
+  ]
 }
