@@ -9,10 +9,8 @@ const {
     'flat/recommended-with-json': recommendedWithJSON,
   } = configs,
   config = defineConfig([
-    ...base,
-    ...recommendedWithJSON,
-    ...prettier,
     {
+      extends: [base, recommendedWithJSON, prettier],
       files: ['**/*.json'],
     },
   ]) satisfies Config[]
