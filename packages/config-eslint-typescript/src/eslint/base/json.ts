@@ -3,10 +3,15 @@ import { defineConfig } from 'eslint/config'
 
 import { type Config } from './base.js'
 
-const config = defineConfig([
-  ...configs['flat/base'],
-  ...configs['flat/recommended-with-json'],
-  ...configs['flat/prettier'],
-]) satisfies Config[]
+const {
+    'flat/base': base,
+    'flat/prettier': prettier,
+    'flat/recommended-with-json': recommendedWithJSON,
+  } = configs,
+  config = defineConfig([
+    ...base,
+    ...recommendedWithJSON,
+    ...prettier,
+  ]) satisfies Config[]
 
 export const json: Config[] = config
