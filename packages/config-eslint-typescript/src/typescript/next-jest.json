@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": { "types": ["@testing-library/jest-dom"] },
+  "extends": "./next.json"
+}
