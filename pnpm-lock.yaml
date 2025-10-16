@@ -264,6 +264,21 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/debug-jest:
+    devDependencies:
+      '@repo/config-eslint-typescript':
+        specifier: workspace:*
+        version: link:../config-eslint-typescript
+      '@types/node':
+        specifier: ^24.8.0
+        version: 24.8.0
+      eslint:
+        specifier: ^9.37.0
+        version: 9.37.0(jiti@2.6.1)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/fonts:
     dependencies:
       next:
