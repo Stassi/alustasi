@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "lint:check": "eslint . --max-warnings 0",
-    "lint:format": "eslint . --fix --max-warnings 0"
+    "lint:format": "eslint . --fix --max-warnings 0",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit:ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js --ci",
+    "test:unit:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
   "devDependencies": {
     "@repo/config-eslint-typescript": "workspace:*",
