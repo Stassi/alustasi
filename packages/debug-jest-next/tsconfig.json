@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "exclude": ["node_modules"],
-  "extends": "@repo/config-eslint-typescript/typescript/base.json",
+  "extends": "@repo/config-eslint-typescript/typescript/react.json",
   "include": ["**/*.ts", "**/*.tsx"]
 }
