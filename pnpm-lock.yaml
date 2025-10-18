@@ -170,6 +170,9 @@ importers:
 
   packages/arithmetic:
     devDependencies:
+      '@jest/types':
+        specifier: ^30.2.0
+        version: 30.2.0
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript

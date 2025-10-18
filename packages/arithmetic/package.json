@@ -12,6 +12,7 @@
     "test:unit:watch": "pnpm run test:jest:esm --watch"
   },
   "devDependencies": {
+    "@jest/types": "^30.2.0",
     "@repo/config-eslint-typescript": "workspace:*",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.8.0",
