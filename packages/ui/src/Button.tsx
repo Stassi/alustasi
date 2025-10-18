@@ -9,8 +9,9 @@ export function Button({
 }: {
   appName: string
   children: ReactNode
-  className?: string
-}): ReactElement {
+} & Partial<{
+  className: string | undefined
+}>): ReactElement {
   return (
     <button
       className={className}

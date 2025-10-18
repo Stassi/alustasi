@@ -5,13 +5,15 @@ import { type ReactElement } from 'react'
 
 import styles from './page.module.css'
 
+const { ctas, footer, logo, main, page, primary, secondary } = styles
+
 export default function Home(): ReactElement {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className={page}>
+      <main className={main}>
         <ThemeImage
           alt="Turborepo logo"
-          className={styles.logo}
+          className={logo}
           height={38}
           priority
           srcDark="turborepo-light.svg"
@@ -25,16 +27,16 @@ export default function Home(): ReactElement {
           <li>Save and see your changes instantly.</li>
         </ol>
 
-        <div className={styles.ctas}>
+        <div className={ctas}>
           <a
-            className={styles.primary}
+            className={primary}
             href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
             rel="noopener noreferrer"
             target="_blank"
           >
             <Image
               alt="Vercel logomark"
-              className={styles.logo}
+              className={logo}
               height={20}
               src="/vercel.svg"
               width={20}
@@ -42,7 +44,7 @@ export default function Home(): ReactElement {
             Deploy now
           </a>
           <a
-            className={styles.secondary}
+            className={secondary}
             href="https://turborepo.com/docs?utm_source"
             rel="noopener noreferrer"
             target="_blank"
@@ -50,11 +52,11 @@ export default function Home(): ReactElement {
             Read our docs
           </a>
         </div>
-        <Button appName="web" className={styles.secondary}>
+        <Button appName="web" className={secondary}>
           Open alert
         </Button>
       </main>
-      <footer className={styles.footer}>
+      <footer className={footer}>
         <a
           href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           rel="noopener noreferrer"
