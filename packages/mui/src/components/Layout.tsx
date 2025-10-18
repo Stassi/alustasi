@@ -36,8 +36,14 @@ export function Layout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <InitColorSchemeScript
-          attribute={colorSchemeSelector}
           defaultMode={defaultMode}
+          {...{
+            ...(colorSchemeSelector
+              ? {
+                  attribute: colorSchemeSelector,
+                }
+              : {}),
+          }}
         />
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider defaultMode={defaultMode} theme={createTheme(theme)}>
