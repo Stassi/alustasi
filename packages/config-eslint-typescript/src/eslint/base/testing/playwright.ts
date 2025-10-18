@@ -1,7 +1,7 @@
 import playwrightPlugin from 'eslint-plugin-playwright'
 import { defineConfig } from 'eslint/config'
 
-import { type Config } from '../base.js'
+import { type Config, type Rules } from '../base.js'
 import { spec } from './filesPattern.js'
 
 const {
@@ -12,7 +12,7 @@ const {
     {
       ...recommended,
       files: [spec],
-      rules,
+      rules: rules as Rules,
     },
   ]) satisfies Config[]
 
