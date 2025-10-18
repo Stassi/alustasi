@@ -180,10 +180,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.8.0
+        specifier: ^24.8.1
         version: 24.8.1
       eslint:
-        specifier: ^9.37.0
+        specifier: ^9.38.0
         version: 9.38.0(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -309,7 +309,7 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.8.0
+        specifier: ^24.8.1
         version: 24.8.1
       '@types/react':
         specifier: ^19.2.2
@@ -318,7 +318,7 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2(@types/react@19.2.2)
       eslint:
-        specifier: ^9.37.0
+        specifier: ^9.38.0
         version: 9.38.0(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
