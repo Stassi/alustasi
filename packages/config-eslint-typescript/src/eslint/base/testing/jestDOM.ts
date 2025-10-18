@@ -1,7 +1,7 @@
 import { configs } from 'eslint-plugin-jest-dom'
 import { defineConfig } from 'eslint/config'
 
-import { type Config } from '../base.js'
+import { type Config, type Rules } from '../base.js'
 import { test } from './filesPattern.js'
 
 const { 'flat/recommended': recommended } = configs,
@@ -10,7 +10,7 @@ const { 'flat/recommended': recommended } = configs,
     {
       ...recommended,
       files: [test],
-      rules,
+      rules: rules as Rules,
     },
   ]) satisfies Config[]
 

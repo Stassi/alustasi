@@ -6,7 +6,8 @@
   "exports": "./src/base.ts",
   "scripts": {
     "lint:check": "eslint . --max-warnings 0",
-    "lint:format": "eslint . --fix --max-warnings 0"
+    "lint:format": "eslint . --fix --max-warnings 0",
+    "types:check": "tsc --noEmit"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
