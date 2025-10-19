@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    "./*": "./src/*.ts",
+    "./*.test": null
+  },
   "scripts": {
     "lint:check": "eslint . --max-warnings 0",
     "lint:format": "eslint . --fix --max-warnings 0",
