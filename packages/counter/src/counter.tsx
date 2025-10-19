@@ -1,26 +1,16 @@
 'use client'
 
-import { increment } from '@repo/arithmetic/increment'
-import {
-  type Dispatch,
-  type ReactElement,
-  type SetStateAction,
-  useState,
-} from 'react'
+import { type ReactElement } from 'react'
+
+import { useCounter } from './useCounter.js'
 
 export default function Counter(): ReactElement {
-  const [count, setCount]: [number, Dispatch<SetStateAction<number>>] =
-    useState(0)
+  const { count, increment } = useCounter(0)
 
   return (
     <>
       <h2>{count}</h2>
-      <button
-        onClick={(): void => {
-          setCount(increment(count))
-        }}
-        type="button"
-      >
+      <button onClick={increment} type="button">
         +
       </button>
     </>
