@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 
-import Counter from './counter.js'
+import Counter from './Counter.js'
 
 describe('Counter', (): void => {
   beforeEach((): void => {
