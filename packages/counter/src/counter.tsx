@@ -1,5 +1,6 @@
 'use client'
 
+import { add } from '@repo/arithmetic/add'
 import {
   type Dispatch,
   type ReactElement,
@@ -16,7 +17,7 @@ export default function Counter(): ReactElement {
       <h2>{count}</h2>
       <button
         onClick={(): void => {
-          setCount(count + 1)
+          setCount(add(count, 1))
         }}
         type="button"
       >
