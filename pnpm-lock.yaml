@@ -296,6 +296,9 @@ importers:
       '@jest/types':
         specifier: ^30.2.0
         version: 30.2.0
+      '@repo/arithmetic':
+        specifier: workspace:*
+        version: link:../arithmetic
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
