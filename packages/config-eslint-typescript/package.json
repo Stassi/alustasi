@@ -10,6 +10,7 @@
     "./typescript/base.json": "./src/typescript/base.json",
     "./typescript/next.json": "./src/typescript/next.json",
     "./typescript/next-jest.json": "./src/typescript/next-jest.json",
+    "./typescript/next-jest-react.json": "./src/typescript/next-jest-react.json",
     "./typescript/react.json": "./src/typescript/react.json"
   },
   "scripts": {
