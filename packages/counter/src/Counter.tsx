@@ -4,7 +4,7 @@ import { type ReactElement } from 'react'
 
 import { useCounter } from './useCounter.js'
 
-export default function Counter(): ReactElement {
+export function Counter(): ReactElement {
   const { count, increment } = useCounter(0)
 
   return (
