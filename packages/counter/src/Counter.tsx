@@ -2,7 +2,7 @@
 
 import { type ReactElement } from 'react'
 
-import { useCounter } from './useCounter.js'
+import { useCounter } from './useCounter'
 
 export function Counter(): ReactElement {
   const { count, increment } = useCounter(0)
