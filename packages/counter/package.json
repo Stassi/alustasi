@@ -12,9 +12,11 @@
     "test:unit:watch": "pnpm run test:jest:esm --watch",
     "types:check": "tsc --noEmit"
   },
+  "dependencies": {
+    "@repo/arithmetic": "workspace:*"
+  },
   "devDependencies": {
     "@jest/types": "^30.2.0",
-    "@repo/arithmetic": "workspace:*",
     "@repo/config-eslint-typescript": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
