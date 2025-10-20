@@ -1,4 +1,4 @@
-import { increment } from './increment.js'
+import { increment } from './increment'
 
 describe('Increment', (): void => {
   it('should increment 1 to equal 2', (): void => {

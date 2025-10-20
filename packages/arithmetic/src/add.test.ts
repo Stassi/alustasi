@@ -1,4 +1,4 @@
-import { add, addCurried } from './add.js'
+import { add, addCurried } from './add'
 
 describe('Addition', (): void => {
   const a = 1,
