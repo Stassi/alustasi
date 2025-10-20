@@ -1,3 +1,5 @@
+'use client'
+
 import { increment } from '@repo/arithmetic/increment'
 import { type Dispatch, type SetStateAction, useState } from 'react'
 
