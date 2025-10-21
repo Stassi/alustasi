@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 import { type ReactElement } from 'react'
 
-import Counter from './counter'
+import { Counter } from './Counter'
 
 export const metadata: Metadata = {
   title: 'App Router',

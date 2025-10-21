@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 
-import Counter from './counter'
+import { Counter } from './Counter'
 
-describe('Stateful Client Component', (): void => {
+describe('Counter', (): void => {
   beforeEach((): void => {
     render(<Counter />)
   })

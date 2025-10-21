@@ -1,5 +1,1 @@
-import 'server-only'
-
-export function add(a: number, b: number) {
-  return a + b
-}
+export { add } from '@repo/arithmetic/add'
