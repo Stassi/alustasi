@@ -2,10 +2,10 @@
 
 import { type ReactElement } from 'react'
 
-import { useCounter } from './useCounter'
+import { type UseCounter, useCounter } from './useCounter'
 
 export function Counter(): ReactElement {
-  const { count, increment } = useCounter(0)
+  const { count, increment }: UseCounter = useCounter(0)
 
   return (
     <>
