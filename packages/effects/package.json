@@ -1,0 +1,29 @@
+{
+  "name": "@repo/effects",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts",
+    "./*.test": null
+  },
+  "scripts": {
+    "lint:check": "eslint . --max-warnings 0",
+    "lint:format": "eslint . --fix --max-warnings 0",
+    "test:jest:esm": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "pnpm run test:jest:esm",
+    "test:unit:ci": "pnpm run test:jest:esm --ci",
+    "test:unit:watch": "pnpm run test:jest:esm --watch",
+    "types:check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@jest/types": "^30.2.0",
+    "@repo/config-eslint-typescript": "workspace:*",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  }
+}
