@@ -1,3 +1,5 @@
+'use client'
+
 import MuiLink from '@mui/material/Link'
 import NextLink from 'next/link'
 import { type ReactElement, type ReactNode } from 'react'
