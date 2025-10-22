@@ -15,7 +15,7 @@ export default function Home(): ReactElement {
           alt="Turborepo logo"
           className={logo}
           height={38}
-          priority
+          preload
           srcDark="turborepo-light.svg"
           srcLight="turborepo-dark.svg"
           width={180}
