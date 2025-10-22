@@ -26,6 +26,7 @@
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@repo/config-eslint-typescript": "workspace:*",
+    "@repo/config-next": "workspace:*",
     "@repo/config-playwright": "workspace:*",
     "@repo/fonts": "workspace:*",
     "@types/node": "^24.9.1",
