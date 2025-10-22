@@ -17,12 +17,12 @@ describe('useCounter', (): void => {
       start,
     }: Record<'clicks' | 'expected' | 'start', number>): void => {
       const { result } = renderHook((): UseCounter => useCounter(start)),
-        repeatIncrement: (n: number) => void = repeat((): void => {
+        incrementRepeatedly: (n: number) => void = repeat((): void => {
           result.current.increment()
         })
 
       act((): void => {
-        repeatIncrement(clicks)
+        incrementRepeatedly(clicks)
       })
 
       expect(result.current.count).toBe(expected)
