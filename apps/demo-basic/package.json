@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "dev": "next dev --port 3000 --turbopack",
+    "dev": "next dev --port 3000",
     "lint:check": "eslint . --max-warnings 0",
     "lint:format": "eslint . --fix --max-warnings 0",
     "start": "next start",
