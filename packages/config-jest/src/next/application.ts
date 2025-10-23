@@ -1,7 +1,7 @@
 import { type Config } from '@jest/types'
 import nextJest from 'next/jest.js'
 
-export const nextApp = nextJest({
+export const application = nextJest({
   dir: './',
 })({
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],

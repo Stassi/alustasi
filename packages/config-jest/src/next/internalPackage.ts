@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'node:url'
 import { type JestConfigWithTsJest, createDefaultEsmPreset } from 'ts-jest'
 
-export const nextPackage = {
+export const internalPackage = {
   ...createDefaultEsmPreset({
     tsconfig: fileURLToPath(
       import.meta.resolve(
