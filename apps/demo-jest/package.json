@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build": "next build",
     "dev": "next dev --port 3500",
     "lint:check": "eslint . --max-warnings 0",
     "lint:format": "eslint . --fix --max-warnings 0",
-    "build": "next build",
     "start": "next start",
     "test:unit": "jest",
     "test:unit:ci": "jest --ci",
