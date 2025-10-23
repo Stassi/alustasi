@@ -1,0 +1,22 @@
+{
+  "name": "@repo/config-jest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/base.ts",
+  "scripts": {
+    "lint:check": "eslint . --max-warnings 0",
+    "lint:format": "eslint . --fix --max-warnings 0",
+    "types:check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "ts-jest": "^29.4.5"
+  },
+  "devDependencies": {
+    "@repo/config-eslint-typescript": "workspace:*",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0",
+    "typescript": "^5.9.3"
+  }
+}
