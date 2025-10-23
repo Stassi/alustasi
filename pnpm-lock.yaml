@@ -359,6 +359,9 @@ importers:
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
+      '@repo/config-jest':
+        specifier: workspace:*
+        version: link:../config-jest
       '@repo/effects':
         specifier: workspace:*
         version: link:../effects
