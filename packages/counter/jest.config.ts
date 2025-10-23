@@ -1,1 +1,1 @@
-export { nextPackage as default } from '@repo/config-jest/nextPackage'
+export { internalPackage as default } from '@repo/config-jest/next/internalPackage'
