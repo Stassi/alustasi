@@ -1,1 +1,1 @@
-export { nextApp as default } from '@repo/config-jest/nextApp'
+export { application as default } from '@repo/config-jest/next/application'
