@@ -5,8 +5,7 @@
   "type": "module",
   "exports": {
     "./base": "./src/base.ts",
-    "./next/application": "./src/next/application.ts",
-    "./next/internalPackage": "./src/next/internalPackage.ts"
+    "./next": "./src/next.ts"
   },
   "scripts": {
     "lint:check": "eslint . --max-warnings 0",
