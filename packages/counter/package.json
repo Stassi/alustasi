@@ -22,6 +22,7 @@
   "devDependencies": {
     "@jest/types": "^30.2.0",
     "@repo/config-eslint-typescript": "workspace:*",
+    "@repo/config-jest": "workspace:*",
     "@repo/effects": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",

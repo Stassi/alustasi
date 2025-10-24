@@ -1,3 +1,1 @@
-import { type JestConfigWithTsJest, createDefaultEsmPreset } from 'ts-jest'
-
-export default { ...createDefaultEsmPreset() } satisfies JestConfigWithTsJest
+export { base as default } from '@repo/config-jest/base'
