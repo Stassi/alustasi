@@ -5,7 +5,7 @@ export function fnv1a64(bytes: Uint8Array): bigint {
   let hash = 0xcbf2_9ce4_8422_2325n
   bytes.forEach((byte: number): void => {
     hash ^= bigInt64(byte)
-    hash *= bigInt64(0x1000_0000_1b3n)
+    hash *= bigInt64(0x0100_0000_01b3n)
   })
   return hash
 }
