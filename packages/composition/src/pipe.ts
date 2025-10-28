@@ -3,8 +3,8 @@ type CompatibleSignatures<
   Steps extends readonly unknown[],
 > = Steps extends readonly []
   ? true
-  : Steps extends readonly [infer Step, ...infer RemainingSteps]
-    ? Step extends (x: Arg) => infer Return
+  : Steps extends readonly [infer Head, ...infer RemainingSteps]
+    ? Head extends (x: Arg) => infer Return
       ? RemainingSteps extends readonly unknown[]
         ? CompatibleSignatures<Return, RemainingSteps>
         : false
@@ -16,30 +16,25 @@ type TailReturn<
   Steps extends readonly unknown[],
 > = Steps extends readonly []
   ? Arg
-  : Steps extends readonly [infer Step, ...infer RemainingSteps]
-    ? Step extends (x: Arg) => infer Return
+  : Steps extends readonly [infer Head, ...infer RemainingSteps]
+    ? Head extends (x: Arg) => infer Return
       ? TailReturn<Return, RemainingSteps>
       : never
     : never
 
 export function pipe<
   HeadArgs extends readonly unknown[],
-  Return,
-  RemainingSteps extends (CompatibleSignatures<
-    Return,
-    RemainingSteps
-  > extends true
+  HeadReturn,
+  Steps extends (CompatibleSignatures<HeadReturn, Steps> extends true
     ? unknown
     : never) &
     readonly unknown[],
->([head, ...remainingSteps]: readonly [
-  (...args: HeadArgs) => Return,
-  ...RemainingSteps,
-]): (...args: HeadArgs) => TailReturn<Return, RemainingSteps> {
+>([head, ...steps]: readonly [(...args: HeadArgs) => HeadReturn, ...Steps]): (
+  ...args: HeadArgs
+) => TailReturn<HeadReturn, Steps> {
   return (...args: HeadArgs) =>
-    (remainingSteps as ((x: Return) => Return)[]).reduce(
-      (previousValue: Return, step: (x: Return) => Return): Return =>
-        step(previousValue),
+    (steps as readonly ((x: unknown) => unknown)[]).reduce<unknown>(
+      (previousValue, step) => step(previousValue),
       head(...args),
-    ) as TailReturn<Return, RemainingSteps>
+    ) as TailReturn<HeadReturn, Steps>
 }
