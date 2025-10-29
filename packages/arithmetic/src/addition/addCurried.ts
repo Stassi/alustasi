@@ -2,8 +2,8 @@ import {
   type BigIntCallback,
   type NumberCallback,
   type Numeric,
-  add,
-} from './add'
+} from '../types'
+import { add } from './add'
 
 export function addCurried(a: number): NumberCallback
 export function addCurried(a: bigint): BigIntCallback

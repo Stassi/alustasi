@@ -2,7 +2,7 @@ import {
   type BigIntCallback,
   type NumberCallback,
   type Numeric,
-} from '../addition/add'
+} from '../types'
 import { multiply } from './multiply'
 
 export function multiplyCurried(a: number): NumberCallback

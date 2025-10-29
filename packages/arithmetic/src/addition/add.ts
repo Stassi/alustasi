@@ -1,7 +1,4 @@
-export type BigIntCallback = NumericCallback<bigint>
-export type NumberCallback = NumericCallback<number>
-export type Numeric = bigint | number
-export type NumericCallback<T extends Numeric> = (n: T) => T
+import { type Numeric } from '../types'
 
 export function add(a: number, b: number): number
 export function add(a: bigint, b: bigint): bigint

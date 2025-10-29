@@ -1,4 +1,4 @@
-import { type Numeric } from '../addition/add'
+import { type Numeric } from '../types'
 
 export function multiply(a: number, b: number): number
 export function multiply(a: bigint, b: bigint): bigint
