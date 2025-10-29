@@ -17,7 +17,8 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/64-bit": "workspace:*"
+    "@repo/64-bit": "workspace:*",
+    "@repo/arithmetic": "workspace:*"
   },
   "devDependencies": {
     "@jest/types": "^30.2.0",
