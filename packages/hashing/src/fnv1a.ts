@@ -1,5 +1,5 @@
 import { bigInt64 } from '@repo/64-bit/bigInt'
-import { multiply } from '@repo/arithmetic/multiply'
+import { multiply } from '@repo/arithmetic/multiplication/multiply'
 
 // https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function
 export function fnv1a64(bytes: Uint8Array): bigint {
