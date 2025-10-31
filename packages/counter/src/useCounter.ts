@@ -1,6 +1,6 @@
 'use client'
 
-import { increment } from '@repo/arithmetic/increment'
+import { increment } from '@repo/arithmetic/addition/increment'
 import { type Dispatch, type SetStateAction, useState } from 'react'
 
 export type UseCounter = {
