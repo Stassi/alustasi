@@ -1,6 +1,6 @@
-import { bigInt64 } from './bigInt'
+import { uInt64 } from './uInt'
 
-describe('BigInt64', (): void => {
+describe('UInt64', (): void => {
   const over64: bigint = 2n ** 64n,
     max64: bigint = over64 - 1n
 
@@ -12,7 +12,7 @@ describe('BigInt64', (): void => {
     ] as const)(
       'should convert $name to a 64-bit unsigned bigint',
       ({ expected, n }): void => {
-        expect(bigInt64(n)).toBe(expected)
+        expect(uInt64(n)).toBe(expected)
       },
     )
   })
@@ -24,7 +24,7 @@ describe('BigInt64', (): void => {
     ] as const)(
       'should appear to return unchanged the 64-bit unsigned bigint $name',
       ({ expected, n }): void => {
-        expect(bigInt64(n)).toBe(expected)
+        expect(uInt64(n)).toBe(expected)
       },
     )
   })
@@ -36,7 +36,7 @@ describe('BigInt64', (): void => {
     ] as const)(
       'should wrap $name to the 64-bit unsigned bigint $expected',
       ({ expected, n }): void => {
-        expect(bigInt64(n)).toBe(expected)
+        expect(uInt64(n)).toBe(expected)
       },
     )
   })
@@ -50,7 +50,7 @@ describe('BigInt64', (): void => {
     ] as const)(
       'should convert $name to the 64-bit unsigned bigint $expected',
       ({ expected, n }): void => {
-        expect(bigInt64(n)).toBe(expected)
+        expect(uInt64(n)).toBe(expected)
       },
     )
   })
