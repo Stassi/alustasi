@@ -750,6 +750,9 @@ importers:
       '@repo/arithmetic':
         specifier: workspace:*
         version: link:../arithmetic
+      '@repo/bitwise':
+        specifier: workspace:*
+        version: link:../bitwise
       '@repo/composition':
         specifier: workspace:*
         version: link:../composition
