@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@repo/64-bit": "workspace:*",
+    "@repo/8-bit": "workspace:*",
     "@repo/arithmetic": "workspace:*",
     "@repo/bitwise": "workspace:*",
     "@repo/composition": "workspace:*",
