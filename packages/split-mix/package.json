@@ -20,7 +20,8 @@
     "@repo/64-bit": "workspace:*",
     "@repo/arithmetic": "workspace:*",
     "@repo/composition": "workspace:*",
-    "@repo/determinism": "workspace:*"
+    "@repo/determinism": "workspace:*",
+    "@repo/types": "workspace:*"
   },
   "devDependencies": {
     "@jest/types": "^30.2.0",
