@@ -1,8 +1,9 @@
+import { type Numeric } from '@repo/types/Numeric'
 import {
   type BigIntCallback,
   type NumberCallback,
-  type Numeric,
-} from '../types'
+} from '@repo/types/NumericCallback'
+
 import { multiply } from './multiply'
 
 export function multiplyCurried(a: number): NumberCallback

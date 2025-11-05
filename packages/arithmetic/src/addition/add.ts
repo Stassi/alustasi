@@ -1,4 +1,4 @@
-import { type Numeric } from '../types'
+import { type Numeric } from '@repo/types/Numeric'
 
 export function add(a: number, b: number): number
 export function add(a: bigint, b: bigint): bigint

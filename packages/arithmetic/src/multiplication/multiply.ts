@@ -1,4 +1,4 @@
-import { type Numeric } from '../types'
+import { type Numeric } from '@repo/types/Numeric'
 
 export function multiply(a: number, b: number): number
 export function multiply(a: bigint, b: bigint): bigint
