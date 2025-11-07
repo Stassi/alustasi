@@ -16,20 +16,20 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.4",
-    "@mui/material": "^7.3.4",
-    "@mui/material-nextjs": "^7.3.3",
-    "next": "^16.0.0",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
+    "@mui/material-nextjs": "^7.3.5",
+    "next": "^16.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@repo/config-eslint-typescript": "workspace:*",
     "@repo/fonts": "workspace:*",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "typescript": "^5.9.3"
   }
 }
