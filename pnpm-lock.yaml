@@ -202,10 +202,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -236,10 +236,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -304,10 +304,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -334,10 +334,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -569,10 +569,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -679,10 +679,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -783,10 +783,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
@@ -813,10 +813,10 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/node':
-        specifier: ^24.9.1
+        specifier: ^24.10.0
         version: 24.10.0
       eslint:
-        specifier: ^9.38.0
+        specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       jest:
         specifier: ^30.2.0
