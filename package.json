@@ -28,11 +28,11 @@
     "types:generate": "turbo run types:generate"
   },
   "devDependencies": {
-    "turbo": "^2.5.8"
+    "turbo": "^2.6.0"
   },
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.20.0",
   "engines": {
-    "node": "^22.21.0",
+    "node": "^24.11.0",
     "npm": "^11.6.2"
   }
 }

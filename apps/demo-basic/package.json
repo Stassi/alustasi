@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "next": "^16.0.0",
+    "next": "^16.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -29,10 +29,10 @@
     "@repo/config-next": "workspace:*",
     "@repo/config-playwright": "workspace:*",
     "@repo/fonts": "workspace:*",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "typescript": "^5.9.3"
   }
 }
