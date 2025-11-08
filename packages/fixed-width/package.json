@@ -1,5 +1,5 @@
 {
-  "name": "@repo/8-bit",
+  "name": "@repo/fixed-width",
   "private": true,
   "version": "0.0.0",
   "type": "module",
