@@ -1,4 +1,4 @@
-import { uInt64 } from '@repo/64-bit/uInt'
+import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { fnv1a64 as hash64 } from '@repo/hashing/fnv1a'
 import { type BytesLike } from '@repo/types/BytesLike'
 import { type Numeric } from '@repo/types/Numeric'

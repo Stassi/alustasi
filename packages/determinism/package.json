@@ -17,7 +17,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/64-bit": "workspace:*",
+    "@repo/fixed-width": "workspace:*",
     "@repo/hashing": "workspace:*",
     "@repo/types": "workspace:*"
   },
