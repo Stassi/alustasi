@@ -1,9 +1,9 @@
-import { uInt64 } from '@repo/64-bit/uInt'
 import { addCurried as add } from '@repo/arithmetic/addition/addCurried'
 import { multiplyCurried as multiplyBy } from '@repo/arithmetic/multiplication/multiplyCurried'
 import { shiftRightCurried as shiftRightBy } from '@repo/bitwise/shiftRightCurried'
 import { xorCurried as xor } from '@repo/bitwise/xorCurried'
 import { pipe } from '@repo/composition/pipe'
+import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 
 import { snapshot } from './snapshot'
 import { type SplitMix64 } from './splitMix'

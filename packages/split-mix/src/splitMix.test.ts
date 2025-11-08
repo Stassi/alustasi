@@ -1,5 +1,5 @@
-import { hex64 } from '@repo/64-bit/hex'
 import { repeat } from '@repo/effects/repeat'
+import { hex64 } from '@repo/fixed-width/bits64/hex'
 
 import { type SplitMix64, splitMix64 } from './splitMix'
 
