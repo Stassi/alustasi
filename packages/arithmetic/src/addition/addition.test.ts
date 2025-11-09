@@ -1,4 +1,5 @@
-import { add, addCurried } from './add'
+import { add } from './add'
+import { addCurried } from './addCurried'
 
 describe('Addition', (): void => {
   const a = 1,
