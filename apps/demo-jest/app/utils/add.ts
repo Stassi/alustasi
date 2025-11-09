@@ -1,1 +1,1 @@
-export { add } from '@repo/arithmetic/add'
+export { add } from '@repo/arithmetic/addition/add'
