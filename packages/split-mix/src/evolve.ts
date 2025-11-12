@@ -3,6 +3,7 @@ import { multiplyCurried as multiplyBy } from '@repo/arithmetic/multiplication/m
 import { shiftRightCurried as shiftRightBy } from '@repo/bitwise/shiftRightCurried'
 import { xorCurried as xor } from '@repo/bitwise/xorCurried'
 import { pipe } from '@repo/composition/pipe'
+import { wCurried as w } from '@repo/composition/w/wCurried'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type BigIntCallback } from '@repo/types/NumericCallback'
 
@@ -27,12 +28,14 @@ export const evolve: (state: bigint) => SplitMix64<bigint> = pipe([
           ...props,
         }))
         .map(({ multiplier, shiftRightXor }) => ({
-          shiftRightXorMultiply64: (prevState: bigint): BigIntCallback =>
-            pipe([shiftRightXor(prevState), multiplyBy(multiplier), uInt64]),
+          wShiftRightXorMultiply64: w(
+            (prevState: bigint): BigIntCallback =>
+              pipe([shiftRightXor(prevState), multiplyBy(multiplier), uInt64]),
+          ),
         }))
         .reduce(
-          (prevState: bigint, { shiftRightXorMultiply64 }): bigint =>
-            shiftRightXorMultiply64(prevState)(prevState),
+          (prevState: bigint, { wShiftRightXorMultiply64 }): bigint =>
+            wShiftRightXorMultiply64(prevState),
           state,
         ),
       state,
