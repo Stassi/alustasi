@@ -13,7 +13,7 @@ import { type SplitMix64 } from './splitMix'
 export const evolve: (state: bigint) => SplitMix64<bigint> = pipe([
   add(0x9e37_79b9_7f4a_7c15n),
   uInt64,
-  (state: bigint) =>
+  (state: bigint): SplitMix64<bigint> =>
     snapshot({
       result: (
         [
