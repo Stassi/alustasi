@@ -1,6 +1,6 @@
 import { addCurried as add } from '@repo/arithmetic/addition/addCurried'
-import { multiplyCurried as multiplyBy } from '@repo/arithmetic/multiplication/multiplyCurried'
-import { shiftRightCurried as shiftRightBy } from '@repo/bitwise/shiftRightCurried'
+import { multiplyCurried as multiply } from '@repo/arithmetic/multiplication/multiplyCurried'
+import { shiftRightCurried as shiftRight } from '@repo/bitwise/shiftRightCurried'
 import { xorCurried as xor } from '@repo/bitwise/xorCurried'
 import { wCurried as w } from '@repo/combinatorics/w/wCurried'
 import { pipe } from '@repo/composition/pipe'
@@ -24,13 +24,13 @@ export const evolve: (state: bigint) => SplitMix64<bigint> = pipe([
         ] as const
       )
         .map(({ shiftRightAmount, ...props }) => ({
-          shiftRightXor: pipe([shiftRightBy(shiftRightAmount), xor]),
+          shiftRightXor: pipe([shiftRight(shiftRightAmount), xor]),
           ...props,
         }))
         .map(({ multiplier, shiftRightXor }) => ({
           wShiftRightXorMultiply64: w(
             (prevState: bigint): BigIntCallback =>
-              pipe([shiftRightXor(prevState), multiplyBy(multiplier), uInt64]),
+              pipe([shiftRightXor(prevState), multiply(multiplier), uInt64]),
           ),
         }))
         .reduce(
