@@ -1,7 +1,8 @@
 import { addCurried as add } from '@repo/arithmetic/addition/addCurried'
-import { multiplyCurried as multiplyBy } from '@repo/arithmetic/multiplication/multiplyCurried'
-import { shiftRightCurried as shiftRightBy } from '@repo/bitwise/shiftRightCurried'
+import { multiplyCurried as multiply } from '@repo/arithmetic/multiplication/multiplyCurried'
+import { shiftRightCurried as shiftRight } from '@repo/bitwise/shiftRightCurried'
 import { xorCurried as xor } from '@repo/bitwise/xorCurried'
+import { wCurried as w } from '@repo/combinatorics/w/wCurried'
 import { pipe } from '@repo/composition/pipe'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type BigIntCallback } from '@repo/types/NumericCallback'
@@ -23,16 +24,18 @@ export const evolve: (state: bigint) => SplitMix64<bigint> = pipe([
         ] as const
       )
         .map(({ shiftRightAmount, ...props }) => ({
-          shiftRightXor: pipe([shiftRightBy(shiftRightAmount), xor]),
+          shiftRightXor: pipe([shiftRight(shiftRightAmount), xor]),
           ...props,
         }))
         .map(({ multiplier, shiftRightXor }) => ({
-          shiftRightXorMultiply64: (prevState: bigint): BigIntCallback =>
-            pipe([shiftRightXor(prevState), multiplyBy(multiplier), uInt64]),
+          wShiftRightXorMultiply64: w(
+            (prevState: bigint): BigIntCallback =>
+              pipe([shiftRightXor(prevState), multiply(multiplier), uInt64]),
+          ),
         }))
         .reduce(
-          (prevState: bigint, { shiftRightXorMultiply64 }): bigint =>
-            shiftRightXorMultiply64(prevState)(prevState),
+          (prevState: bigint, { wShiftRightXorMultiply64 }): bigint =>
+            wShiftRightXorMultiply64(prevState),
           state,
         ),
       state,
