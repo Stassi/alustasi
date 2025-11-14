@@ -1,4 +1,5 @@
 import { type Seed64Input, seed64 } from '@repo/determinism/seed'
+import { type Numeric } from '@repo/types/Numeric'
 
 import { snapshot } from './snapshot'
 
@@ -8,7 +9,12 @@ export type SnapshotProps<Result extends bigint | undefined> = Readonly<{
 }>
 
 export type SplitMix64<Result extends bigint | undefined = undefined> =
-  Readonly<Record<'next', () => SplitMix64<bigint>> & SnapshotProps<Result>>
+  Readonly<
+    {
+      jump: (steps: Numeric) => SplitMix64<bigint>
+      next: () => SplitMix64<bigint>
+    } & SnapshotProps<Result>
+  >
 
 // https://prng.di.unimi.it/splitmix64.c
 export function splitMix64({
