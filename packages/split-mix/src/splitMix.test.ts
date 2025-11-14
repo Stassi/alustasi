@@ -96,4 +96,31 @@ describe('SplitMix 64', (): void => {
       expect(r1.state).not.toBe(r2.state)
     })
   })
+
+  describe('jump', (): void => {
+    it('should match next() for a single forward step', (): void => {
+      const prng: SplitMix64 = splitMix64({ seed }),
+        viaJump: SplitMix64<bigint> = prng.jump(1),
+        viaNext: SplitMix64<bigint> = prng.next()
+
+      expect(viaJump.state).toBe(viaNext.state)
+      expect(viaJump.result).toBe(viaNext.result)
+    })
+
+    it('should allow a walker to catch up to a jumper', (): void => {
+      const stepsToJump = 5
+
+      const base: SplitMix64 = splitMix64({ seed }),
+        jumper: SplitMix64<bigint> = base.jump(stepsToJump)
+
+      let walker: SplitMix64<bigint> = base.next()
+
+      repeat((): void => {
+        walker = walker.next()
+      }, stepsToJump - 1)
+
+      expect(walker.state).toBe(jumper.state)
+      expect(walker.result).toBe(jumper.result)
+    })
+  })
 })
