@@ -1,16 +1,16 @@
 import { type Numeric } from '@repo/types/Numeric'
 
-import { devolveOnce, evolve, evolveOnce } from './evolve'
 import { type SnapshotProps, type SplitMix64 } from './splitMix'
+import { stepBackward, stepBy, stepForward } from './step'
 
 export function snapshot<Result extends bigint | undefined>({
   state,
   ...rest
 }: SnapshotProps<Result>): SplitMix64<Result> {
   return {
-    back: (): SplitMix64<bigint> => devolveOnce(state),
-    jump: (steps: Numeric): SplitMix64<bigint> => evolve({ state, steps }),
-    next: (): SplitMix64<bigint> => evolveOnce(state),
+    back: (): SplitMix64<bigint> => stepBackward(state),
+    jump: (steps: Numeric): SplitMix64<bigint> => stepBy({ state, steps }),
+    next: (): SplitMix64<bigint> => stepForward(state),
     state,
     ...rest,
   }
