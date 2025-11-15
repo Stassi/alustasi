@@ -11,9 +11,9 @@ import { addWeylProduct } from './addWeylProduct'
 import { snapshot } from './snapshot'
 import { type SplitMix64 } from './splitMix'
 
-const evolveCurried: (
+const stepCurried: (steps: Numeric) => (state: bigint) => SplitMix64<bigint> = (
   steps: Numeric,
-) => (state: bigint) => SplitMix64<bigint> = (steps: Numeric) =>
+) =>
   pipe([
     addWeylProduct(steps),
     uInt64,
@@ -45,12 +45,11 @@ const evolveCurried: (
       }),
   ])
 
-export const evolveOnce: (state: bigint) => SplitMix64<bigint> =
-  evolveCurried(1)
+export const stepForward: (state: bigint) => SplitMix64<bigint> = stepCurried(1)
 
-export function evolve({ state, steps }: { state: bigint; steps: Numeric }) {
-  return evolveCurried(steps)(state)
+export function stepBy({ state, steps }: { state: bigint; steps: Numeric }) {
+  return stepCurried(steps)(state)
 }
 
-export const devolveOnce: (state: bigint) => SplitMix64<bigint> =
-  evolveCurried(-1)
+export const stepBackward: (state: bigint) => SplitMix64<bigint> =
+  stepCurried(-1)
