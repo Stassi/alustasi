@@ -51,3 +51,6 @@ export const evolveOnce: (state: bigint) => SplitMix64<bigint> =
 export function evolve({ state, steps }: { state: bigint; steps: Numeric }) {
   return evolveCurried(steps)(state)
 }
+
+export const devolveOnce: (state: bigint) => SplitMix64<bigint> =
+  evolveCurried(-1)

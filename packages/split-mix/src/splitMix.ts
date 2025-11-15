@@ -12,8 +12,8 @@ export type SplitMix64<Result extends bigint | undefined = undefined> =
   Readonly<
     {
       jump: (steps: Numeric) => SplitMix64<bigint>
-      next: () => SplitMix64<bigint>
-    } & SnapshotProps<Result>
+    } & Record<'back' | 'next', () => SplitMix64<bigint>> &
+      SnapshotProps<Result>
   >
 
 // https://prng.di.unimi.it/splitmix64.c
