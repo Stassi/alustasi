@@ -108,19 +108,74 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should allow a walker to catch up to a jumper', (): void => {
-      const stepsToJump = 5
-
       const base: SplitMix64 = splitMix64({ seed }),
-        jumper: SplitMix64<bigint> = base.jump(stepsToJump)
+        steps = 5,
+        jumper: SplitMix64<bigint> = base.jump(steps)
 
       let walker: SplitMix64<bigint> = base.next()
 
       repeat((): void => {
         walker = walker.next()
-      }, stepsToJump - 1)
+      }, steps - 1)
 
       expect(walker.state).toBe(jumper.state)
       expect(walker.result).toBe(jumper.result)
+    })
+
+    it('should allow a walker to catch up to a long jumper', (): void => {
+      const base: SplitMix64 = splitMix64({ seed }),
+        steps = 100,
+        jumper: SplitMix64<bigint> = base.jump(steps)
+
+      let walker: SplitMix64<bigint> = base.next()
+
+      repeat((): void => {
+        walker = walker.next()
+      }, steps - 1)
+
+      expect(walker.state).toBe(jumper.state)
+      expect(walker.result).toBe(jumper.result)
+    })
+
+    it('should allow a backward walker to catch up to a backward jumper', (): void => {
+      const base: SplitMix64 = splitMix64({ seed }),
+        steps = 100,
+        start: SplitMix64<bigint> = base.jump(steps),
+        jumper: SplitMix64<bigint> = start.jump(-steps)
+
+      let walker: SplitMix64<bigint> = start.back()
+
+      repeat((): void => {
+        walker = walker.back()
+      }, steps - 1)
+
+      expect(walker.state).toBe(jumper.state)
+      expect(walker.result).toBe(jumper.result)
+    })
+
+    it('should walk back and forth between neighboring states', (): void => {
+      const base: SplitMix64 = splitMix64({ seed }),
+        forward: SplitMix64<bigint> = base.next(),
+        backward: SplitMix64<bigint> = forward.back(),
+        forwardAgain: SplitMix64<bigint> = backward.next()
+
+      expect(backward.state).toBe(base.state)
+
+      expect(forwardAgain.state).toBe(forward.state)
+      expect(forwardAgain.result).toBe(forward.result)
+    })
+
+    it('should support full back-and-forth traversal via jump()', (): void => {
+      const base: SplitMix64 = splitMix64({ seed }),
+        steps = 10,
+        forward: SplitMix64<bigint> = base.jump(steps),
+        backAgain: SplitMix64<bigint> = forward.jump(-steps),
+        forwardAgain: SplitMix64<bigint> = backAgain.jump(steps)
+
+      expect(backAgain.state).toBe(base.state)
+
+      expect(forwardAgain.state).toBe(forward.state)
+      expect(forwardAgain.result).toBe(forward.result)
     })
   })
 })
