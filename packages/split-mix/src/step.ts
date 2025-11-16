@@ -47,7 +47,13 @@ const stepCurried: (steps: Numeric) => (state: bigint) => SplitMix64<bigint> = (
 
 export const stepForward: (state: bigint) => SplitMix64<bigint> = stepCurried(1)
 
-export function stepBy({ state, steps }: { state: bigint; steps: Numeric }) {
+export function stepBy({
+  state,
+  steps,
+}: {
+  state: bigint
+  steps: Numeric
+}): SplitMix64<bigint> {
   return stepCurried(steps)(state)
 }
 
