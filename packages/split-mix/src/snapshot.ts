@@ -5,6 +5,7 @@ import {
   type SnapshotProps,
   type SnapshotResult,
   type SplitMix64,
+  type SplitMix64State,
 } from './splitMix'
 import { stepBackward, stepBy, stepForward } from './step'
 
@@ -13,9 +14,10 @@ export function snapshot<Result extends SnapshotResult>({
   ...rest
 }: SnapshotProps<Result>): SplitMix64<Result> {
   return {
-    back: (): SplitMix64<bigint> => stepBackward(state),
-    jump: (steps: Numeric): SplitMix64<bigint> => stepBy({ state, steps }),
-    next: (): SplitMix64<bigint> => stepForward(state),
+    back: (): SplitMix64<SplitMix64State> => stepBackward(state),
+    jump: (steps: Numeric): SplitMix64<SplitMix64State> =>
+      stepBy({ state, steps }),
+    next: (): SplitMix64<SplitMix64State> => stepForward(state),
     state,
     ...rest,
   }
@@ -24,5 +26,6 @@ export function snapshot<Result extends SnapshotResult>({
 export function snapshotCurried<Result extends SnapshotResult>(
   result: Result,
 ): SnapshotCurried<Result> {
-  return (state: bigint): SplitMix64<Result> => snapshot({ result, state })
+  return (state: SplitMix64State): SplitMix64<Result> =>
+    snapshot({ result, state })
 }
