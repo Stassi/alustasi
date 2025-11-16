@@ -16,7 +16,7 @@ import {
   type SplitMix64State,
 } from './splitMix'
 
-const stepCurried = (steps: Numeric): SnapshotCurried<bigint> =>
+const stepCurried = (steps: Numeric): SnapshotCurried =>
   pipe([
     addWeylProduct(steps),
     uInt64,
@@ -52,11 +52,11 @@ const stepCurried = (steps: Numeric): SnapshotCurried<bigint> =>
         }) as BigIntCallback,
         snapshot<bigint>,
       ]),
-    ) as SnapshotCurried<bigint>,
+    ) as SnapshotCurried,
   ])
 
-export const stepForward: SnapshotCurried<bigint> = stepCurried(1)
-export const stepBackward: SnapshotCurried<bigint> = stepCurried(-1)
+export const stepForward: SnapshotCurried = stepCurried(1)
+export const stepBackward: SnapshotCurried = stepCurried(-1)
 
 export function stepBy({
   state,
