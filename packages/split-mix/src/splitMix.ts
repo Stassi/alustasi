@@ -4,19 +4,19 @@ import { type Numeric } from '@repo/types/Numeric'
 import { snapshot } from './snapshot'
 
 export type SnapshotCurried<Result extends SnapshotResult> = (
-  state: bigint,
+  state: SplitMix64State,
 ) => SplitMix64<Result>
 
 export type SnapshotProps<Result extends SnapshotResult> = Readonly<{
   result: Result
-  state: bigint
+  state: SplitMix64State
 }>
 
-export type SnapshotResult = bigint | undefined
+export type SnapshotResult = SplitMix64State | undefined
 
 export type SplitMix64<Result extends SnapshotResult = undefined> = Readonly<
-  Record<'back' | 'next', () => SplitMix64<bigint>> &
-    Record<'jump', (steps: Numeric) => SplitMix64<bigint>> &
+  Record<'back' | 'next', () => SplitMix64<SplitMix64State>> &
+    Record<'jump', (steps: Numeric) => SplitMix64<SplitMix64State>> &
     SnapshotProps<Result>
 >
 
