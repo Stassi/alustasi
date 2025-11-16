@@ -3,7 +3,7 @@ import { type Numeric } from '@repo/types/Numeric'
 
 import { snapshot } from './snapshot'
 
-export type SnapshotCurried<Result extends SnapshotResult> = (
+export type SnapshotCurried<Result extends SnapshotResult = SplitMix64State> = (
   state: SplitMix64State,
 ) => SplitMix64<Result>
 
