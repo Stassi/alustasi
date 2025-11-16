@@ -20,6 +20,8 @@ export type SplitMix64<Result extends SnapshotResult = undefined> = Readonly<
     SnapshotProps<Result>
 >
 
+export type SplitMix64State = bigint
+
 // https://prng.di.unimi.it/splitmix64.c
 export function splitMix64({
   seed,
