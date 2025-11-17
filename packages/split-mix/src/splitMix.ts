@@ -14,11 +14,12 @@ export type SnapshotProps<Result extends SnapshotResult> = Readonly<{
 
 export type SnapshotResult = SplitMix64State | undefined
 
-export type SplitMix64<Result extends SnapshotResult = undefined> = Readonly<
-  Record<'back' | 'next', () => SplitMix64<SplitMix64State>> &
-    Record<'jump', (steps: Numeric) => SplitMix64<SplitMix64State>> &
-    SnapshotProps<Result>
->
+export type SplitMix64<Result extends SnapshotResult = SplitMix64State> =
+  Readonly<
+    Record<'back' | 'next', () => SplitMix64> &
+      Record<'jump', (steps: Numeric) => SplitMix64> &
+      SnapshotProps<Result>
+  >
 
 export type SplitMix64Props = Readonly<
   Partial<Record<'state', SnapshotResult>> & Record<'seed', Seed64Input>
