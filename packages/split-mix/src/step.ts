@@ -9,8 +9,8 @@ import { type Numeric } from '@repo/types/Numeric'
 import { type BigIntCallback } from '@repo/types/NumericCallback'
 
 import { addWeylProduct } from './addWeylProduct'
-import { snapshotCurried as snapshot } from './snapshot'
-import { type SnapshotCurried, type SplitMix64 } from './splitMix'
+import { type SnapshotCurried, snapshotCurried as snapshot } from './snapshot'
+import { type SplitMix64 } from './splitMix'
 
 const stepCurried = (steps: Numeric): SnapshotCurried =>
   pipe([
