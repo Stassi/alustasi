@@ -28,7 +28,10 @@ export type SplitMix64Props = Readonly<
 export type SplitMix64State = bigint
 
 // https://prng.di.unimi.it/splitmix64.c
-export function splitMix64({ seed, state }: SplitMix64Props): SplitMix64 {
+export function splitMix64({
+  seed,
+  state,
+}: SplitMix64Props): SplitMix64<undefined> {
   return snapshot({
     result: undefined,
     state: state ?? seed64(seed),
