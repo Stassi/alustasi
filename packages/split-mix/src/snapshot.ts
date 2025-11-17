@@ -9,7 +9,7 @@ import {
 } from './splitMix'
 import { stepBackward, stepBy, stepForward } from './step'
 
-export function snapshot<Result extends SnapshotResult>({
+export function snapshot<Result extends SnapshotResult = SplitMix64State>({
   state,
   ...rest
 }: SnapshotProps<Result>): SplitMix64<Result> {
@@ -22,9 +22,9 @@ export function snapshot<Result extends SnapshotResult>({
   }
 }
 
-export function snapshotCurried<Result extends SnapshotResult>(
-  result: Result,
-): SnapshotCurried<Result> {
+export function snapshotCurried<
+  Result extends SnapshotResult = SplitMix64State,
+>(result: Result): SnapshotCurried<Result> {
   return (state: SplitMix64State): SplitMix64<Result> =>
     snapshot({ result, state })
 }
