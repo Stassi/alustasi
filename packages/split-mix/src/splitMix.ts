@@ -1,19 +1,7 @@
 import { type Seed64Input, seed64 } from '@repo/determinism/seed'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { snapshot } from './snapshot'
-
-export type SnapshotCurried<Result extends SnapshotResult = SplitMix64State> = (
-  state: SplitMix64State,
-) => SplitMix64<Result>
-
-export type SnapshotProps<Result extends SnapshotResult = SplitMix64State> =
-  Readonly<{
-    result: Result
-    state: SplitMix64State
-  }>
-
-export type SnapshotResult = SplitMix64State | undefined
+import { type SnapshotProps, type SnapshotResult, snapshot } from './snapshot'
 
 export type SplitMix64<Result extends SnapshotResult = SplitMix64State> =
   Readonly<
