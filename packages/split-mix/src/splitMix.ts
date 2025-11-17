@@ -7,10 +7,11 @@ export type SnapshotCurried<Result extends SnapshotResult = SplitMix64State> = (
   state: SplitMix64State,
 ) => SplitMix64<Result>
 
-export type SnapshotProps<Result extends SnapshotResult> = Readonly<{
-  result: Result
-  state: SplitMix64State
-}>
+export type SnapshotProps<Result extends SnapshotResult = SplitMix64State> =
+  Readonly<{
+    result: Result
+    state: SplitMix64State
+  }>
 
 export type SnapshotResult = SplitMix64State | undefined
 
