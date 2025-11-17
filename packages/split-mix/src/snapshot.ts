@@ -14,10 +14,9 @@ export function snapshot<Result extends SnapshotResult>({
   ...rest
 }: SnapshotProps<Result>): SplitMix64<Result> {
   return {
-    back: (): SplitMix64<SplitMix64State> => stepBackward(state),
-    jump: (steps: Numeric): SplitMix64<SplitMix64State> =>
-      stepBy({ state, steps }),
-    next: (): SplitMix64<SplitMix64State> => stepForward(state),
+    back: (): SplitMix64 => stepBackward(state),
+    jump: (steps: Numeric): SplitMix64 => stepBy({ state, steps }),
+    next: (): SplitMix64 => stepForward(state),
     state,
     ...rest,
   }
