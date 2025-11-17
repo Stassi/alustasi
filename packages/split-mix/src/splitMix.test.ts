@@ -1,7 +1,7 @@
 import { repeat } from '@repo/effects/repeat'
 import { hex64 } from '@repo/fixed-width/bits64/hex'
 
-import { type SplitMix64, type SplitMix64State, splitMix64 } from './splitMix'
+import { type SplitMix64, splitMix64 } from './splitMix'
 
 describe('SplitMix 64', (): void => {
   const seed = 'test-seed',
@@ -12,8 +12,8 @@ describe('SplitMix 64', (): void => {
   })
 
   it('should produce deterministic sequences for the same seed', (): void => {
-    let a: SplitMix64<SplitMix64State> = splitMix64({ seed }).next(),
-      b: SplitMix64<SplitMix64State> = splitMix64({ seed }).next()
+    let a: SplitMix64 = splitMix64({ seed }).next(),
+      b: SplitMix64 = splitMix64({ seed }).next()
 
     const seqA: bigint[] = [],
       seqB: bigint[] = []
@@ -52,7 +52,7 @@ describe('SplitMix 64', (): void => {
     )('seed: %s', (seed: string, expected): void => {
       const res: string[] = []
 
-      let prng: SplitMix64<SplitMix64State> = splitMix64({
+      let prng: SplitMix64 = splitMix64({
         seed: BigInt(seed),
       }).next()
 
@@ -69,8 +69,8 @@ describe('SplitMix 64', (): void => {
 
   describe('immutability', (): void => {
     it('should returns a new instance on next()', (): void => {
-      const r0: SplitMix64 = splitMix64({ seed }),
-        r1: SplitMix64<SplitMix64State> = r0.next()
+      const r0: SplitMix64<undefined> = splitMix64({ seed }),
+        r1: SplitMix64 = r0.next()
 
       expect(r1).not.toBe(r0)
       expect(r1.state).not.toBe(r0.state)
@@ -80,9 +80,9 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should not mutate previous instances in a chain', (): void => {
-      const r0: SplitMix64 = splitMix64({ seed }),
-        r1: SplitMix64<SplitMix64State> = r0.next(),
-        r2: SplitMix64<SplitMix64State> = r1.next()
+      const r0: SplitMix64<undefined> = splitMix64({ seed }),
+        r1: SplitMix64 = r0.next(),
+        r2: SplitMix64 = r1.next()
 
       expect(r0.result).toBeUndefined()
 
@@ -99,20 +99,20 @@ describe('SplitMix 64', (): void => {
 
   describe('jump', (): void => {
     it('should match next() for a single forward step', (): void => {
-      const prng: SplitMix64 = splitMix64({ seed }),
-        viaJump: SplitMix64<SplitMix64State> = prng.jump(1),
-        viaNext: SplitMix64<SplitMix64State> = prng.next()
+      const prng: SplitMix64<undefined> = splitMix64({ seed }),
+        viaJump: SplitMix64 = prng.jump(1),
+        viaNext: SplitMix64 = prng.next()
 
       expect(viaJump.state).toBe(viaNext.state)
       expect(viaJump.result).toBe(viaNext.result)
     })
 
     it('should allow a walker to catch up to a jumper', (): void => {
-      const base: SplitMix64 = splitMix64({ seed }),
+      const base: SplitMix64<undefined> = splitMix64({ seed }),
         steps = 5,
-        jumper: SplitMix64<SplitMix64State> = base.jump(steps)
+        jumper: SplitMix64 = base.jump(steps)
 
-      let walker: SplitMix64<SplitMix64State> = base.next()
+      let walker: SplitMix64 = base.next()
 
       repeat((): void => {
         walker = walker.next()
@@ -123,11 +123,11 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should allow a walker to catch up to a long jumper', (): void => {
-      const base: SplitMix64 = splitMix64({ seed }),
+      const base: SplitMix64<undefined> = splitMix64({ seed }),
         steps = 100,
-        jumper: SplitMix64<SplitMix64State> = base.jump(steps)
+        jumper: SplitMix64 = base.jump(steps)
 
-      let walker: SplitMix64<SplitMix64State> = base.next()
+      let walker: SplitMix64 = base.next()
 
       repeat((): void => {
         walker = walker.next()
@@ -138,12 +138,12 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should allow a backward walker to catch up to a backward jumper', (): void => {
-      const base: SplitMix64 = splitMix64({ seed }),
+      const base: SplitMix64<undefined> = splitMix64({ seed }),
         steps = 100,
-        start: SplitMix64<SplitMix64State> = base.jump(steps),
-        jumper: SplitMix64<SplitMix64State> = start.jump(-steps)
+        start: SplitMix64 = base.jump(steps),
+        jumper: SplitMix64 = start.jump(-steps)
 
-      let walker: SplitMix64<SplitMix64State> = start.back()
+      let walker: SplitMix64 = start.back()
 
       repeat((): void => {
         walker = walker.back()
@@ -154,10 +154,10 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should walk back and forth between neighboring states', (): void => {
-      const base: SplitMix64 = splitMix64({ seed }),
-        forward: SplitMix64<SplitMix64State> = base.next(),
-        backward: SplitMix64<SplitMix64State> = forward.back(),
-        forwardAgain: SplitMix64<SplitMix64State> = backward.next()
+      const base: SplitMix64<undefined> = splitMix64({ seed }),
+        forward: SplitMix64 = base.next(),
+        backward: SplitMix64 = forward.back(),
+        forwardAgain: SplitMix64 = backward.next()
 
       expect(backward.state).toBe(base.state)
 
@@ -166,11 +166,11 @@ describe('SplitMix 64', (): void => {
     })
 
     it('should support full back-and-forth traversal via jump()', (): void => {
-      const base: SplitMix64 = splitMix64({ seed }),
+      const base: SplitMix64<undefined> = splitMix64({ seed }),
         steps = 10,
-        forward: SplitMix64<SplitMix64State> = base.jump(steps),
-        backAgain: SplitMix64<SplitMix64State> = forward.jump(-steps),
-        forwardAgain: SplitMix64<SplitMix64State> = backAgain.jump(steps)
+        forward: SplitMix64 = base.jump(steps),
+        backAgain: SplitMix64 = forward.jump(-steps),
+        forwardAgain: SplitMix64 = backAgain.jump(steps)
 
       expect(backAgain.state).toBe(base.state)
 
