@@ -20,7 +20,6 @@
     "@repo/arithmetic": "workspace:*",
     "@repo/bitwise": "workspace:*",
     "@repo/combinatorics": "workspace:*",
-    "@repo/composition": "workspace:*",
     "@repo/determinism": "workspace:*",
     "@repo/fixed-width": "workspace:*",
     "@repo/types": "workspace:*"

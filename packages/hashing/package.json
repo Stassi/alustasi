@@ -19,7 +19,7 @@
   "dependencies": {
     "@repo/arithmetic": "workspace:*",
     "@repo/bitwise": "workspace:*",
-    "@repo/composition": "workspace:*",
+    "@repo/combinatorics": "workspace:*",
     "@repo/fixed-width": "workspace:*",
     "@repo/types": "workspace:*"
   },
