@@ -46,7 +46,7 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
             wShiftRightXorMultiply64: BigIntCallback,
           ): bigint => wShiftRightXorMultiply64(prevState),
         }) as BigIntCallback,
-        snapshot<bigint>,
+        snapshot,
       ]),
     ) as SnapshotCurried,
   ])
