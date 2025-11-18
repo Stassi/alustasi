@@ -1,4 +1,5 @@
 import { type Seed64Input, seed64 } from '@repo/determinism/seed'
+import { type Callback } from '@repo/types/Callback'
 import { type Numeric } from '@repo/types/Numeric'
 
 import { type SnapshotProps, type SnapshotResult, snapshot } from './snapshot'
@@ -15,6 +16,8 @@ export type SplitMix64Props = Readonly<
 >
 
 export type SplitMix64State = bigint
+
+export type SplitMix64StateCallback = Callback<SplitMix64State>
 
 // https://prng.di.unimi.it/splitmix64.c
 export function splitMix64({
