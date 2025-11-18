@@ -6,11 +6,14 @@ import { reduceApply } from '@repo/combinatorics/reduceApply'
 import { wCurried as w } from '@repo/combinatorics/w/wCurried'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
-import { type BigIntCallback } from '@repo/types/NumericCallback'
 
 import { addWeylProduct } from './addWeylProduct'
 import { type SnapshotCurried, snapshotCurried as snapshot } from './snapshot'
-import { type SplitMix64, type SplitMix64State } from './splitMix'
+import {
+  type SplitMix64,
+  type SplitMix64State,
+  type SplitMix64StateCallback,
+} from './splitMix'
 
 const stepCurried = (steps: Numeric): SnapshotCurried =>
   pipe([
@@ -31,13 +34,13 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
               ...props,
             }))
             .map(
-              ({ multiplier, shiftRightXor }): BigIntCallback =>
+              ({ multiplier, shiftRightXor }): SplitMix64StateCallback =>
                 w(
-                  (state: SplitMix64State): BigIntCallback =>
+                  (state: SplitMix64State): SplitMix64StateCallback =>
                     pipe([shiftRightXor(state), multiply(multiplier), uInt64]),
                 ),
             ),
-        ) as BigIntCallback,
+        ) as SplitMix64StateCallback,
         snapshot,
       ]),
     ) as SnapshotCurried,
