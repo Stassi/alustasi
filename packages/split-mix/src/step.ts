@@ -2,7 +2,7 @@ import { multiplyCurried as multiply } from '@repo/arithmetic/multiplication/mul
 import { shiftRightCurried as shiftRight } from '@repo/bitwise/shiftRightCurried'
 import { xorCurried as xor } from '@repo/bitwise/xorCurried'
 import { pipe } from '@repo/combinatorics/pipe/pipe'
-import { reduceCurried as reduce } from '@repo/combinatorics/reduce'
+import { reduceApply } from '@repo/combinatorics/reduceApply'
 import { wCurried as w } from '@repo/combinatorics/w/wCurried'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
@@ -18,8 +18,8 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
     uInt64,
     w(
       pipe([
-        reduce({
-          arr: (
+        reduceApply(
+          (
             [
               { multiplier: 0xbf58_476d_1ce4_e5b9n, shiftRightAmount: 30n },
               { multiplier: 0x94d0_49bb_1331_11ebn, shiftRightAmount: 27n },
@@ -41,11 +41,7 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
                     ]),
                 ),
             ),
-          fn: (
-            prevState: bigint,
-            wShiftRightXorMultiply64: BigIntCallback,
-          ): bigint => wShiftRightXorMultiply64(prevState),
-        }) as BigIntCallback,
+        ) as BigIntCallback,
         snapshot,
       ]),
     ) as SnapshotCurried,
