@@ -10,7 +10,7 @@ import { type BigIntCallback } from '@repo/types/NumericCallback'
 
 import { addWeylProduct } from './addWeylProduct'
 import { type SnapshotCurried, snapshotCurried as snapshot } from './snapshot'
-import { type SplitMix64 } from './splitMix'
+import { type SplitMix64, type SplitMix64State } from './splitMix'
 
 const stepCurried = (steps: Numeric): SnapshotCurried =>
   pipe([
@@ -33,12 +33,8 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
             .map(
               ({ multiplier, shiftRightXor }): BigIntCallback =>
                 w(
-                  (prevState: bigint): BigIntCallback =>
-                    pipe([
-                      shiftRightXor(prevState),
-                      multiply(multiplier),
-                      uInt64,
-                    ]),
+                  (state: SplitMix64State): BigIntCallback =>
+                    pipe([shiftRightXor(state), multiply(multiplier), uInt64]),
                 ),
             ),
         ) as BigIntCallback,
@@ -53,9 +49,6 @@ export const stepBackward: SnapshotCurried = stepCurried(-1)
 export function stepBy({
   state,
   steps,
-}: {
-  state: bigint
-  steps: Numeric
-}): SplitMix64 {
+}: Record<'state', SplitMix64State> & Record<'steps', Numeric>): SplitMix64 {
   return stepCurried(steps)(state)
 }
