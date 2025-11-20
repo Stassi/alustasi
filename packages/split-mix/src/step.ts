@@ -55,6 +55,8 @@ export const stepBackward: SplitMix64SnapshotCurried = stepCurried(-1)
 export function stepBy({
   state,
   steps,
-}: Record<'state', SplitMix64State> & Record<'steps', Numeric>): SplitMix64 {
+}: Readonly<
+  Record<'state', SplitMix64State> & Record<'steps', Numeric>
+>): SplitMix64 {
   return stepCurried(steps)(state)
 }
