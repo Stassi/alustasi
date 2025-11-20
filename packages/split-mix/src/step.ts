@@ -8,14 +8,17 @@ import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
 import { addWeylProduct } from './addWeylProduct'
-import { type SnapshotCurried, snapshotCurried as snapshot } from './snapshot'
+import {
+  type SplitMix64SnapshotCurried,
+  snapshotCurried as snapshot,
+} from './snapshot'
 import {
   type SplitMix64,
   type SplitMix64State,
   type SplitMix64StateCallback,
 } from './splitMix'
 
-const stepCurried = (steps: Numeric): SnapshotCurried =>
+const stepCurried = (steps: Numeric): SplitMix64SnapshotCurried =>
   pipe([
     addWeylProduct(steps),
     uInt64,
@@ -43,15 +46,17 @@ const stepCurried = (steps: Numeric): SnapshotCurried =>
         ) as SplitMix64StateCallback,
         snapshot,
       ]),
-    ) as SnapshotCurried,
+    ) as SplitMix64SnapshotCurried,
   ])
 
-export const stepForward: SnapshotCurried = stepCurried(1)
-export const stepBackward: SnapshotCurried = stepCurried(-1)
+export const stepForward: SplitMix64SnapshotCurried = stepCurried(1)
+export const stepBackward: SplitMix64SnapshotCurried = stepCurried(-1)
 
 export function stepBy({
   state,
   steps,
-}: Record<'state', SplitMix64State> & Record<'steps', Numeric>): SplitMix64 {
+}: Readonly<
+  Record<'state', SplitMix64State> & Record<'steps', Numeric>
+>): SplitMix64 {
   return stepCurried(steps)(state)
 }

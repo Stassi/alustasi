@@ -2,17 +2,23 @@ import { type Seed64Input, seed64 } from '@repo/determinism/seed'
 import { type Callback } from '@repo/types/Callback'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { type SnapshotProps, type SnapshotResult, snapshot } from './snapshot'
+import {
+  type SplitMix64SnapshotProps,
+  type SplitMix64SnapshotResult,
+  snapshot,
+} from './snapshot'
 
-export type SplitMix64<Result extends SnapshotResult = SplitMix64State> =
-  Readonly<
-    Record<'back' | 'next', () => SplitMix64> &
-      Record<'jump', (steps: Numeric) => SplitMix64> &
-      SnapshotProps<Result>
-  >
+export type SplitMix64<
+  Result extends SplitMix64SnapshotResult = SplitMix64State,
+> = Readonly<
+  Record<'back' | 'next', () => SplitMix64> &
+    Record<'jump', (steps: Numeric) => SplitMix64> &
+    SplitMix64SnapshotProps<Result>
+>
 
 export type SplitMix64Props = Readonly<
-  Partial<Record<'state', SnapshotResult>> & Record<'seed', Seed64Input>
+  Partial<Record<'state', SplitMix64SnapshotResult>> &
+    Record<'seed', Seed64Input>
 >
 
 export type SplitMix64State = bigint
