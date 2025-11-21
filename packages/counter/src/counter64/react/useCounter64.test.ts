@@ -1,9 +1,9 @@
 import { repeatCurried as repeat } from '@repo/effects/repeat'
 import { act, renderHook } from '@testing-library/react'
 
-import { type UseCounter, useCounter } from './useCounter'
+import { type UseCounter64, useCounter64 } from './useCounter64'
 
-describe('useCounter', (): void => {
+describe('useCounter 64', (): void => {
   it.each([
     { clicks: 3, expected: 1n, start: -2n },
     { clicks: 2, expected: 2n, start: 0n },
@@ -13,7 +13,7 @@ describe('useCounter', (): void => {
   ] as const)(
     'increment $clicks clicks from $start to $expected',
     ({ clicks, expected, start }): void => {
-      const { result } = renderHook((): UseCounter => useCounter(start)),
+      const { result } = renderHook((): UseCounter64 => useCounter64(start)),
         incrementRepeatedly: (n: number) => void = repeat((): void => {
           result.current.increment()
         })
