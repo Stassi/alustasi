@@ -10,7 +10,7 @@ export type UseCounter = {
   increment: () => void
 }
 
-export function useCounter(initialState: Numeric): UseCounter {
+export function useCounter(initialState: Numeric = 0): UseCounter {
   const [{ result: count }, setCounter]: [
     Counter64,
     Dispatch<SetStateAction<Counter64>>,
