@@ -351,8 +351,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-testing-library:
-        specifier: ^7.13.4
-        version: 7.13.4(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
+        specifier: ^7.13.5
+        version: 7.13.5(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-turbo:
         specifier: ^2.6.1
         version: 2.6.1(eslint@9.39.1(jiti@2.6.1))(turbo@2.6.1)
@@ -2274,8 +2274,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.258:
-    resolution: {integrity: sha512-rHUggNV5jKQ0sSdWwlaRDkFc3/rRJIVnOSe9yR4zrR07m3ZxhP4N27Hlg8VeJGGYgFTxK5NqDmWI4DSH72vIJg==}
+  electron-to-chromium@1.5.259:
+    resolution: {integrity: sha512-I+oLXgpEJzD6Cwuwt1gYjxsDmu/S/Kd41mmLA3O+/uH2pFRO/DvOjUyGozL8j3KeLV6WyZ7ssPwELMsXCcsJAQ==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -2472,9 +2472,9 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-testing-library@7.13.4:
-    resolution: {integrity: sha512-OOrjrJrFsp20xULIy2wDJWjW7qmH2nV0zrs3Y790Ld3+XZFDbtgKvnE//xDANIBna3M9sk9GPYbzkCLI7XhYmg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0, pnpm: ^9.14.0}
+  eslint-plugin-testing-library@7.13.5:
+    resolution: {integrity: sha512-75rUmtNnXeO9cyMwG78vXxGEB7muIQ+IwcwBTma+M9KFc68SFaMKevGydObsUgX+IFef4lRLO/ysR9JqK1odyg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -5430,7 +5430,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.8.30
       caniuse-lite: 1.0.30001756
-      electron-to-chromium: 1.5.258
+      electron-to-chromium: 1.5.259
       node-releases: 2.0.27
       update-browserslist-db: 1.1.4(browserslist@4.28.0)
 
@@ -5616,7 +5616,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.258: {}
+  electron-to-chromium@1.5.259: {}
 
   emittery@0.13.1: {}
 
@@ -5888,7 +5888,7 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-testing-library@7.13.4(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3):
+  eslint-plugin-testing-library@7.13.5(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/scope-manager': 8.47.0
       '@typescript-eslint/utils': 8.47.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
