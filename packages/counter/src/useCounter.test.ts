@@ -10,14 +10,9 @@ describe('useCounter', (): void => {
     { clicks: 0, expected: 0xffff_ffff_ffff_ffffn, start: -1n },
     { clicks: 4, expected: 5n, start: 1n },
     { clicks: 0, expected: 3n, start: 3n },
-  ])(
+  ] as const)(
     'increment $clicks clicks from $start to $expected',
-    ({
-      clicks,
-      expected,
-      start,
-    }: Record<'clicks', number> &
-      Record<'expected' | 'start', bigint>): void => {
+    ({ clicks, expected, start }): void => {
       const { result } = renderHook((): UseCounter => useCounter(start)),
         incrementRepeatedly: (n: number) => void = repeat((): void => {
           result.current.increment()
