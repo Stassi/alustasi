@@ -1,1 +1,1 @@
-export { Counter } from '@repo/counter/Counter'
+export { Counter64 as Counter } from '@repo/counter/counter64/react/Counter64'
