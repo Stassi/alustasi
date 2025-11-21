@@ -5,17 +5,19 @@ import { type UseCounter, useCounter } from './useCounter'
 
 describe('useCounter', (): void => {
   it.each([
-    { clicks: 3, expected: 1, start: -2 },
-    { clicks: 2, expected: 2, start: 0 },
-    { clicks: 4, expected: 5, start: 1 },
-    { clicks: 0, expected: 3, start: 3 },
+    { clicks: 3, expected: 1n, start: -2n },
+    { clicks: 2, expected: 2n, start: 0n },
+    { clicks: 0, expected: 0xffff_ffff_ffff_ffffn, start: -1n },
+    { clicks: 4, expected: 5n, start: 1n },
+    { clicks: 0, expected: 3n, start: 3n },
   ])(
     'increment $clicks clicks from $start to $expected',
     ({
       clicks,
       expected,
       start,
-    }: Record<'clicks' | 'expected' | 'start', number>): void => {
+    }: Record<'clicks', number> &
+      Record<'expected' | 'start', bigint>): void => {
       const { result } = renderHook((): UseCounter => useCounter(start)),
         incrementRepeatedly: (n: number) => void = repeat((): void => {
           result.current.increment()
