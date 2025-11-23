@@ -1,6 +1,6 @@
 import { type Numeric } from '@repo/types/Numeric'
 
-import { snapshot } from './snapshot'
+import { snapshot64 } from './snapshot64'
 
 export type Counter64 = Readonly<
   Record<'back' | 'next', () => Counter64> &
@@ -10,5 +10,5 @@ export type Counter64 = Readonly<
 export type Counter64State = bigint
 
 export function counter64(state: Numeric = 0n): Counter64 {
-  return snapshot(state)
+  return snapshot64(state)
 }
