@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 
-import { Counter } from './Counter'
+import { Counter } from '../../react/Counter'
 
 describe('Counter (variable-width, React component)', (): void => {
   beforeEach((): void => {

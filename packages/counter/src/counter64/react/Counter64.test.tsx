@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 
-import { Counter64 } from './Counter64'
+import { Counter64 } from '../../react/Counter'
 
 describe('Counter 64 (React component)', (): void => {
   beforeEach((): void => {
