@@ -1,7 +1,7 @@
 import { repeatCurried as repeat } from '@repo/effects/repeat'
 import { act, renderHook } from '@testing-library/react'
 
-import { type UseCounter, useCounter } from './useCounter'
+import { type UseCounter, useCounter } from '../../react/useCounter'
 
 describe('useCounter (variable-width, React hook)', (): void => {
   it.each([
