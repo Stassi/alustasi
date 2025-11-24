@@ -10,7 +10,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^16.0.3"
+    "next": "^16.0.4"
   },
   "devDependencies": {
     "@repo/config-eslint-typescript": "workspace:*",
