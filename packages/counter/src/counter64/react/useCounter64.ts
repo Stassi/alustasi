@@ -3,7 +3,7 @@
 import { type Numeric } from '@repo/types/Numeric'
 import { type Dispatch, type SetStateAction, useState } from 'react'
 
-import { type Counter64, counter64 } from '../counter64'
+import { type Counter, counter64 } from '../../counter'
 
 export type UseCounter64 = {
   count: bigint
@@ -12,14 +12,14 @@ export type UseCounter64 = {
 
 export function useCounter64(initialState: Numeric = 0): UseCounter64 {
   const [{ result: count }, setCounter]: [
-    Counter64,
-    Dispatch<SetStateAction<Counter64>>,
+    Counter,
+    Dispatch<SetStateAction<Counter>>,
   ] = useState(counter64(initialState))
 
   return {
     count,
     increment(): void {
-      setCounter((previous: Counter64): Counter64 => previous.next())
+      setCounter((previous: Counter): Counter => previous.next())
     },
   }
 }

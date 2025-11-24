@@ -3,7 +3,7 @@
 import { type Numeric } from '@repo/types/Numeric'
 import { type Dispatch, type SetStateAction, useState } from 'react'
 
-import { type Counter, counter } from '../counter'
+import { type Counter, counter } from '../../counter'
 
 export type UseCounter = {
   count: bigint
