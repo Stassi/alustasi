@@ -3,7 +3,7 @@ import { repeat } from '@repo/effects/repeat'
 import { type Numeric } from '@repo/types/Numeric'
 import { type NumericCallback } from '@repo/types/NumericCallback'
 
-import { type Counter, counter } from './counter'
+import { type Counter, counter } from '../counter'
 
 describe('Counter (variable-width)', (): void => {
   const [bigNegativeOne, bigZero, bigOne, bigTwo] = [-1n, 0n, 1n, 2n],
