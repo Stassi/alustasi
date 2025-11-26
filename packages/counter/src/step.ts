@@ -1,34 +1,34 @@
+import { pipe } from '@repo/combinatorics/pipe/pipe'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { type Counter, type CounterState } from './counter'
+import { bigAdd } from './bigAdd'
 import {
-  type CounterSnapshotCurried,
-  addSnapshot,
-  addSnapshot64,
-} from './snapshot'
+  type Counter,
+  type CounterState,
+  type CounterWidthNormalizer,
+} from './counter'
+import { snapshotCurried as snapshot } from './snapshot'
 
-type StepByProps = Readonly<
-  Record<'state', CounterState> & Record<'steps', Numeric>
->
+export type StepByProps = Record<'state', CounterState> &
+  Record<'steps', Numeric>
 
-export function stepBy({ state, steps }: StepByProps): Counter {
-  return addSnapshot(state, BigInt(steps))
+export type StepProps = Record<
+  'stepBackward' | 'stepForward',
+  (state: CounterState) => Counter
+> &
+  Record<'stepBy', (props: StepByProps) => Counter>
+
+export function step(widthNormalizer: CounterWidthNormalizer): StepProps {
+  const stepBy = ({ state, steps }: StepByProps): Counter =>
+      stepCurried(steps)(state),
+    stepCurried =
+      (steps: Numeric) =>
+      (state: CounterState): Counter =>
+        pipe([bigAdd(steps), snapshot(widthNormalizer)])(state)
+
+  return {
+    stepBackward: stepCurried(-1),
+    stepBy,
+    stepForward: stepCurried(1),
+  }
 }
-
-export function stepBy64({ state, steps }: StepByProps): Counter {
-  return addSnapshot64(state, BigInt(steps))
-}
-
-function stepCurried(steps: Numeric): CounterSnapshotCurried {
-  return (state: CounterState): Counter => stepBy({ state, steps })
-}
-
-function stepCurried64(steps: Numeric): CounterSnapshotCurried {
-  return (state: CounterState): Counter => stepBy64({ state, steps })
-}
-
-export const stepForward: CounterSnapshotCurried = stepCurried(1)
-export const stepBackward: CounterSnapshotCurried = stepCurried(-1)
-
-export const stepForward64: CounterSnapshotCurried = stepCurried64(1)
-export const stepBackward64: CounterSnapshotCurried = stepCurried64(-1)

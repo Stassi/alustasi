@@ -1,6 +1,7 @@
+import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { snapshot, snapshot64 } from './snapshot'
+import { snapshot } from './snapshot'
 
 export type Counter = Readonly<
   Record<'back' | 'next', () => Counter> &
@@ -8,13 +9,10 @@ export type Counter = Readonly<
     Record<'result' | 'state', CounterState>
 >
 export type CounterState = bigint
-export type CounterWithWidth = (state?: Numeric) => Counter
+export type CounterWidthNormalizer = (initialState: Numeric) => CounterState
 
-function widthAppliedCounter(fixedWidth?: 64): CounterWithWidth {
-  return fixedWidth === undefined
-    ? (state: Numeric = 0n): Counter => snapshot(state)
-    : (state: Numeric = 0n): Counter => snapshot64(state)
-}
+export const counter = (initialState: Numeric = 0n): Counter =>
+  snapshot({ initialState })
 
-export const counter: CounterWithWidth = widthAppliedCounter()
-export const counter64: CounterWithWidth = widthAppliedCounter(64)
+export const counter64 = (initialState: Numeric = 0n): Counter =>
+  snapshot({ initialState, widthNormalizer: uInt64 })
