@@ -748,6 +748,9 @@ importers:
       '@repo/types':
         specifier: workspace:*
         version: link:../types
+      '@repo/weyl-sequence':
+        specifier: workspace:*
+        version: link:../weyl-sequence
     devDependencies:
       '@jest/types':
         specifier: ^30.2.0
