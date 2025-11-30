@@ -7,7 +7,7 @@ import { wCurried as w } from '@repo/combinatorics/w/wCurried'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { addWeylProduct } from './addWeylProduct'
+import { addGoldenRatioProduct } from './addGoldenRatioProduct'
 import {
   type SplitMix64SnapshotCurried,
   snapshotCurried as snapshot,
@@ -20,7 +20,7 @@ import {
 
 const stepCurried = (steps: Numeric): SplitMix64SnapshotCurried =>
   pipe([
-    addWeylProduct(steps),
+    addGoldenRatioProduct(steps),
     uInt64,
     w(
       pipe([
