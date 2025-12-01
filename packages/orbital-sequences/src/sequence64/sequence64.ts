@@ -55,3 +55,25 @@ const snapshot: Sequence64Snapshot = pipe([
       }),
   ),
 ])
+
+export function counterSequence64(initialState: Numeric = 0n): Sequence64 {
+  return sequence64VariableIncrement({
+    increment: 1n,
+    initialState,
+  })
+}
+
+export function weylSequence64(initialState: Numeric = 0n): Sequence64 {
+  return sequence64VariableIncrement({
+    increment: 0x9e37_79b9_7f4a_7c15n,
+    initialState,
+  })
+}
+
+function sequence64VariableIncrement({
+  initialState = 0n,
+}: Readonly<
+  Partial<Record<'initialState', Numeric>> & Record<'increment', Numeric>
+>): Sequence64 {
+  return sequence64(initialState)
+}
