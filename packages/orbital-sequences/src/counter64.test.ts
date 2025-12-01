@@ -2,7 +2,7 @@ import { repeat } from '@repo/effects/repeat'
 
 import {
   type Sequence64 as Counter64,
-  sequence64 as counter64,
+  counterSequence64 as counter64,
 } from './sequence64/sequence64'
 
 describe('Counter 64 (sequence)', (): void => {
