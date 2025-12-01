@@ -2,11 +2,11 @@ import { repeat } from '@repo/effects/repeat'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { increment } from './increment/increment'
 import { type Sequence64, sequence64 } from './sequence64'
 
 describe('Sequence 64', (): void => {
-  const over64: bigint = 2n ** 64n,
+  const increment = 1n,
+    over64: bigint = 2n ** 64n,
     max64: bigint = over64 - 1n,
     zero = 0n
 
