@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./*": "./src/*.tsx",
-    "./*.test": null
+    "./*": "./src/*.ts",
+    "./*.test": null,
+    "./react/*": "./src/react/*.tsx"
   },
   "scripts": {
     "lint:check": "eslint . --max-warnings 0",
