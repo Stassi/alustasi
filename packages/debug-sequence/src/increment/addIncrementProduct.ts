@@ -4,8 +4,7 @@ import { pipe } from '@repo/combinatorics/pipe/pipe'
 import { type Numeric } from '@repo/types/Numeric'
 import { type NumericCallback } from '@repo/types/NumericCallback'
 
-import { goldenRatio64 } from './goldenRatio64'
+import { increment } from './increment'
 
-export const addGoldenRatioProduct: (
-  steps: Numeric,
-) => NumericCallback<Numeric> = pipe([BigInt, multiply(goldenRatio64), add])
+export const addIncrementProduct: (steps: Numeric) => NumericCallback<Numeric> =
+  pipe([BigInt, multiply(increment), add])
