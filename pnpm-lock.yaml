@@ -901,6 +901,9 @@ importers:
       '@repo/fixed-width':
         specifier: workspace:*
         version: link:../fixed-width
+      '@repo/orbital-sequences':
+        specifier: workspace:*
+        version: link:../orbital-sequences
       '@repo/types':
         specifier: workspace:*
         version: link:../types
