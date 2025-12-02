@@ -2,15 +2,13 @@ import { repeat } from '@repo/effects/repeat'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
-import {
-  type Sequence64,
-  counterSequence64,
-  weylSequence64,
-} from './sequence64'
+import { counter64 } from '../counter64'
+import { weylSequence64 } from '../weylSequence64'
+import { type OrbitalSequence } from './orbitalSequence'
 
-describe('Sequence 64', (): void => {
+describe('Orbital sequence 64', (): void => {
   describe.each([
-    { increment: 1n, name: 'Counter', sequence64: counterSequence64 },
+    { increment: 1n, name: 'Counter', sequence64: counter64 },
     {
       increment: 0x9e37_79b9_7f4a_7c15n,
       name: 'Golden ratio',
@@ -24,48 +22,49 @@ describe('Sequence 64', (): void => {
         zero = 0n
 
       it('should normalize the initial state via uInt64', (): void => {
-        const { result, state }: Sequence64 = sequence64(-1n)
+        const { result, state }: OrbitalSequence = sequence64(-1n)
         expect(state).toBe(max64)
         expect(result).toBe(max64)
       })
 
       it('should expose the result as identity on state', (): void => {
-        const { result, state }: Sequence64 = sequence64(42n)
+        const { result, state }: OrbitalSequence = sequence64(42n)
         expect(result).toBe(state)
       })
 
       it('next() / back() stay inside the 64-bit ring', (): void => {
-        const { back, next }: Sequence64 = sequence64(),
-          { state: backState }: Sequence64 = back(),
-          { state: nextState }: Sequence64 = next()
+        const { back, next }: OrbitalSequence = sequence64(),
+          { state: backState }: OrbitalSequence = back(),
+          { state: nextState }: OrbitalSequence = next()
 
         expect(nextState).toBe(uInt64(increment))
         expect(backState).toBe(uInt64(-increment))
       })
 
       it('jump(1) matches next()', (): void => {
-        const { jump, next }: Sequence64 = sequence64(0n),
-          { result: jumpResult, state: jumpState }: Sequence64 = jump(1),
-          { result: nextResult, state: nextState }: Sequence64 = next()
+        const { jump, next }: OrbitalSequence = sequence64(0n),
+          { result: jumpResult, state: jumpState }: OrbitalSequence = jump(1),
+          { result: nextResult, state: nextState }: OrbitalSequence = next()
 
         expect(jumpState).toBe(nextState)
         expect(jumpResult).toBe(nextResult)
       })
 
       it('jump(-1) matches back()', (): void => {
-        const { back, jump }: Sequence64 = sequence64(0n),
-          { result: backResult, state: backState }: Sequence64 = back(),
-          { result: jumpResult, state: jumpState }: Sequence64 = jump(-1)
+        const { back, jump }: OrbitalSequence = sequence64(0n),
+          { result: backResult, state: backState }: OrbitalSequence = back(),
+          { result: jumpResult, state: jumpState }: OrbitalSequence = jump(-1)
 
         expect(jumpState).toBe(backState)
         expect(jumpResult).toBe(backResult)
       })
 
       it('walker vs jumper forward (short)', (): void => {
-        const { jump, next }: Sequence64 = sequence64(0n),
+        const { jump, next }: OrbitalSequence = sequence64(0n),
           steps = 10,
-          { result: jumperResult, state: jumperState }: Sequence64 = jump(steps)
-        let walker: Sequence64 = next()
+          { result: jumperResult, state: jumperState }: OrbitalSequence =
+            jump(steps)
+        let walker: OrbitalSequence = next()
 
         repeat((): void => {
           walker = walker.next()
@@ -77,12 +76,13 @@ describe('Sequence 64', (): void => {
 
       it('walker vs jumper backward (short)', (): void => {
         const steps = 10,
-          { jump: baseJump }: Sequence64 = sequence64(0n),
+          { jump: baseJump }: OrbitalSequence = sequence64(0n),
           // eslint-disable-next-line perfectionist/sort-variable-declarations
-          { back: startBack, jump: startJump }: Sequence64 = baseJump(steps),
-          { result: jumperResult, state: jumperState }: Sequence64 =
+          { back: startBack, jump: startJump }: OrbitalSequence =
+            baseJump(steps),
+          { result: jumperResult, state: jumperState }: OrbitalSequence =
             startJump(-steps)
-        let walker: Sequence64 = startBack()
+        let walker: OrbitalSequence = startBack()
 
         repeat((): void => {
           walker = walker.back()
@@ -94,17 +94,20 @@ describe('Sequence 64', (): void => {
 
       it('should jump forward then backward returns to the same snapshot', (): void => {
         const steps = 25,
-          { jump: baseJump, state: baseState }: Sequence64 = sequence64(0n),
+          { jump: baseJump, state: baseState }: OrbitalSequence =
+            sequence64(0n),
           {
             jump: forwardJump,
             result: forwardResult,
             state: forwardState,
-          }: Sequence64 = baseJump(steps),
+          }: OrbitalSequence = baseJump(steps),
           // eslint-disable-next-line perfectionist/sort-variable-declarations
-          { jump: backAgainJump, state: backAgainState }: Sequence64 =
+          { jump: backAgainJump, state: backAgainState }: OrbitalSequence =
             forwardJump(-steps),
-          { result: forwardAgainResult, state: forwardAgainState }: Sequence64 =
-            backAgainJump(steps)
+          {
+            result: forwardAgainResult,
+            state: forwardAgainState,
+          }: OrbitalSequence = backAgainJump(steps)
 
         expect(backAgainState).toBe(baseState)
         expect(forwardAgainState).toBe(forwardState)
@@ -112,9 +115,9 @@ describe('Sequence 64', (): void => {
       })
 
       it('should produce immutable snapshots along the orbit', (): void => {
-        const s0: Sequence64 = sequence64(),
-          s1: Sequence64 = s0.next(),
-          s2: Sequence64 = s1.next()
+        const s0: OrbitalSequence = sequence64(),
+          s1: OrbitalSequence = s0.next(),
+          s2: OrbitalSequence = s1.next()
 
         expect(s0).not.toBe(s1)
         expect(s1).not.toBe(s2)
@@ -132,8 +135,8 @@ describe('Sequence 64', (): void => {
         const initialState: Numeric = 123n,
           steps = 16
 
-        let a: Sequence64 = sequence64(initialState),
-          b: Sequence64 = sequence64(initialState)
+        let a: OrbitalSequence = sequence64(initialState),
+          b: OrbitalSequence = sequence64(initialState)
 
         const seqA: bigint[] = [],
           seqB: bigint[] = []
