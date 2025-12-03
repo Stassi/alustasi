@@ -1,7 +1,7 @@
 'use client'
 
-import { counter } from '@repo/sequences/counter'
-import { counter64 } from '@repo/sequences/counter64'
+import { counter } from '@repo/sequences/orbit/invariants/counter'
+import { counter64 } from '@repo/sequences/orbit/invariants/counter64'
 import { type Orbit as Counter } from '@repo/sequences/orbit/orbit'
 import { type Numeric } from '@repo/types/Numeric'
 import { type Dispatch, type SetStateAction, useState } from 'react'

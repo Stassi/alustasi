@@ -1,5 +1,5 @@
 import { addCurried as add } from '@repo/arithmetic/addition/addCurried'
-import { weylSequence64 } from '@repo/sequences/weylSequence64'
+import { weylSequence64 } from '@repo/sequences/orbit/invariants/weylSequence64'
 import { type Numeric } from '@repo/types/Numeric'
 import { type NumericCallback } from '@repo/types/NumericCallback'
 
