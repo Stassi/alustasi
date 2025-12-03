@@ -1,6 +1,6 @@
 import { repeat } from '@repo/effects/repeat'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
-import { type OrbitalSequence } from '@repo/orbital-sequences/orbitalSequence/orbitalSequence'
+import { type Orbit } from '@repo/sequences/orbit/orbit'
 import { type Numeric } from '@repo/types/Numeric'
 
 import { weylSequence64 } from './weylSequence64'
@@ -23,9 +23,9 @@ describe('Weyl sequence 64', (): void => {
   })
 
   it('next() / back() stay inside the 64-bit ring', (): void => {
-    const { back, next }: OrbitalSequence = weylSequence64(),
-      { state: backState }: OrbitalSequence = back(),
-      { state: nextState }: OrbitalSequence = next()
+    const { back, next }: Orbit = weylSequence64(),
+      { state: backState }: Orbit = back(),
+      { state: nextState }: Orbit = next()
 
     expect(nextState).toBe(uInt64(goldenRatio64))
     expect(backState).toBe(uInt64(-goldenRatio64))
@@ -41,20 +41,19 @@ describe('Weyl sequence 64', (): void => {
   })
 
   it('jump(-1) matches back()', (): void => {
-    const { back, jump }: OrbitalSequence = weylSequence64(0n),
-      { result: backResult, state: backState }: OrbitalSequence = back(),
-      { result: jumpResult, state: jumpState }: OrbitalSequence = jump(-1)
+    const { back, jump }: Orbit = weylSequence64(0n),
+      { result: backResult, state: backState }: Orbit = back(),
+      { result: jumpResult, state: jumpState }: Orbit = jump(-1)
 
     expect(jumpState).toBe(backState)
     expect(jumpResult).toBe(backResult)
   })
 
   it('walker vs jumper forward (short)', (): void => {
-    const { jump, next }: OrbitalSequence = weylSequence64(0n),
+    const { jump, next }: Orbit = weylSequence64(0n),
       steps = 10,
-      { result: jumperResult, state: jumperState }: OrbitalSequence =
-        jump(steps)
-    let walker: OrbitalSequence = next()
+      { result: jumperResult, state: jumperState }: Orbit = jump(steps)
+    let walker: Orbit = next()
 
     repeat((): void => {
       walker = walker.next()
@@ -66,12 +65,11 @@ describe('Weyl sequence 64', (): void => {
 
   it('walker vs jumper backward (short)', (): void => {
     const steps = 10,
-      { jump: baseJump }: OrbitalSequence = weylSequence64(0n),
+      { jump: baseJump }: Orbit = weylSequence64(0n),
       // eslint-disable-next-line perfectionist/sort-variable-declarations
-      { back: startBack, jump: startJump }: OrbitalSequence = baseJump(steps),
-      { result: jumperResult, state: jumperState }: OrbitalSequence =
-        startJump(-steps)
-    let walker: OrbitalSequence = startBack()
+      { back: startBack, jump: startJump }: Orbit = baseJump(steps),
+      { result: jumperResult, state: jumperState }: Orbit = startJump(-steps)
+    let walker: Orbit = startBack()
 
     repeat((): void => {
       walker = walker.back()
@@ -83,20 +81,17 @@ describe('Weyl sequence 64', (): void => {
 
   it('should jump forward then backward returns to the same snapshot', (): void => {
     const steps = 25,
-      { jump: baseJump, state: baseState }: OrbitalSequence =
-        weylSequence64(0n),
+      { jump: baseJump, state: baseState }: Orbit = weylSequence64(0n),
       {
         jump: forwardJump,
         result: forwardResult,
         state: forwardState,
-      }: OrbitalSequence = baseJump(steps),
+      }: Orbit = baseJump(steps),
       // eslint-disable-next-line perfectionist/sort-variable-declarations
-      { jump: backAgainJump, state: backAgainState }: OrbitalSequence =
+      { jump: backAgainJump, state: backAgainState }: Orbit =
         forwardJump(-steps),
-      {
-        result: forwardAgainResult,
-        state: forwardAgainState,
-      }: OrbitalSequence = backAgainJump(steps)
+      { result: forwardAgainResult, state: forwardAgainState }: Orbit =
+        backAgainJump(steps)
 
     expect(backAgainState).toBe(baseState)
     expect(forwardAgainState).toBe(forwardState)
@@ -104,9 +99,9 @@ describe('Weyl sequence 64', (): void => {
   })
 
   it('should produce immutable snapshots along the orbit', (): void => {
-    const s0: OrbitalSequence = weylSequence64(),
-      s1: OrbitalSequence = s0.next(),
-      s2: OrbitalSequence = s1.next()
+    const s0: Orbit = weylSequence64(),
+      s1: Orbit = s0.next(),
+      s2: Orbit = s1.next()
 
     expect(s0).not.toBe(s1)
     expect(s1).not.toBe(s2)
@@ -124,8 +119,8 @@ describe('Weyl sequence 64', (): void => {
     const initial: Numeric = 123n,
       steps = 16
 
-    let a: OrbitalSequence = weylSequence64(initial),
-      b: OrbitalSequence = weylSequence64(initial)
+    let a: Orbit = weylSequence64(initial),
+      b: Orbit = weylSequence64(initial)
 
     const seqA: bigint[] = [],
       seqB: bigint[] = []
