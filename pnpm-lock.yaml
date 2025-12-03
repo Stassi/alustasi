@@ -728,7 +728,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/orbital-sequences:
+  packages/sequences:
     dependencies:
       '@repo/arithmetic':
         specifier: workspace:*
@@ -901,9 +901,9 @@ importers:
       '@repo/fixed-width':
         specifier: workspace:*
         version: link:../fixed-width
-      '@repo/orbital-sequences':
+      '@repo/sequences':
         specifier: workspace:*
-        version: link:../orbital-sequences
+        version: link:../sequences
       '@repo/types':
         specifier: workspace:*
         version: link:../types
