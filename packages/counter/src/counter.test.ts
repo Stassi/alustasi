@@ -1,9 +1,10 @@
 import { addCurried as add } from '@repo/arithmetic/addition/addCurried'
 import { repeat } from '@repo/effects/repeat'
+import { counter } from '@repo/sequences/counter'
+import { counter64 } from '@repo/sequences/counter64'
+import { type Orbit as Counter } from '@repo/sequences/orbit/orbit'
 import { type Numeric } from '@repo/types/Numeric'
 import { type NumericCallback } from '@repo/types/NumericCallback'
-
-import { type Counter, counter, counter64 } from './counter'
 
 describe('Counter', (): void => {
   describe('Counter (variable-width)', (): void => {
