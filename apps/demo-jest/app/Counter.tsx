@@ -1,1 +1,1 @@
-export { Counter } from '@repo/counter/react/Counter'
+export { Counter } from '@repo/sequences-ui/react/Counter'
