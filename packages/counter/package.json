@@ -20,6 +20,7 @@
     "@repo/arithmetic": "workspace:*",
     "@repo/combinatorics": "workspace:*",
     "@repo/fixed-width": "workspace:*",
+    "@repo/sequences": "workspace:*",
     "@repo/types": "workspace:*"
   },
   "devDependencies": {

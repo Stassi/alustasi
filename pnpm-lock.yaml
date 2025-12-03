@@ -442,6 +442,9 @@ importers:
       '@repo/fixed-width':
         specifier: workspace:*
         version: link:../fixed-width
+      '@repo/sequences':
+        specifier: workspace:*
+        version: link:../sequences
       '@repo/types':
         specifier: workspace:*
         version: link:../types
