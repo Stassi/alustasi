@@ -22,8 +22,8 @@
     "@repo/combinatorics": "workspace:*",
     "@repo/determinism": "workspace:*",
     "@repo/fixed-width": "workspace:*",
-    "@repo/types": "workspace:*",
-    "@repo/weyl-sequence": "workspace:*"
+    "@repo/sequences": "workspace:*",
+    "@repo/types": "workspace:*"
   },
   "devDependencies": {
     "@jest/types": "^30.2.0",
