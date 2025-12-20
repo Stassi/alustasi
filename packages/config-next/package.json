@@ -10,12 +10,12 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^16.0.5"
+    "next": "^16.1.0"
   },
   "devDependencies": {
     "@repo/config-eslint-typescript": "workspace:*",
-    "@types/node": "^24.10.1",
-    "eslint": "^9.39.1",
+    "@types/node": "^25.0.3",
+    "eslint": "^9.39.2",
     "typescript": "^5.9.3"
   }
 }

@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "next": "^16.0.5",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "next": "^16.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
@@ -29,10 +29,10 @@
     "@repo/config-next": "workspace:*",
     "@repo/config-playwright": "workspace:*",
     "@repo/fonts": "workspace:*",
-    "@types/node": "^24.10.1",
+    "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "typescript": "^5.9.3"
   }
 }
