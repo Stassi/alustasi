@@ -3,8 +3,7 @@ import { repeat } from '@repo/effects/repeat'
 import { type Numeric } from '@repo/types/Numeric'
 import { type NumericCallback } from '@repo/types/NumericCallback'
 
-import { type Orbit } from '../orbit'
-import { counter } from './counter'
+import { type Orbit, counter } from '../orbit'
 
 describe('Counter (orbit)', (): void => {
   const [bigNegativeOne, bigZero, bigOne, bigTwo] = [-1n, 0n, 1n, 2n],

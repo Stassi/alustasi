@@ -2,8 +2,7 @@ import { repeat } from '@repo/effects/repeat'
 import { uInt64 } from '@repo/fixed-width/bits64/uInt'
 import { type Numeric } from '@repo/types/Numeric'
 
-import { type Orbit } from '../orbit'
-import { weylSequence64 } from './weylSequence64'
+import { type Orbit, weylSequence64 } from '../orbit'
 
 describe('Weyl sequence 64 (orbit)', (): void => {
   const goldenRatio64 = 0x9e37_79b9_7f4a_7c15n,

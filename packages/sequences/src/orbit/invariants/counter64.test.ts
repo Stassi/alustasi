@@ -1,7 +1,6 @@
 import { repeat } from '@repo/effects/repeat'
 
-import { type Orbit } from '../orbit'
-import { counter64 } from './counter64'
+import { type Orbit, counter64 } from '../orbit'
 
 describe('Counter 64 (orbit)', (): void => {
   const over64: bigint = 2n ** 64n
