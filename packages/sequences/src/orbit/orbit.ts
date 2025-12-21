@@ -9,7 +9,7 @@ import { type NumericCallbackCurried } from '@repo/types/NumericCallback'
 export type Orbit = Readonly<
   Readonly<Record<'result' | 'state', OrbitState>> &
     Record<'back' | 'next', () => Orbit> &
-    Record<'jump', OrbitStepBy>
+    Record<'jump', (step: Numeric) => Orbit>
 >
 export type OrbitCurried = (
   widthNormalizer?: OrbitWidthNormalizer,
@@ -32,7 +32,6 @@ export type OrbitWidthNormalizer = (state: Numeric) => OrbitState
 
 type OrbitStateCallbackCurried = NumericCallbackCurried<OrbitState>
 type OrbitStateTransition = (state: OrbitState) => Orbit
-type OrbitStepBy = (step: Numeric) => Orbit
 type OrbitStepByBig = (step: bigint) => Orbit
 
 export const orbitCurried: OrbitCurried =
