@@ -11,9 +11,15 @@ export type Orbit = Readonly<
     Record<'back' | 'next', () => Orbit> &
     Record<'jump', OrbitStepBy>
 >
+export type OrbitCurried = (
+  widthNormalizer?: OrbitWidthNormalizer,
+) => OrbitFromStateFromOptionalIncrement
 export type OrbitFromState = (state?: Numeric) => Orbit
 export type OrbitFromStateFromOptionalIncrement = (
   increment?: Numeric,
+) => OrbitFromState
+export type OrbitFromStateFromOptionalNormalizer = (
+  widthNormalizer?: OrbitWidthNormalizer,
 ) => OrbitFromState
 export type OrbitSnapshotProps = Readonly<
   Partial<
@@ -24,12 +30,6 @@ export type OrbitSnapshotProps = Readonly<
 export type OrbitState = bigint
 export type OrbitWidthNormalizer = (state: Numeric) => OrbitState
 
-type OrbitCurried = (
-  widthNormalizer?: OrbitWidthNormalizer,
-) => OrbitFromStateFromOptionalIncrement
-type OrbitFromStateFromOptionalNormalizer = (
-  widthNormalizer?: OrbitWidthNormalizer,
-) => OrbitFromState
 type OrbitStateCallbackCurried = NumericCallbackCurried<OrbitState>
 type OrbitStateTransition = (state: OrbitState) => Orbit
 type OrbitStepBy = (step: Numeric) => Orbit
