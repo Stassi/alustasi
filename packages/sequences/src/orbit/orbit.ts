@@ -57,7 +57,7 @@ export const orbitCurried: OrbitCurried =
       },
     ])
 
-    return pipe([(state: Numeric = 0n): Numeric => state, BigInt, snapshot])
+    return pipe([(state?: Numeric): Numeric => state ?? 0n, BigInt, snapshot])
   }
 
 export function orbit({
