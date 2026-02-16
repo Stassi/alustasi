@@ -5,6 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  '@eslint/js': ^9
+  eslint: ^9
   js-yaml@<4.1.1: '>=4.1.1'
 
 importers:
