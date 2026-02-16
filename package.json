@@ -28,7 +28,7 @@
     "types:generate": "turbo run types:generate"
   },
   "devDependencies": {
-    "turbo": "^2.7.0"
+    "turbo": "^2.8.9"
   },
   "packageManager": "pnpm@10.29.3",
   "engines": {
