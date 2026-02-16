@@ -64,8 +64,8 @@ describe('Weyl sequence 64', (): void => {
 
   it('walker vs jumper backward (short)', (): void => {
     const steps = 10,
-      { jump: baseJump }: WeylSequence64 = weylSequence64(0n),
       // eslint-disable-next-line perfectionist/sort-variable-declarations
+      { jump: baseJump }: WeylSequence64 = weylSequence64(0n),
       { back: startBack, jump: startJump }: WeylSequence64 = baseJump(steps),
       { result: jumperResult, state: jumperState }: WeylSequence64 =
         startJump(-steps)
@@ -81,13 +81,13 @@ describe('Weyl sequence 64', (): void => {
 
   it('should jump forward then backward returns to the same snapshot', (): void => {
     const steps = 25,
+      // eslint-disable-next-line perfectionist/sort-variable-declarations
       { jump: baseJump, state: baseState }: WeylSequence64 = weylSequence64(0n),
       {
         jump: forwardJump,
         result: forwardResult,
         state: forwardState,
       }: WeylSequence64 = baseJump(steps),
-      // eslint-disable-next-line perfectionist/sort-variable-declarations
       { jump: backAgainJump, state: backAgainState }: WeylSequence64 =
         forwardJump(-steps),
       { result: forwardAgainResult, state: forwardAgainState }: WeylSequence64 =
