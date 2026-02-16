@@ -15,9 +15,8 @@ export const application = nextJest({
 export const internalPackage = {
   ...createDefaultEsmPreset({
     tsconfig: fileURLToPath(
-      import.meta.resolve(
-        '@repo/config-eslint-typescript/typescript/next-jest-react.json',
-      ),
+      import.meta
+        .resolve('@repo/config-eslint-typescript/typescript/next-jest-react.json'),
     ),
   }),
   ...config,
