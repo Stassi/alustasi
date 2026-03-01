@@ -23,16 +23,15 @@
     "lint:format": "turbo run lint:format",
     "test:e2e": "turbo run test:e2e --concurrency=1",
     "test:unit": "turbo run test:unit",
-    "turbo:daemon:reload": "turbo daemon clean",
     "types:check": "turbo run types:check",
     "types:generate": "turbo run types:generate"
   },
   "devDependencies": {
-    "turbo": "^2.8.9"
+    "turbo": "^2.8.12"
   },
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@10.30.3",
   "engines": {
-    "node": "^24.13.1",
-    "npm": "^11.10.0"
+    "node": "^24.14.0",
+    "npm": "^11.11.0"
   }
 }

@@ -1,4 +1,3 @@
-// @ts-expect-error -- untyped module
 import onlyWarnPlugin from 'eslint-plugin-only-warn'
 import { defineConfig } from 'eslint/config'
 
