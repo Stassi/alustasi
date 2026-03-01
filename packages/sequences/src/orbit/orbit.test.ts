@@ -73,8 +73,8 @@ describe('Orbit', (): void => {
 
       it('walker vs jumper backward (short)', (): void => {
         const steps = 10,
-          { jump: baseJump }: Orbit = sequence64(0n),
           // eslint-disable-next-line perfectionist/sort-variable-declarations
+          { jump: baseJump }: Orbit = sequence64(0n),
           { back: startBack, jump: startJump }: Orbit = baseJump(steps),
           { result: jumperResult, state: jumperState }: Orbit =
             startJump(-steps)
@@ -90,13 +90,13 @@ describe('Orbit', (): void => {
 
       it('should jump forward then backward returns to the same snapshot', (): void => {
         const steps = 25,
+          // eslint-disable-next-line perfectionist/sort-variable-declarations
           { jump: baseJump, state: baseState }: Orbit = sequence64(0n),
           {
             jump: forwardJump,
             result: forwardResult,
             state: forwardState,
           }: Orbit = baseJump(steps),
-          // eslint-disable-next-line perfectionist/sort-variable-declarations
           { jump: backAgainJump, state: backAgainState }: Orbit =
             forwardJump(-steps),
           { result: forwardAgainResult, state: forwardAgainState }: Orbit =
