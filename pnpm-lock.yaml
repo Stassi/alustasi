@@ -68,9 +68,9 @@ importers:
       '@repo/arithmetic':
         specifier: workspace:*
         version: link:../../packages/arithmetic
-      '@repo/counter':
+      '@repo/sequences-ui':
         specifier: workspace:*
-        version: link:../../packages/counter
+        version: link:../../packages/sequences-ui
       next:
         specifier: ^16.1.6
         version: 16.1.6(@babel/core@7.29.0)(@playwright/test@1.58.2)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -433,70 +433,6 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/counter:
-    dependencies:
-      '@repo/arithmetic':
-        specifier: workspace:*
-        version: link:../arithmetic
-      '@repo/combinatorics':
-        specifier: workspace:*
-        version: link:../combinatorics
-      '@repo/fixed-width':
-        specifier: workspace:*
-        version: link:../fixed-width
-      '@repo/types':
-        specifier: workspace:*
-        version: link:../types
-    devDependencies:
-      '@jest/types':
-        specifier: ^30.2.0
-        version: 30.2.0
-      '@repo/config-eslint-typescript':
-        specifier: workspace:*
-        version: link:../config-eslint-typescript
-      '@repo/config-jest':
-        specifier: workspace:*
-        version: link:../config-jest
-      '@repo/effects':
-        specifier: workspace:*
-        version: link:../effects
-      '@testing-library/jest-dom':
-        specifier: ^6.9.1
-        version: 6.9.1
-      '@testing-library/react':
-        specifier: ^16.3.2
-        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@types/jest':
-        specifier: ^30.0.0
-        version: 30.0.0
-      '@types/node':
-        specifier: ^25.3.3
-        version: 25.3.3
-      '@types/react':
-        specifier: ^19.2.14
-        version: 19.2.14
-      '@types/react-dom':
-        specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.14)
-      eslint:
-        specifier: ^9
-        version: 9.39.3(jiti@2.6.1)
-      jest:
-        specifier: ^30.2.0
-        version: 30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@25.3.3)(typescript@5.9.3))
-      jest-environment-jsdom:
-        specifier: ^30.2.0
-        version: 30.2.0
-      react:
-        specifier: ^19.2.4
-        version: 19.2.4
-      ts-jest:
-        specifier: ^29.4.6
-        version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0))(typescript@5.9.3)
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
   packages/determinism:
     dependencies:
       '@repo/fixed-width':
@@ -730,6 +666,119 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/sequences:
+    dependencies:
+      '@repo/arithmetic':
+        specifier: workspace:*
+        version: link:../arithmetic
+      '@repo/combinatorics':
+        specifier: workspace:*
+        version: link:../combinatorics
+      '@repo/fixed-width':
+        specifier: workspace:*
+        version: link:../fixed-width
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../types
+    devDependencies:
+      '@jest/types':
+        specifier: ^30.2.0
+        version: 30.2.0
+      '@repo/config-eslint-typescript':
+        specifier: workspace:*
+        version: link:../config-eslint-typescript
+      '@repo/config-jest':
+        specifier: workspace:*
+        version: link:../config-jest
+      '@repo/effects':
+        specifier: workspace:*
+        version: link:../effects
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: ^25.3.3
+        version: 25.3.3
+      eslint:
+        specifier: ^9
+        version: 9.39.3(jiti@2.6.1)
+      jest:
+        specifier: ^30.2.0
+        version: 30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@25.3.3)(typescript@5.9.3))
+      ts-jest:
+        specifier: ^29.4.6
+        version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0))(typescript@5.9.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/sequences-ui:
+    dependencies:
+      '@repo/arithmetic':
+        specifier: workspace:*
+        version: link:../arithmetic
+      '@repo/combinatorics':
+        specifier: workspace:*
+        version: link:../combinatorics
+      '@repo/fixed-width':
+        specifier: workspace:*
+        version: link:../fixed-width
+      '@repo/sequences':
+        specifier: workspace:*
+        version: link:../sequences
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../types
+    devDependencies:
+      '@jest/types':
+        specifier: ^30.2.0
+        version: 30.2.0
+      '@repo/config-eslint-typescript':
+        specifier: workspace:*
+        version: link:../config-eslint-typescript
+      '@repo/config-jest':
+        specifier: workspace:*
+        version: link:../config-jest
+      '@repo/effects':
+        specifier: workspace:*
+        version: link:../effects
+      '@testing-library/jest-dom':
+        specifier: ^6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: ^16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: ^25.3.3
+        version: 25.3.3
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
+      eslint:
+        specifier: ^9
+        version: 9.39.3(jiti@2.6.1)
+      jest:
+        specifier: ^30.2.0
+        version: 30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@25.3.3)(typescript@5.9.3))
+      jest-environment-jsdom:
+        specifier: ^30.2.0
+        version: 30.2.0
+      react:
+        specifier: ^19.2.4
+        version: 19.2.4
+      ts-jest:
+        specifier: ^29.4.6
+        version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0))(typescript@5.9.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/split-mix:
     dependencies:
       '@repo/arithmetic':
@@ -747,12 +796,12 @@ importers:
       '@repo/fixed-width':
         specifier: workspace:*
         version: link:../fixed-width
+      '@repo/sequences':
+        specifier: workspace:*
+        version: link:../sequences
       '@repo/types':
         specifier: workspace:*
         version: link:../types
-      '@repo/weyl-sequence':
-        specifier: workspace:*
-        version: link:../weyl-sequence
     devDependencies:
       '@jest/types':
         specifier: ^30.2.0
@@ -842,52 +891,6 @@ importers:
       eslint:
         specifier: ^9
         version: 9.39.3(jiti@2.6.1)
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  packages/weyl-sequence:
-    dependencies:
-      '@repo/arithmetic':
-        specifier: workspace:*
-        version: link:../arithmetic
-      '@repo/combinatorics':
-        specifier: workspace:*
-        version: link:../combinatorics
-      '@repo/fixed-width':
-        specifier: workspace:*
-        version: link:../fixed-width
-      '@repo/types':
-        specifier: workspace:*
-        version: link:../types
-    devDependencies:
-      '@jest/types':
-        specifier: ^30.2.0
-        version: 30.2.0
-      '@repo/config-eslint-typescript':
-        specifier: workspace:*
-        version: link:../config-eslint-typescript
-      '@repo/config-jest':
-        specifier: workspace:*
-        version: link:../config-jest
-      '@repo/effects':
-        specifier: workspace:*
-        version: link:../effects
-      '@types/jest':
-        specifier: ^30.0.0
-        version: 30.0.0
-      '@types/node':
-        specifier: ^25.3.3
-        version: 25.3.3
-      eslint:
-        specifier: ^9
-        version: 9.39.3(jiti@2.6.1)
-      jest:
-        specifier: ^30.2.0
-        version: 30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@types/node@25.3.3)(typescript@5.9.3))
-      ts-jest:
-        specifier: ^29.4.6
-        version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@25.3.3)(babel-plugin-macros@3.1.0))(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
