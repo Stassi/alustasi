@@ -30,6 +30,9 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@jest/types':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@playwright/test':
         specifier: ^1.59.1
         version: 1.59.1
@@ -45,6 +48,9 @@ importers:
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -155,6 +161,9 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@jest/types':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@playwright/test':
         specifier: ^1.59.1
         version: 1.59.1
@@ -170,6 +179,9 @@ importers:
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/fonts
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -378,6 +390,9 @@ importers:
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -605,9 +620,15 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@jest/types':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -700,12 +721,18 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@jest/types':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
       '@repo/fonts':
         specifier: workspace:*
         version: link:../fonts
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -819,9 +846,15 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
     devDependencies:
+      '@jest/types':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@repo/config-eslint-typescript':
         specifier: workspace:*
         version: link:../config-eslint-typescript
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
