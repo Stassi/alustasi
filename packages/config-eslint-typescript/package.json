@@ -6,7 +6,7 @@
   "exports": {
     "./eslint/base": "./src/eslint/base/base.ts",
     "./eslint/next": "./src/eslint/next.ts",
-    "./eslint/react": "./src/eslint/react/react.ts",
+    "./eslint/react": "./src/eslint/react.ts",
     "./typescript/base.json": "./src/typescript/base.json",
     "./typescript/next.json": "./src/typescript/next.json",
     "./typescript/next-jest.json": "./src/typescript/next-jest.json",
