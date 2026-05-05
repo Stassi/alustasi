@@ -6,7 +6,7 @@
   "exports": {
     "./eslint/base": "./src/eslint/base/base.ts",
     "./eslint/next": "./src/eslint/next.ts",
-    "./eslint/react": "./src/eslint/react/react.ts",
+    "./eslint/react": "./src/eslint/react.ts",
     "./typescript/base.json": "./src/typescript/base.json",
     "./typescript/next.json": "./src/typescript/next.json",
     "./typescript/next-jest.json": "./src/typescript/next-jest.json",
@@ -19,6 +19,7 @@
     "types:check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint-react/eslint-plugin": "^5.7.2",
     "@eslint/compat": "^2.0.2",
     "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "^16.1.6",
@@ -35,8 +36,6 @@
     "eslint-plugin-perfectionist": "^5.6.0",
     "eslint-plugin-playwright": "^2.8.0",
     "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-testing-library": "^7.16.0",
     "eslint-plugin-turbo": "^2.8.12",
     "globals": "^17.3.0",
