@@ -2,8 +2,10 @@ import nextPlugin, { configs } from '@next/eslint-plugin-next'
 import { defineConfig } from 'eslint/config'
 
 import { type Config, type Plugin, type Rules } from './base/base.js'
+import { reactWithoutBrowserGlobals } from './react.js'
 
 const config = defineConfig([
+  ...reactWithoutBrowserGlobals,
   {
     plugins: {
       '@next/next': nextPlugin as Plugin,
