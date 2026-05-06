@@ -39,7 +39,6 @@
     "eslint-plugin-testing-library": "^7.16.2",
     "eslint-plugin-turbo": "^2.9.9",
     "globals": "^17.6.0",
-    "jiti": "^2.6.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.59.2"
   }
