@@ -8,3 +8,4 @@ onlyBuiltDependencies:
 
 overrides:
   js-yaml@<4.1.1: '>=4.1.1'
+  typescript: '>=5.9.3 <6.0.0'
