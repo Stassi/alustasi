@@ -8,8 +8,8 @@ const {
     flatConfigs: { recommended, typescript },
   } = importXPlugin,
   config = defineConfig([
-    recommended as Config,
-    typescript as Config,
+    recommended,
+    typescript,
     {
       languageOptions: {
         parser,
