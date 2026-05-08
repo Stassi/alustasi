@@ -1,3 +1,5 @@
+'use client'
+
 import MuiLink from '@mui/material/Link'
 import { type ReactElement, useState } from 'react'
 
