@@ -6,7 +6,7 @@ import { type ReactElement, useState } from 'react'
 import { Footer } from '../Typography/Footer'
 
 export function Copyright(): ReactElement {
-  const [fullYear] = useState((): string => String(new Date().getFullYear()))
+  const [localYear] = useState((): string => String(new Date().getFullYear()))
 
   return (
     <Footer>
@@ -14,7 +14,7 @@ export function Copyright(): ReactElement {
       <MuiLink color="inherit" href="https://mui.com/">
         Your Website
       </MuiLink>
-      {` ${fullYear}.`}
+      {` ${localYear}.`}
     </Footer>
   )
 }
