@@ -43,7 +43,7 @@ describe('UInt64', (): void => {
 
   describe('negative sign bigint|number', (): void => {
     it.each([
-      { expected: max64, n: -1 as number, name: '-1 (number)' },
+      { expected: max64, n: -1, name: '-1 (number)' },
       { expected: max64, n: -1, name: '-1 (number literal)' },
       { expected: 0n, n: -over64, name: '-(2^64)' },
       { expected: max64 - 6n, n: -(over64 + 7n), name: '-(2^64 + 7n)' },
