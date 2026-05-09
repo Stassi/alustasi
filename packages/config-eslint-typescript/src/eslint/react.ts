@@ -8,9 +8,9 @@ import { type Config, base } from './base/base.js'
 
 function config(browserGlobals: boolean): Config[] {
   return defineConfig([
+    ...base,
     {
       extends: [
-        base,
         jsConfigs.recommended,
         tsConfigs.recommended,
         eslintReact.configs['recommended-typescript'],
