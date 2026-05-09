@@ -23,14 +23,14 @@
     "@repo/types": "workspace:*"
   },
   "devDependencies": {
-    "@jest/types": "^30.3.0",
+    "@jest/types": "^30.4.1",
     "@repo/config-eslint-typescript": "workspace:*",
     "@repo/config-jest": "workspace:*",
     "@repo/effects": "workspace:*",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.6.2",
     "eslint": "^10.3.0",
-    "jest": "^30.3.0",
+    "jest": "^30.4.1",
     "ts-jest": "^29.4.9",
     "typescript": "^5.9.3"
   }
