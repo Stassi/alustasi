@@ -2,11 +2,15 @@ packages:
   - apps/*
   - packages/*
 
-onlyBuiltDependencies:
-  - sharp
-  - unrs-resolver
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
 
 overrides:
-  '@eslint/js': '^9'
-  eslint: '^9'
   js-yaml@<4.1.1: '>=4.1.1'
+  postcss@<8.5.10: '>=8.5.10'
+  typescript: '>=5.9.3 <6.0.0'
+
+updateConfig:
+  ignoreDependencies:
+    - typescript

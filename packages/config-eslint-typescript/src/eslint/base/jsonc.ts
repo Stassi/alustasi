@@ -10,11 +10,7 @@ const {
   } = configs,
   config = defineConfig([
     {
-      extends: [
-        base as Config,
-        recommendedWithJSON as Config,
-        prettier as Config,
-      ],
+      extends: [base, recommendedWithJSON, prettier],
       files: ['**/*.json'],
     },
   ]) satisfies Config[]
