@@ -1,5 +1,5 @@
 {
-  "name": "@repo/counter",
+  "name": "@repo/sequences-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "@repo/arithmetic": "workspace:*",
     "@repo/combinatorics": "workspace:*",
     "@repo/fixed-width": "workspace:*",
+    "@repo/sequences": "workspace:*",
     "@repo/types": "workspace:*"
   },
   "devDependencies": {
