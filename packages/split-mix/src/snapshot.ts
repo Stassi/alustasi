@@ -19,13 +19,13 @@ export type SplitMix64SnapshotResult = SplitMix64State | undefined
 export function snapshot<
   Result extends SplitMix64SnapshotResult = SplitMix64State,
 >({ state, ...rest }: SplitMix64SnapshotProps<Result>): SplitMix64<Result> {
-  return {
+  return Object.freeze({
     back: (): SplitMix64 => stepBackward(state),
     jump: (steps: Numeric): SplitMix64 => stepBy({ state, steps }),
     next: (): SplitMix64 => stepForward(state),
     state,
     ...rest,
-  }
+  })
 }
 
 export function snapshotCurried<
